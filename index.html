@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aetna Medicaid | Mid-Year Partnership Review | Pyx Health</title>
+<title>Aetna | Youth &amp; Family Programs | Pyx Health</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -58,37 +58,15 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
 .mkt-card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07);border-left:4px solid #d2dce8}
 .mkt-card.bh{border-left-color:#0076bf}
-.mkt-card.maternal{border-left-color:#29a4a2}
-.mkt-card.diabetic{border-left-color:#d6661a}
-.mkt-card.smoking{border-left-color:#5542a7}
-.mkt-card.mercy{border-left-color:#49a601}
 .mkt-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
 .mkt-name{font-family:'Roboto Slab',serif;font-weight:600;font-size:16px;color:#2e4456}
 .mkt-type-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px;background:#eff1f3;color:#6b7f8f}
-.mkt-goal{font-size:11px;color:#6b7f8f;margin-bottom:12px;line-height:1.4;border-left:2px solid #d2dce8;padding-left:8px}
 .mkt-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .mkt-stat{background:#f6f6f6;border-radius:6px;padding:10px}
 .mkt-stat-lbl{font-size:10px;color:#8a9aab;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
 .mkt-stat-val{font-size:17px;font-weight:700;color:#2e4456}
-.mkt-stat-val.green{color:#49a601}
-.mkt-stat-val.blue{color:#0076bf}
-.progress-track{background:#eff1f3;border-radius:4px;height:6px}
-.progress-fill{background:#49a601;border-radius:4px;height:6px;transition:width .6s}
-.progress-fill.amber{background:#ff9400}
-.progress-fill.red{background:#d6661a}
-.mkt-signal{font-size:11px;color:#49a601;font-weight:600;margin-top:10px;line-height:1.4}
 
-/* JOURNEY VISUAL */
-.journey-track{background:#fff;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.journey-phases{display:flex;align-items:stretch;gap:0}
-.phase{flex:1;padding:16px 14px;position:relative;text-align:center}
-.phase:not(:last-child)::after{content:'';position:absolute;right:-1px;top:20%;height:60%;width:2px;background:#d2dce8;z-index:1}
-.phase-num{width:28px;height:28px;border-radius:50%;background:#49a601;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
-.phase-title{font-family:'Roboto Slab',serif;font-weight:600;font-size:12px;color:#2e4456;margin-bottom:4px}
-.phase-desc{font-size:10px;color:#8a9aab;line-height:1.4}
-.phase-status{margin-top:8px;font-size:10px;font-weight:700;color:#49a601}
-
-/* ENROLLMENT CHART */
+/* CHART */
 .chart-wrap{background:#fff;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .chart-title{font-family:'Roboto Slab',serif;font-weight:600;font-size:14px;margin-bottom:16px}
 .bar-chart{display:flex;align-items:flex-end;gap:10px;height:120px}
@@ -97,7 +75,7 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .bar-lbl{font-size:10px;color:#8a9aab;text-align:center}
 .bar-val{font-size:10px;font-weight:700;color:#2e4456}
 
-/* BILLING TABLE */
+/* TABLE */
 .billing-table{background:#fff;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow-x:auto}
 .data-table{width:100%;border-collapse:collapse;font-size:12px}
 .data-table th{background:#2e4456;color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:11px}
@@ -117,13 +95,7 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .tp-block ul{padding-left:16px}
 .tp-block ul li{font-size:12px;color:#2e4456;line-height:1.6;margin-bottom:4px}
 
-/* MEMBER STORY */
-.story-placeholder{background:#fff;border:2px dashed #d2dce8;border-radius:10px;padding:24px;margin-bottom:24px;text-align:center}
-.story-placeholder .icon{font-size:28px;margin-bottom:8px;color:#d2dce8}
-.story-placeholder h4{font-family:'Roboto Slab',serif;font-weight:600;font-size:14px;color:#8a9aab;margin-bottom:6px}
-.story-placeholder p{font-size:12px;color:#aab5c0;line-height:1.5}
-
-/* MARKET PAGE */
+/* MARKET PAGE HERO */
 .market-hero{background:linear-gradient(135deg,#2e4456,#1e3045);border-radius:12px;padding:28px;margin-bottom:24px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
 .market-hero h1{font-family:'Roboto Slab',serif;font-weight:300;font-size:26px;color:#fff;margin-bottom:6px}
 .market-hero .subtitle{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:12px}
@@ -133,7 +105,7 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .hero-kpi-val{font-size:30px;font-weight:700;color:#49a601;line-height:1}
 .hero-kpi-lbl{font-size:11px;color:rgba(255,255,255,.55)}
 
-/* ACTIVATION BAR */
+/* ACTIVATION / BIG STAT */
 .activation-display{background:#fff;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .activation-number{font-size:52px;font-weight:700;color:#49a601;line-height:1}
 .activation-label{font-size:14px;color:#6b7f8f;margin-top:4px}
@@ -141,27 +113,16 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 
 /* BARRIER TABLE */
 .barrier-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eff1f3}
-.barrier-row:last-child{border-bottom:none}
+.barrier-row:last-of-type{border-bottom:none}
 .barrier-name{font-size:13px;font-weight:500;min-width:160px}
 .barrier-bars{flex:1;display:flex;gap:6px;align-items:center}
-.barrier-old{background:#d2dce8;height:8px;border-radius:4px}
-.barrier-new{background:#49a601;height:8px;border-radius:4px}
 .barrier-vals{font-size:11px;color:#6b7f8f;white-space:nowrap}
-.barrier-change{font-size:11px;font-weight:700;color:#49a601;white-space:nowrap}
-
-/* APPT CHART */
-.appt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px}
-.appt-item{background:#f6f6f6;border-radius:8px;padding:14px;text-align:center}
-.appt-num{font-size:28px;font-weight:700;color:#2e4456}
-.appt-lbl{font-size:10px;color:#8a9aab;margin-top:4px;line-height:1.3}
 
 /* SPOTLIGHT */
 .spotlight{background:linear-gradient(135deg,#49a601,#87d001);border-radius:10px;padding:24px;margin-bottom:24px;color:#fff}
 .spotlight h3{font-family:'Roboto Slab',serif;font-weight:700;font-size:16px;margin-bottom:6px}
 .spotlight .tag{background:rgba(255,255,255,.2);font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px;display:inline-block;margin-bottom:12px;letter-spacing:.5px}
 .spotlight p{font-size:12px;opacity:.9;line-height:1.6}
-.spotlight .big-stat{font-size:40px;font-weight:700;line-height:1;margin:12px 0 4px}
-.spotlight .big-label{font-size:12px;opacity:.8}
 
 /* DATA NOTE */
 .data-note{background:#fff8e6;border:1px solid #ff9400;border-radius:8px;padding:12px 16px;font-size:11px;color:#6b4c00;margin-bottom:20px;line-height:1.5}
@@ -174,8 +135,8 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .roi-tile.blue{background:#0076bf}
 .roi-tile.slate{background:#2e4456}
 .roi-tile.green{background:#49a601}
-.roi-tile .big{font-size:32px;font-weight:700;line-height:1}
-.roi-tile .desc{font-size:11px;opacity:.85;margin-top:6px;line-height:1.4}
+.roi-tile .big{font-size:26px;font-weight:700;line-height:1;margin-bottom:8px}
+.roi-tile .desc{font-size:11px;opacity:.85;line-height:1.4}
 
 /* RECOMMENDATIONS */
 .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:24px}
@@ -193,7 +154,6 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .stage-label-wrap{display:flex;flex-direction:column;gap:2px}
 .stage-label-tag{font-size:10px;font-weight:700;color:#49a601;text-transform:uppercase;letter-spacing:.6px}
 .stage-title-text{font-family:'Roboto Slab',serif;font-weight:600;font-size:18px;color:#2e4456}
-.stage-desc-text{font-size:12px;color:#8a9aab}
 .stage-divider{flex:1;height:1px;background:#d2dce8}
 .stage-card{background:#fff;border-radius:10px;padding:24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid #49a601}
 .stage-narrative{font-size:14px;color:#2e4456;line-height:1.75;margin-bottom:20px;font-style:italic;border-bottom:1px solid #eff1f3;padding-bottom:16px}
@@ -202,1267 +162,901 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 /* UTILITY */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-@media(max-width:700px){.two-col,.three-col{grid-template-columns:1fr}.journey-phases{flex-direction:column}.market-hero{grid-template-columns:1fr}.hero-kpis{justify-content:flex-start}}
+@media(max-width:700px){.two-col,.three-col{grid-template-columns:1fr}.market-hero{grid-template-columns:1fr}.hero-kpis{justify-content:flex-start}}
 </style>
 </head>
 <body>
 
 <div class="nav">
-  <div class="nav-brand">Pyx Health &times; <span>Aetna Medicaid</span></div>
+  <div class="nav-brand">Pyx <span>Health</span></div>
   <div class="nav-tabs">
-    <div class="nav-tab active" onclick="showPage('value',this)">National Overview</div>
+    <div class="nav-tab active" onclick="showPage('national',this)">National Overview</div>
     <div class="nav-tab" onclick="showPage('fl',this)">Florida</div>
-    <div class="nav-tab" onclick="showPage('ky',this)">Kentucky</div>
     <div class="nav-tab" onclick="showPage('ok',this)">Oklahoma</div>
+    <div class="nav-tab" onclick="showPage('ky',this)">Kentucky</div>
     <div class="nav-tab" onclick="showPage('tx',this)">Texas</div>
-    <div class="nav-tab" onclick="showPage('il',this)">Illinois</div>
-    <div class="nav-tab" onclick="showPage('la',this)">Louisiana</div>
-    <div class="nav-tab" onclick="showPage('mi',this)">Michigan</div>
-    <div class="nav-tab" onclick="showPage('az',this)">Arizona</div>
+    <div class="nav-tab" onclick="showPage('pa',this)">Pennsylvania</div>
   </div>
   <div class="nav-right">
-    <button class="tp-btn" id="tp-toggle" onclick="toggleTalkingPoints(this)">Talking Points</button>
+    <button class="tp-btn" id="tp-toggle" onclick="toggleTP()">Talking Points</button>
   </div>
 </div>
 
-<!-- ======================== NATIONAL / VALUE VIEW ======================== -->
-<div class="page active" id="page-value">
+<!-- ============================================================
+     NATIONAL OVERVIEW
+     ============================================================ -->
+<div class="page active" id="page-national">
 
   <div class="value-anchor">
     <svg class="va-arrow" viewBox="0 0 48 48" fill="none">
-      <path d="M8 24L28 8l4 4-14 12 14 12-4 4z" fill="#49a601" opacity=".4"/>
-      <path d="M20 24L40 8l4 4-14 12 14 12-4 4z" fill="#49a601"/>
+      <circle cx="24" cy="24" r="24" fill="rgba(73,166,1,.15)"/>
+      <path d="M16 24h16M28 18l6 6-6 6" stroke="#49a601" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <div class="va-text">
-      <h2>You asked us to reach members who weren't accessing care. <strong>Here's what happened.</strong></h2>
-      <p>Across 8 markets, the Navigate program has moved members from unreachable to engaged, from engaged to identified, from identified to activated. Each stage below maps what Pyx is doing to what it means for Aetna.</p>
+      <h2>Across five markets, Pyx Health has enrolled <strong>5,622 youth ages 13–17</strong> in Aetna's Medicaid programs — establishing behavioral health baselines for a population historically underserved and underscreened.</h2>
+      <p>The data below represents the leading indicators that precede measurable improvement in EPSDT compliance, behavioral health access, and youth quality measures. <strong>What Pyx is generating now is the clinical visibility Aetna needs to act before these members become high-cost adults.</strong></p>
     </div>
   </div>
 
-  <!-- GOALS -->
-  <div class="section-header" style="margin-top:0">
-    <span class="section-label">What you asked us to do</span>
-    <span class="section-title">Plan goals by market</span>
-    <div class="section-divider"></div>
-  </div>
-  <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-    <div class="kpi" style="border-top-color:#0076bf"><div class="kpi-lbl" style="color:#0076bf">Florida · Oklahoma · Illinois</div><div class="kpi-val" style="font-size:15px;line-height:1.3">Access to care for members with BH diagnoses and high utilizers</div><div class="kpi-ctx">3 markets · 1,853 enrolled</div></div>
-    <div class="kpi" style="border-top-color:#5542a7"><div class="kpi-lbl" style="color:#5542a7">Kentucky</div><div class="kpi-val" style="font-size:15px;line-height:1.3">Support members with tobacco dependency toward cessation</div><div class="kpi-ctx">1 market · 598 enrolled</div></div>
-    <div class="kpi" style="border-top-color:#29a4a2"><div class="kpi-lbl" style="color:#29a4a2">Louisiana · Michigan</div><div class="kpi-val" style="font-size:15px;line-height:1.3">Prenatal and postpartum care completion for maternal members</div><div class="kpi-ctx">2 markets · 971 enrolled</div></div>
-    <div class="kpi" style="border-top-color:#d6661a"><div class="kpi-lbl" style="color:#d6661a">Texas</div><div class="kpi-val" style="font-size:15px;line-height:1.3">Chronic condition management — closing care gaps for diabetic members</div><div class="kpi-ctx">1 market · 545 enrolled</div></div>
-  </div>
-
-  <!-- STAGE 1 -->
+  <!-- Stage 1: Reach -->
   <div class="stage-header">
     <div class="stage-num">1</div>
     <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 1</div>
-      <div class="stage-title-text">Member Response</div>
-      <div class="stage-desc-text">Confirming strong reach into priority populations</div>
+      <div class="stage-label-tag">Stage 1 — Reach</div>
+      <div class="stage-title-text">Youth Enrolled Across Five Markets</div>
     </div>
     <div class="stage-divider"></div>
   </div>
   <div class="stage-card">
-    <div class="stage-narrative">Targeted outreach is effectively converting priority populations into program enrollment. <strong>4,424 members entered this program between November and May — not contacts, not outreach attempts, but members who spoke with a Pyx care team member, shared what was happening in their lives, and made the decision to let us help.</strong> In Oklahoma, 3 in 4 members contacted enrolled — and two-thirds of them carry the specific diagnosis the plan targeted. In Michigan, nearly 1 in 2 maternal members reached came into the program. In Texas, diabetic members responded at more than twice the typical Medicaid engagement rate. These members weren't disengaged. They hadn't been reached the right way before.</div>
-    <div class="kpi-grid" style="grid-template-columns:1fr 1fr;max-width:500px">
-      <div class="kpi green"><div class="kpi-lbl">Members in Program</div><div class="kpi-val">4,424</div><div class="kpi-ctx">7 months · all 8 markets</div><div class="kpi-why">4,424 care relationships established — not contacts. Members who entered a care plan.</div></div>
-      <div class="kpi blue"><div class="kpi-lbl">OK: Outreach Response</div><div class="kpi-val">75%</div><div class="kpi-ctx">3 in 4 members contacted enrolled</div><div class="kpi-why">The strongest response rate in the program — and the highest target-diagnosis concentration at 66%.</div></div>
+    <div class="stage-narrative">
+      Pyx is operating youth programs in Florida, Oklahoma, Kentucky, Texas, and Pennsylvania — reaching Medicaid members ages 13–17 across BH Medicaid, STAR CHIP, STAR Kids, SKY, and CHIP program types. <strong>Outreach conversion rates average 75% across markets, reaching youth who traditional outreach consistently misses.</strong>
     </div>
-    <div class="chart-wrap" style="margin-bottom:0;box-shadow:none;padding:16px 0 0;border-top:1px solid #eff1f3">
-      <div class="chart-title">New Members Enrolled per Month (Nov 2025 – May 2026)</div>
-      <div class="bar-chart" id="enrollment-chart" style="margin-top:12px"></div>
-      <p style="font-size:11px;color:#aab5c0;margin-top:10px">* May reflects 7 days of enrollment. 49% of enrolled members are still in month 1 — this is an actively growing cohort. The activation numbers ahead are early signals, not a ceiling.</p>
+    <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))">
+      <div class="kpi green"><div class="kpi-lbl">Total Youth Enrolled</div><div class="kpi-val">5,622</div><div class="kpi-ctx">Ages 13–17 · 5 markets</div></div>
+      <div class="kpi teal"><div class="kpi-lbl">Avg Outreach Rate</div><div class="kpi-val">75%</div><div class="kpi-ctx">Conversion across markets</div></div>
+      <div class="kpi blue"><div class="kpi-lbl">Markets Active</div><div class="kpi-val">5</div><div class="kpi-ctx">FL · OK · KY · TX · PA</div></div>
+      <div class="kpi purple"><div class="kpi-lbl">Program Types</div><div class="kpi-val">6</div><div class="kpi-ctx">BH Medicaid, CHIP, STAR, SKY, Kids</div></div>
+      <div class="kpi orange"><div class="kpi-lbl">Combined Eligible Pool</div><div class="kpi-val">374K+</div><div class="kpi-ctx">Youth members across markets</div></div>
     </div>
-    <div class="tp-block" id="tp-stage1">
-      <h4>Talking Points — Member Response</h4>
+    <div class="tp-block" id="tp-nat-reach">
+      <h4>Talking Points — Youth Reach</h4>
       <ul>
-        <li>The enrollment number is table stakes. What matters is who enrolled. Oklahoma's 66% target-diagnosis concentration, Michigan's 47% maternal response rate, Texas's 42% diabetic response — these aren't random Medicaid members. They're exactly the members Aetna needed to reach.</li>
-        <li>A 75% outreach response rate in a BH/high-utilizer population explodes the myth that these members are disengaged. They respond when reached the right way.</li>
-        <li>49% of enrolled members are still in month 1 — this is an actively growing cohort. The activation numbers we'll show are early signals, not a ceiling.</li>
+        <li>5,622 Medicaid youth are now enrolled in Pyx — these are members who were invisible to behavioral health systems before this program</li>
+        <li>75% outreach conversion demonstrates that youth engage when the model is designed for them — human-first, not transactional</li>
+        <li>The combined eligible pool of 374,000+ youth represents the opportunity to scale what we're proving works</li>
+        <li>Six distinct program types across five states speaks to Pyx's ability to operate within complex Medicaid structures while maintaining a consistent clinical model</li>
       </ul>
     </div>
   </div>
 
-  <!-- STAGE 2 -->
+  <div class="chart-wrap">
+    <div class="chart-title">Youth Enrollment by Market — 12-Month Rolling</div>
+    <div class="bar-chart">
+      <div class="bar-col">
+        <div class="bar-val">1,175</div>
+        <div class="bar-fill" style="height:94px;background:#0076bf"></div>
+        <div class="bar-lbl">Florida</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val">1,249</div>
+        <div class="bar-fill" style="height:100px;background:#49a601"></div>
+        <div class="bar-lbl">Oklahoma</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val">1,057</div>
+        <div class="bar-fill" style="height:85px;background:#29a4a2"></div>
+        <div class="bar-lbl">Kentucky</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val">1,081</div>
+        <div class="bar-fill" style="height:87px;background:#d6661a"></div>
+        <div class="bar-lbl">Texas</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val">1,060</div>
+        <div class="bar-fill" style="height:85px;background:#5542a7"></div>
+        <div class="bar-lbl">Pennsylvania</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 2: Screening -->
   <div class="stage-header">
     <div class="stage-num">2</div>
     <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 2</div>
-      <div class="stage-title-text">Member Engagement</div>
-      <div class="stage-desc-text">Engagement is deeper, more frequent, and care-team led</div>
+      <div class="stage-label-tag">Stage 2 — Clinical Screening</div>
+      <div class="stage-title-text">Loneliness &amp; Mental Health Baselines Established</div>
     </div>
     <div class="stage-divider"></div>
   </div>
   <div class="stage-card">
-    <div class="stage-narrative">More enrolled members are engaging directly with the care team, and that engagement is deeper than before. In Oklahoma — the market with the most longitudinal data — <strong>91% of enrolled members are now talking directly to a care team member, compared to 62% under the prior model.</strong> Calls average 31 minutes, nearly double the prior length. Each member receives 3 touchpoints on average — enough to build a care plan, identify barriers, and begin navigating toward care. This is not a campaign result. It's a model-level change: onboarding now centers on identifying member needs upfront, which informs a care plan and guides ongoing engagement. As a result, <strong>engagement is intentional and care-team led — not app-based or reactive.</strong></div>
-    <div class="kpi-grid" style="grid-template-columns:1fr 1fr;max-width:500px">
-      <div class="kpi green"><div class="kpi-lbl">OK: Direct Care Team Engagement</div><div class="kpi-val">91%</div><div class="kpi-ctx">vs. 62% prior model (+29 pts)</div><div class="kpi-why">91% of enrolled members have had a real conversation — not a reminder, not an automated touch. The kind where barriers surface and care plans get built.</div></div>
-      <div class="kpi blue"><div class="kpi-lbl">OK: Avg Call Length</div><div class="kpi-val">31 min</div><div class="kpi-ctx">+63% vs. prior model</div><div class="kpi-why">31 minutes is enough time to learn a member can't get to their PCP because they have no car, no childcare, and a medication they can't afford. That's what changes outcomes.</div></div>
+    <div class="stage-narrative">
+      Pyx screens every enrolled youth on the UCLA-3 Loneliness Scale and PHQ-2 mental distress tool — generating clinical baselines that most Medicaid programs never capture for this age group. <strong>1 in 4 youth (25%) screen as lonely at baseline. Across markets, 47–78% of those lonely youth also show PHQ-2 distress — a direct pipeline from isolation to behavioral health need.</strong>
     </div>
-    <div style="background:#f6f6f6;border-radius:8px;padding:16px;margin-top:16px">
-      <div style="font-size:12px;font-weight:700;color:#2e4456;margin-bottom:12px">Months of sustained engagement — all markets</div>
-      <div id="months-chart"></div>
-      <div style="font-size:11px;color:#8a9aab;margin-top:10px">51% of enrolled members have sustained more than 1 month of engagement. 165 members have sustained 5+ months — the highest-touch, highest-need cohort. Exactly the population this program was designed to serve.</div>
+    <div class="kpi-grid">
+      <div class="kpi green"><div class="kpi-lbl">Avg UCLA-3 Score</div><div class="kpi-val">4.3</div><div class="kpi-ctx">Scale 3–9; ≥6 = lonely</div></div>
+      <div class="kpi purple"><div class="kpi-lbl">Show Loneliness</div><div class="kpi-val">25%</div><div class="kpi-ctx">UCLA-3 ≥6 at intake</div></div>
+      <div class="kpi orange"><div class="kpi-lbl">Avg PHQ-2</div><div class="kpi-val">1.1</div><div class="kpi-ctx">Scale 0–12; ≥2 = clinical flag</div></div>
+      <div class="kpi teal"><div class="kpi-lbl">Lonely→Distress</div><div class="kpi-val">47–78%</div><div class="kpi-ctx">Of lonely youth, also PHQ-2 elevated</div></div>
     </div>
-    <div class="tp-block" id="tp-stage2">
-      <h4>Talking Points — Member Engagement</h4>
+    <div class="tp-block" id="tp-nat-screen">
+      <h4>Talking Points — Clinical Screening</h4>
       <ul>
-        <li>The shift from 62% to 91% direct engagement is not incremental improvement — it's a structural change in how members are served. The prior model waited for members to engage. This model goes to them, with a plan.</li>
-        <li>3 calls per member averaging 31 minutes each is more than 90 minutes of direct care conversation per enrolled member. That's enough time to know someone's barriers, build a care plan, and start navigating them toward action.</li>
-        <li>More than half of enrolled members have now sustained multi-month engagement. The members staying in active care relationships are the ones most likely to activate into care next.</li>
+        <li>Pyx has established UCLA-3 loneliness and PHQ-2 distress baselines for 5,622 Medicaid youth — a dataset that simply doesn't exist anywhere else for this population</li>
+        <li>1 in 4 youth screen as lonely. In markets like Oklahoma and Texas, 76–78% of those lonely youth also show PHQ-2 distress — early flags for behavioral health trajectories, not background statistics</li>
+        <li>PHQ-2 baselines create the documentation foundation for EPSDT compliance and behavioral health access quality measures</li>
+        <li>Texas STAR Kids shows the highest acuity: UCLA-3 of 5.4 and PHQ-2 of 2.1 — these youth are at or above clinical thresholds at their first Pyx contact</li>
       </ul>
     </div>
   </div>
 
-  <!-- STAGE 3 -->
+  <div class="billing-table">
+    <div class="chart-title" style="margin-bottom:14px">Clinical Screening — Market Comparison</div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Market / Program</th>
+          <th>UCLA-3 Score</th>
+          <th>% Lonely (≥6)</th>
+          <th>PHQ-2 Score</th>
+          <th>Lonely→Distress</th>
+          <th>% SDoH Need</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Florida — BH Medicaid Youth</td>
+          <td>4.2</td>
+          <td><span class="pct-chip mid">22%</span></td>
+          <td>1.1</td>
+          <td>67%</td>
+          <td>29%</td>
+        </tr>
+        <tr>
+          <td>Oklahoma — Medicaid Youth</td>
+          <td>4.5</td>
+          <td><span class="pct-chip mid">29%</span></td>
+          <td>1.1</td>
+          <td>76%</td>
+          <td>26%</td>
+        </tr>
+        <tr>
+          <td>Kentucky — Youth 13–17</td>
+          <td>4.1</td>
+          <td><span class="pct-chip mid">20%</span></td>
+          <td>0.8</td>
+          <td>47%</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Texas — STAR CHIP Youth</td>
+          <td>4.6</td>
+          <td><span class="pct-chip mid">28%</span></td>
+          <td>1.5</td>
+          <td>78%</td>
+          <td>31%</td>
+        </tr>
+        <tr>
+          <td>Texas — STAR Kids Youth</td>
+          <td>5.4</td>
+          <td><span class="pct-chip low">44%</span></td>
+          <td>2.1</td>
+          <td>78%</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Pennsylvania — CHIP 13–17</td>
+          <td>4.2</td>
+          <td><span class="pct-chip mid">24%</span></td>
+          <td>0.8</td>
+          <td>65%</td>
+          <td>29%</td>
+        </tr>
+        <tr>
+          <td>Portfolio Average</td>
+          <td>4.3</td>
+          <td>25%</td>
+          <td>1.1</td>
+          <td>68%</td>
+          <td>29%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Stage 3: Barriers -->
   <div class="stage-header">
     <div class="stage-num">3</div>
     <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 3</div>
-      <div class="stage-title-text">Deep Engagement</div>
-      <div class="stage-desc-text">Sustained engagement uncovers barriers that traditional outreach misses</div>
+      <div class="stage-label-tag">Stage 3 — Barrier Identification</div>
+      <div class="stage-title-text">What's Keeping Youth from Care</div>
     </div>
     <div class="stage-divider"></div>
   </div>
   <div class="stage-card">
-    <div class="stage-narrative">Through repeated interactions, members surface challenges — transportation gaps, medication barriers, childcare constraints, safety concerns — that don't appear in claims data and aren't identified through traditional outreach. <strong>You can't solve barriers you can't see. Now we can see them, at scale.</strong> In Oklahoma, the average barrier identification rate increased by 5.75 points versus the prior model — not because the barriers are new, but because deeper engagement creates the trust and time needed for members to share them. Transportation identified in 25% of members. Medication adherence in 38%. These are the barriers that explain why members weren't keeping appointments — and now the care team knows, and can act.</div>
-    <div style="background:#f6f6f6;border-radius:8px;padding:20px;margin-bottom:16px">
-      <div style="font-size:13px;font-weight:700;color:#2e4456;margin-bottom:4px">Oklahoma — Barrier Identification</div>
-      <div style="font-size:11px;color:#8a9aab;margin-bottom:16px">New model vs. prior contract · +5.75 average point increase in barrier identification</div>
-      <div id="vv-barriers"></div>
+    <div class="stage-narrative">
+      Youth barriers differ substantially from adult barriers — and from market to market. <strong>Social media emerges as a top barrier in Texas and Pennsylvania, a leading indicator of digital isolation. Family dynamics dominate in Florida and Oklahoma. Safety concerns surface in every market.</strong> These findings require youth-specific navigation, not adult protocols.
     </div>
-    <div class="tp-block" id="tp-stage3">
-      <h4>Talking Points — Deep Engagement</h4>
+    <div class="two-col">
+      <div>
+        <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:13px;color:#2e4456;margin-bottom:12px">Top Barriers by Market</div>
+        <div class="barrier-row"><div class="barrier-name" style="min-width:70px;font-size:12px;font-weight:700">FL</div><div style="flex:1;font-size:12px;color:#6b7f8f">Family (23%), Discrimination (18%), Income (14%)</div></div>
+        <div class="barrier-row"><div class="barrier-name" style="min-width:70px;font-size:12px;font-weight:700">OK</div><div style="flex:1;font-size:12px;color:#6b7f8f">Mental Health (22%), Family (21%), Income (13%)</div></div>
+        <div class="barrier-row"><div class="barrier-name" style="min-width:70px;font-size:12px;font-weight:700">KY</div><div style="flex:1;font-size:12px;color:#6b7f8f">Safety (20%), Income (19%), Food (15%)</div></div>
+        <div class="barrier-row"><div class="barrier-name" style="min-width:70px;font-size:12px;font-weight:700">TX</div><div style="flex:1;font-size:12px;color:#6b7f8f">Social Media (27%), Mental Health (20%), Food (15%)</div></div>
+        <div class="barrier-row" style="border-bottom:none"><div class="barrier-name" style="min-width:70px;font-size:12px;font-weight:700">PA</div><div style="flex:1;font-size:12px;color:#6b7f8f">Social Media (18%), Food (15%), Transportation (13%)</div></div>
+      </div>
+      <div>
+        <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:13px;color:#2e4456;margin-bottom:12px">Cross-Market Themes</div>
+        <div style="background:#f6f6f6;border-radius:8px;padding:14px;margin-bottom:10px">
+          <div style="font-size:11px;font-weight:700;color:#5542a7;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Social Media &amp; Digital Isolation</div>
+          <div style="font-size:12px;color:#6b7f8f;line-height:1.5">TX #1 (27%), PA #1 (18%) — youth are online but disconnected; a behavioral SDOH that claims can't surface</div>
+        </div>
+        <div style="background:#f6f6f6;border-radius:8px;padding:14px;margin-bottom:10px">
+          <div style="font-size:11px;font-weight:700;color:#0076bf;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Safety &amp; Family Stress</div>
+          <div style="font-size:12px;color:#6b7f8f;line-height:1.5">Safety in top 4 in every market; family dynamics primary in FL and OK — home instability amplifying behavioral health risk</div>
+        </div>
+        <div style="background:#f6f6f6;border-radius:8px;padding:14px">
+          <div style="font-size:11px;font-weight:700;color:#d6661a;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Food &amp; Economic Stress</div>
+          <div style="font-size:12px;color:#6b7f8f;line-height:1.5">Food and income appear across all 5 markets — youth navigating economic instability alongside emotional and behavioral stress</div>
+        </div>
+      </div>
+    </div>
+    <div class="tp-block" id="tp-nat-barriers">
+      <h4>Talking Points — Youth Barriers</h4>
       <ul>
-        <li>Transportation identified in 25% of Oklahoma members — up from 13%. These aren't new barriers. They existed before. The prior model just wasn't surfacing them. Now the care team knows, and can act.</li>
-        <li>Medication adherence at 38% — up from 32%. For a BH and high-utilizer population, non-adherence is the single most preventable driver of avoidable hospitalization. Identifying it is the prerequisite to resolving it.</li>
-        <li>Standard outreach identifies barriers at the point of first contact — one interaction, one data point. Pyx identifies barriers through sustained engagement over time. More depth, more truth, more opportunity to intervene.</li>
-        <li>This is a clinical intelligence layer the plan didn't have before. It's not engagement reporting — it's a population needs map that informs care coordination priorities in every market.</li>
+        <li>Social media as the #1 barrier in Texas and Pennsylvania is a finding unique to youth programs — it signals digital isolation, not engagement, and requires a fundamentally different navigation approach than adult SDOH protocols</li>
+        <li>Safety concerns appear in the top four barriers across all five markets — these youth are navigating instability at home and in their communities simultaneously</li>
+        <li>Discrimination at 18% in Florida is the highest rate in the portfolio — a health equity signal that belongs in Aetna FL's equity reporting and SDOH documentation</li>
+        <li>These barrier maps give Aetna's SDOH and quality teams actionable intelligence they cannot generate from claims data alone</li>
       </ul>
     </div>
   </div>
 
-  <!-- STAGE 4 -->
+  <!-- Stage 4: Connection -->
   <div class="stage-header">
     <div class="stage-num">4</div>
     <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 4</div>
-      <div class="stage-title-text">Activation</div>
-      <div class="stage-desc-text">Members are taking action to access care</div>
+      <div class="stage-label-tag">Stage 4 — Connection</div>
+      <div class="stage-title-text">Trust-Based Engagement at Scale</div>
     </div>
     <div class="stage-divider"></div>
   </div>
   <div class="stage-card">
-    <div class="stage-narrative">As a result of sustained engagement and barrier resolution, members are now accessing care. <strong>Members who weren't completing recommended visits are now completing them.</strong> Texas leads the portfolio at 88% — nearly 9 in 10 enrolled diabetic members have completed a care visit. Michigan's maternal members are completing postpartum visits at 86%, compared to a national Medicaid average of approximately 62%. These are early behavior changes, and they are the leading indicators of improved plan quality performance. The completed visits happening today are the quality measures that close tomorrow.</div>
-    <div id="vv-activation-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px"></div>
-    <div style="background:#f0f7e8;border:1px solid #87d001;border-radius:8px;padding:16px;margin-bottom:16px">
-      <div style="font-size:12px;font-weight:700;color:#2a6200;margin-bottom:10px">What activation means for each program type</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12px;color:#2e4456;line-height:1.5">
-        <div><strong style="color:#0076bf">BH (FL, OK, IL):</strong> Completed a behavioral health visit, therapy session, or PCP follow-up — the visits that reduce crisis utilization and close BH care gaps.</div>
-        <div><strong style="color:#d6661a">Diabetic (TX):</strong> Completed a diabetes-related care visit — A1C monitoring, blood pressure, retinal exam, PCP management. Directly connected to HEDIS chronic condition measures.</div>
-        <div><strong style="color:#29a4a2">Maternal (MI, LA):</strong> Completed a prenatal or postpartum visit — closing HEDIS postpartum gap measures and reducing maternal morbidity risk.</div>
-        <div><strong style="color:#5542a7">Cessation (KY):</strong> Set a quit date or completed a cessation milestone — documented behavior change, not just engagement.</div>
-      </div>
+    <div class="stage-narrative">
+      Pyx's support center is the human layer behind every program — available when youth need someone to talk to, navigating barriers, and keeping members connected to care. <strong>Across five markets, the support center has engaged youth 4,924+ times. Pennsylvania's program runs at 91% companion call model — reaching youth who don't engage through digital tools at all.</strong>
     </div>
-    <div style="margin-top:16px">
-      <div style="font-size:13px;font-weight:700;color:#2e4456;margin-bottom:12px">All markets at a glance</div>
-      <div class="market-grid" id="national-market-grid"></div>
+    <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
+      <div class="kpi green"><div class="kpi-lbl">Florida</div><div class="kpi-val">1,208</div><div class="kpi-ctx">Support contacts</div></div>
+      <div class="kpi blue"><div class="kpi-lbl">Oklahoma</div><div class="kpi-val">1,177</div><div class="kpi-ctx">Support contacts</div></div>
+      <div class="kpi teal"><div class="kpi-lbl">Kentucky</div><div class="kpi-val">1,020</div><div class="kpi-ctx">Support contacts</div></div>
+      <div class="kpi orange"><div class="kpi-lbl">Texas</div><div class="kpi-val">753</div><div class="kpi-ctx">604 CHIP · 149 Kids</div></div>
+      <div class="kpi purple"><div class="kpi-lbl">Pennsylvania</div><div class="kpi-val">766</div><div class="kpi-ctx">91% companion call model</div></div>
     </div>
-    <div class="tp-block" id="tp-stage4">
-      <h4>Talking Points — Activation</h4>
+    <div class="spotlight" style="margin-top:4px">
+      <div class="tag">PENNSYLVANIA MODEL</div>
+      <h3>91% companion call engagement — no app required</h3>
+      <p>Pennsylvania's CHIP Youth program demonstrates that Pyx's human-first model works without digital dependence. 91% of PA youth engage exclusively through companion calls — a proof point for reaching members that digital-first programs leave behind entirely. The PA model is replicable anywhere youth digital engagement is low.</p>
+    </div>
+    <div class="tp-block" id="tp-nat-connection">
+      <h4>Talking Points — Connection &amp; Engagement</h4>
       <ul>
-        <li>Texas at 88% is the program benchmark — it shows what this model delivers when the population is clearly defined and engagement has depth. Every other market is moving toward that number.</li>
-        <li>Michigan's 86% maternal visit completion significantly outperforms the national Medicaid postpartum average of ~62%. In a state where maternal health quality is a plan priority, this is a reportable outcome.</li>
-        <li>32 quit dates in Kentucky is a clinical commitment — not a goal set, not an intent captured. Each one represents a member on a path toward cessation who wasn't on that path before engagement.</li>
-        <li>Oklahoma's 128 completed appointments — across specialist, PCP, therapy, and maternal visits — represent 128 instances where a high-cost member chose a scheduled visit instead of an unplanned ED visit.</li>
+        <li>4,924+ support center contacts across five markets represents human engagement, not automated outreach — these are real conversations with youth navigating real barriers</li>
+        <li>Pennsylvania's 91% companion-call model is a differentiator: Pyx reaches youth who don't engage through apps or digital programs — the population that is typically unreachable by health plans</li>
+        <li>The support center is the mechanism through which barrier navigation actually happens — it's what converts a screen into an action and a barrier identified into a resource connected</li>
       </ul>
     </div>
   </div>
 
-  <!-- STAGE 5 -->
+  <!-- Stage 5: Plan Value -->
   <div class="stage-header">
     <div class="stage-num">5</div>
     <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 5</div>
-      <div class="stage-title-text">Plan Value</div>
-      <div class="stage-desc-text">How member action translates to Aetna quality, utilization, and cost goals</div>
+      <div class="stage-label-tag">Stage 5 — Plan Value</div>
+      <div class="stage-title-text">What This Generates for Aetna</div>
     </div>
     <div class="stage-divider"></div>
   </div>
   <div class="stage-card">
-    <div class="stage-narrative">This program is 7 months old. Quality measure movement takes 12–24 months to appear in state ratings. <strong>What's visible now are leading indicators — the member actions that, at scale and over time, move quality scores, reduce avoidable utilization, and protect plan performance.</strong> The visits being completed today are the measures that close tomorrow. The barriers being identified today are the hospitalizations that won't happen next year. The program is on a clear path to delivering measurable quality and cost value in the back half of the contract term. Today's data is the evidence base for that path.</div>
-    <div class="three-col" style="margin-bottom:20px">
-      <div style="background:#f6f6f6;border-radius:8px;padding:18px;border-left:4px solid #d6661a">
-        <div style="font-size:10px;font-weight:700;color:#d6661a;text-transform:uppercase;margin-bottom:8px">Texas · Diabetic · HEDIS CDC</div>
-        <div style="font-size:13px;color:#2e4456;line-height:1.6"><strong>88% of enrolled diabetic members</strong> completed a care visit. HEDIS CDC measures — A1C testing, blood pressure control, retinal exams — are closed when members show up. Pyx is getting them to show up.</div>
-      </div>
-      <div style="background:#f6f6f6;border-radius:8px;padding:18px;border-left:4px solid #29a4a2">
-        <div style="font-size:10px;font-weight:700;color:#29a4a2;text-transform:uppercase;margin-bottom:8px">Michigan · Maternal · HEDIS Postpartum</div>
-        <div style="font-size:13px;color:#2e4456;line-height:1.6"><strong>86% of maternal members</strong> completed a maternal care visit — a direct HEDIS measure. Each completed visit is a reportable quality outcome for Aetna MI, in a population where that visit is too often missed.</div>
-      </div>
-      <div style="background:#f6f6f6;border-radius:8px;padding:18px;border-left:4px solid #0076bf">
-        <div style="font-size:10px;font-weight:700;color:#0076bf;text-transform:uppercase;margin-bottom:8px">FL · OK · IL · BH · HEDIS FUH/FUM</div>
-        <div style="font-size:13px;color:#2e4456;line-height:1.6"><strong>56–64% of BH members</strong> completed a care visit. Follow-up after hospitalization and sustained BH engagement are HEDIS measures. Pyx builds the engagement layer that makes those visits possible.</div>
-      </div>
+    <div class="stage-narrative">
+      The clinical visibility, barrier data, and engagement Pyx is building now creates the foundation for measurable improvement in the quality measures Aetna cares about most for youth Medicaid populations. <strong>These are the leading indicators that precede outcomes — and the data Aetna needs to see before it exists anywhere else.</strong>
     </div>
     <div class="roi-grid">
-      <div class="roi-tile teal"><div class="big">2×</div><div class="desc">Increased risk of preterm delivery without adequate prenatal care access — the risk LA and MI members are navigating away from</div></div>
-      <div class="roi-tile blue"><div class="big">&gt;40%</div><div class="desc">Decrease in infant mortality associated with high-quality prenatal care — the outcome maternal program completions are building toward</div></div>
-      <div class="roi-tile slate"><div class="big">42%</div><div class="desc">Of maternal health costs are non-medical — largely mental health and SDOH related, directly addressable through care navigation</div></div>
-      <div class="roi-tile green"><div class="big">10%</div><div class="desc">Estimated reduction in avoidable ED visits for high-utilizer members in sustained care navigation programs — the OK cohort</div></div>
+      <div class="roi-tile teal">
+        <div class="big">EPSDT</div>
+        <div class="desc">PHQ-2 and UCLA-3 screenings generate behavioral health assessment documentation aligned with EPSDT requirements for youth Medicaid</div>
+      </div>
+      <div class="roi-tile blue">
+        <div class="big">BH Access</div>
+        <div class="desc">Lonely-to-distress identification (47–78%) creates a pipeline for BH treatment initiation — improving HEDIS behavioral health access measures</div>
+      </div>
+      <div class="roi-tile slate">
+        <div class="big">SDOH Data</div>
+        <div class="desc">Youth barrier mapping feeds Aetna's SDOH documentation and quality reporting — intelligence claims cannot generate</div>
+      </div>
+      <div class="roi-tile green">
+        <div class="big">Equity</div>
+        <div class="desc">Discrimination (FL 18%), safety across all markets, food insecurity — early identification of health equity gaps at the member level</div>
+      </div>
     </div>
-    <div class="tp-block" id="tp-stage5">
+    <div class="tp-block" id="tp-nat-value">
       <h4>Talking Points — Plan Value</h4>
       <ul>
-        <li>Quality measure movement takes 12–24 months to show in state ratings. What we're showing today are the leading indicators — the member actions that precede measurable improvement. Texas's 88% diabetic activation is the early signal. The HEDIS movement follows.</li>
-        <li>For the Oklahoma high-utilizer cohort: 91% direct care team engagement and 56% completing care is cost avoidance beginning to materialize. Research on sustained engagement programs for high-utilizer Medicaid populations estimates 10% reduction in avoidable ED use.</li>
-        <li>42% of maternal health costs are non-medical — mental health and SDOH related. Louisiana and Michigan are designed to address exactly this. The depth of engagement in those markets reflects the level of navigation support these members need and are receiving.</li>
-        <li>This is not a promise — it's a trajectory. The program is on a clear path to delivering measurable quality and utilization value in the back half of the contract term. Today's data is the evidence base for that path.</li>
+        <li>Every PHQ-2 baseline established today is a behavioral health quality data point that can flow into Aetna's EPSDT reporting — these screenings don't happen anywhere else in the member's care journey</li>
+        <li>The lonely-to-distress connection (47–78% across markets) represents a clinical pipeline: youth who screen lonely and distressed today will generate BH claims within 12–24 months if not intercepted — Pyx is the interception point</li>
+        <li>SDOH barrier data from Pyx cannot be replicated from claims — it requires trust-based conversation to surface. Aetna now has it at scale across five youth markets</li>
+        <li>Pennsylvania's companion-call model proves the approach works for members who are otherwise unreachable — broadening Aetna's visibility into youth populations that traditional programs miss</li>
       </ul>
     </div>
   </div>
 
-  <!-- OPPORTUNITY -->
-  <div class="stage-header">
-    <div class="stage-num" style="background:#2e4456">→</div>
-    <div class="stage-label-wrap">
-      <div class="stage-label-tag" style="color:#2e4456">Opportunity Ahead</div>
-      <div class="stage-title-text">Significant value remains to be unlocked</div>
-    </div>
-    <div class="stage-divider"></div>
-  </div>
-  <div style="background:#2e4456;border-radius:12px;padding:28px;margin-bottom:24px" class="three-col">
-    <div>
-      <div style="color:#87d001;font-size:11px;font-weight:700;margin-bottom:8px;text-transform:uppercase">Activation Pipeline</div>
-      <div style="color:#fff;font-size:13px;line-height:1.6">44% of enrolled BH members have not yet activated. These are members in active care relationships — the engagement is happening, the barrier identification is underway. Activation follows. The pipeline is full.</div>
-    </div>
-    <div>
-      <div style="color:#87d001;font-size:11px;font-weight:700;margin-bottom:8px;text-transform:uppercase">Quality Measure Alignment</div>
-      <div style="color:#fff;font-size:13px;line-height:1.6">As early-cohort members cross 6 months of engagement, we will begin connecting activation data to quality measure trends — bringing the leading indicators in this review into direct alignment with HEDIS performance data.</div>
-    </div>
-    <div>
-      <div style="color:#87d001;font-size:11px;font-weight:700;margin-bottom:8px;text-transform:uppercase">Reach Expansion</div>
-      <div style="color:#fff;font-size:13px;line-height:1.6">Illinois has the largest eligibility pool (176K) with the most headroom. Oklahoma's food box pilot — 51 self-onboardings from 1,000 letters, zero outbound calls — is a replicable reach model for never-engaged populations across all markets.</div>
-    </div>
-  </div>
-
-  <div class="story-placeholder">
-    <div class="icon">◎</div>
-    <h4>Member Stories — Placeholders</h4>
-    <p>Add 2–3 de-identified member stories illustrating the full arc: barrier identified → engagement sustained → care action completed → outcome for the plan. One story per program type (BH, maternal, diabetic/cessation).</p>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
+  <div class="footer">Pyx Health | Aetna Youth &amp; Family Programs | National Overview | 12-Month Rolling | Confidential</div>
 </div>
 
-  <div class="stage-card">
-    <div class="stage-narrative">Targeted outreach is effectively converting priority populations into program enrollment, establishing a strong foundation for downstream engagement and care activation. <strong>Enrollment reflects priority populations aligned to plan goals — not just whoever picked up the phone.</strong></div>
-    <div class="kpi-grid">
-      <div class="kpi green">
-        <div class="kpi-lbl">Members in Program</div><div class="kpi-val">4,424</div>
-        <div class="kpi-ctx">7 months across all 8 markets</div>
-        <div class="kpi-why">4,424 care relationships established — members who spoke with a Pyx care team member, shared their situation, and entered a care plan. Not contacts. Not outreach attempts. Members.</div>
-      </div>
-      <div class="kpi blue">
-        <div class="kpi-lbl">OK: Priority Population Enrolled</div><div class="kpi-val">66%</div>
-        <div class="kpi-ctx">Of enrolled carry a target diagnosis</div>
-        <div class="kpi-why">When 2 in 3 enrolled members carry the specific diagnosis the plan targeted, outreach is finding the right people — not just the easiest to reach.</div>
-      </div>
-      <div class="kpi teal">
-        <div class="kpi-lbl">OK: Member Response Rate</div><div class="kpi-val">75%</div>
-        <div class="kpi-ctx">Of members contacted, 3 in 4 enrolled</div>
-        <div class="kpi-why">75% tells you these members want help. They're not disengaged — they just haven't been reached the right way before. Pyx reached them the right way.</div>
-      </div>
-      <div class="kpi orange">
-        <div class="kpi-lbl">MI: Maternal Response Rate</div><div class="kpi-val">47%</div>
-        <div class="kpi-ctx">Nearly 1 in 2 maternal members contacted enrolled</div>
-        <div class="kpi-why">Nearly half of all maternal members contacted chose to engage — in a population managing pregnancy alongside Medicaid access constraints. Unmet need is being answered.</div>
-      </div>
-      <div class="kpi purple">
-        <div class="kpi-lbl">TX: Diabetic Response Rate</div><div class="kpi-val">42%</div>
-        <div class="kpi-ctx">Of members contacted</div>
-        <div class="kpi-why">Diabetic members responding at 42% signals the program is reaching members at a moment of genuine need — not capturing the always-engaged.</div>
-      </div>
-    </div>
-    <div class="chart-wrap" style="margin-bottom:0;box-shadow:none;padding:16px 0 0;border-top:1px solid #eff1f3">
-      <div class="chart-title">New Members Enrolled per Month (Nov 2025 – May 2026)</div>
-      <div class="bar-chart" id="enrollment-chart" style="margin-top:12px"></div>
-      <p style="font-size:11px;color:#aab5c0;margin-top:10px">* May reflects 7 days of enrollment. Program is actively growing — 49% of enrolled members are still in month 1.</p>
-    </div>
-    <div class="tp-block" id="tp-stage1">
-      <h4>Talking Points — Member Response</h4>
-      <ul>
-        <li>The enrollment number is table stakes. What matters is who enrolled. Oklahoma's 66% target-diagnosis concentration, Michigan's 47% maternal response rate, Texas's 42% diabetic response — these aren't random Medicaid members. They're exactly the members Aetna needed to reach.</li>
-        <li>A 75% outreach response rate in a BH/high-utilizer population explodes the myth that these members are disengaged. They respond when reached the right way.</li>
-        <li>49% of enrolled members are still in month 1 — this is an actively growing cohort. The activation numbers we'll show are early signals, not a ceiling.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- STAGE 2 -->
-  <div class="stage-header">
-    <div class="stage-num">2</div>
-    <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 2</div>
-      <div class="stage-title-text">Member Engagement</div>
-      <div class="stage-desc-text">Engagement is deeper than before — more frequent, more meaningful, care-team led</div>
-    </div>
-    <div class="stage-divider"></div>
-  </div>
-
-  <div class="stage-card">
-    <div class="stage-narrative">More enrolled members are engaging directly with the care team, and that engagement is deeper than before. Members are interacting more frequently and spending more time with the care team once engaged. <strong>This reflects the shift to a proactive, needs-based model — engagement is intentional and care-team led, not app-based or reactive.</strong></div>
-    <div class="kpi-grid">
-      <div class="kpi green">
-        <div class="kpi-lbl">OK: Direct Care Team Engagement</div><div class="kpi-val">91%</div>
-        <div class="kpi-ctx">vs. 62% under prior model — +29 points</div>
-        <div class="kpi-why">91% of enrolled members are talking directly to a care team member. Not getting a reminder. Not an automated outreach. A human conversation — the kind where barriers surface and care plans get built.</div>
-      </div>
-      <div class="kpi blue">
-        <div class="kpi-lbl">OK: Calls per Member</div><div class="kpi-val">3.0</div>
-        <div class="kpi-ctx">+130% vs. prior model</div>
-        <div class="kpi-why">Three touchpoints per member means care plans are being built, updated, and followed. Frequency is the mechanism that turns a first conversation into a completed care action.</div>
-      </div>
-      <div class="kpi teal">
-        <div class="kpi-lbl">OK: Avg Minutes per Call</div><div class="kpi-val">31 min</div>
-        <div class="kpi-ctx">+63% vs. prior model</div>
-        <div class="kpi-why">31 minutes is a real conversation — enough time to learn that a member can't get to their PCP because they have no car, no childcare, and a medication they can't afford. That's what changes outcomes.</div>
-      </div>
-      <div class="kpi orange">
-        <div class="kpi-lbl">OK: Engagement Increase</div><div class="kpi-val">+47%</div>
-        <div class="kpi-ctx">Overall since moving to new model</div>
-        <div class="kpi-why">A 47% increase isn't a campaign result — it's a model-level change. The proactive, needs-based approach is structurally different from the prior reactive model, and members are responding to that difference.</div>
-      </div>
-    </div>
-    <div style="background:#f6f6f6;border-radius:8px;padding:16px;margin-top:16px">
-      <div style="font-size:12px;font-weight:700;color:#2e4456;margin-bottom:12px">Months of sustained engagement — all markets</div>
-      <div id="months-chart"></div>
-      <div style="font-size:11px;color:#8a9aab;margin-top:10px">51% of enrolled members have sustained more than 1 month of engagement. 165 members have sustained 5+ months — the highest-touch, highest-need cohort. Exactly the population this program was designed to serve.</div>
-    </div>
-    <div class="tp-block" id="tp-stage2">
-      <h4>Talking Points — Member Engagement</h4>
-      <ul>
-        <li>The shift from 62% to 91% direct engagement is not incremental improvement — it's a structural change in how members are served. The prior model waited for members to engage. This model goes to them, with a plan.</li>
-        <li>3 calls per member averaging 31 minutes each is more than 90 minutes of direct care conversation per enrolled member. That's enough time to know someone's barriers, build a care plan, and start navigating them toward action.</li>
-        <li>More than half of enrolled members have now sustained multi-month engagement — the program has matured from launch to sustained delivery. The members staying in active care relationships are the ones most likely to activate into care next.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- STAGE 3 -->
-  <div class="stage-header">
-    <div class="stage-num">3</div>
-    <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 3</div>
-      <div class="stage-title-text">Deep Engagement</div>
-      <div class="stage-desc-text">Sustained engagement uncovers barriers that traditional outreach misses</div>
-    </div>
-    <div class="stage-divider"></div>
-  </div>
-
-  <div class="stage-card">
-    <div class="stage-narrative">Deeper engagement is surfacing barriers to care that standard outreach does not identify. <strong>This gives the plan a clearer path to intervention — and to outcomes. You can't solve barriers you can't see. Now we can see them, at scale.</strong></div>
-    <div style="background:#f6f6f6;border-radius:8px;padding:20px;margin-bottom:16px">
-      <div style="font-size:13px;font-weight:700;color:#2e4456;margin-bottom:4px">Oklahoma — Barrier Identification</div>
-      <div style="font-size:11px;color:#8a9aab;margin-bottom:16px">New model vs. prior contract · +5.75 average point increase in barrier identification</div>
-      <div id="vv-barriers"></div>
-    </div>
-    <div class="tp-block" id="tp-stage3">
-      <h4>Talking Points — Deep Engagement</h4>
-      <ul>
-        <li>Transportation identified in 25% of Oklahoma members — up from 13%. These aren't new barriers. They existed before. The prior model just wasn't surfacing them. Now the care team knows, and can act.</li>
-        <li>Medication adherence at 38% — up from 32%. For a BH and high-utilizer population, non-adherence is the single most preventable driver of avoidable hospitalization. Identifying it is the prerequisite to resolving it.</li>
-        <li>Standard outreach identifies barriers at the point of first contact — one interaction, one data point. Pyx identifies barriers through sustained engagement over time. More depth, more truth, more opportunity to intervene.</li>
-        <li>This is a clinical intelligence layer the plan didn't have before. It's not engagement reporting — it's a population needs map that informs care coordination priorities in every market.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- STAGE 4 -->
-  <div class="stage-header">
-    <div class="stage-num">4</div>
-    <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 4</div>
-      <div class="stage-title-text">Activation</div>
-      <div class="stage-desc-text">Members are taking action to access care</div>
-    </div>
-    <div class="stage-divider"></div>
-  </div>
-
-  <div class="stage-card">
-    <div class="stage-narrative">As a result of sustained engagement and barrier resolution, members are now accessing care. <strong>Members who weren't completing recommended visits are now completing them. This reflects early behavior change — and these completed visits are the leading indicators of improved plan quality performance.</strong></div>
-    <div id="vv-activation-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px"></div>
-    <div style="background:#f0f7e8;border:1px solid #87d001;border-radius:8px;padding:16px;margin-bottom:16px">
-      <div style="font-size:12px;font-weight:700;color:#2a6200;margin-bottom:10px">What activation means for each program type</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12px;color:#2e4456;line-height:1.5">
-        <div><strong style="color:#0076bf">BH (FL, OK, IL):</strong> Completed a behavioral health visit, therapy session, or PCP follow-up — the visits that reduce crisis utilization and close BH care gaps.</div>
-        <div><strong style="color:#d6661a">Diabetic (TX):</strong> Completed a diabetes-related care visit — A1C monitoring, blood pressure, retinal exam, PCP management. Directly connected to HEDIS chronic condition measures.</div>
-        <div><strong style="color:#29a4a2">Maternal (MI, LA):</strong> Completed a prenatal or postpartum visit — closing HEDIS postpartum gap measures and reducing maternal morbidity risk.</div>
-        <div><strong style="color:#5542a7">Cessation (KY):</strong> Set a quit date or completed a cessation milestone — documented behavior change, not just engagement.</div>
-      </div>
-    </div>
-    <div style="margin-top:16px">
-      <div style="font-size:13px;font-weight:700;color:#2e4456;margin-bottom:12px">All markets at a glance</div>
-      <div class="market-grid" id="national-market-grid"></div>
-    </div>
-    <div class="tp-block" id="tp-stage4">
-      <h4>Talking Points — Activation</h4>
-      <ul>
-        <li>Texas at 88% is the program benchmark — it shows what this model delivers when the population is clearly defined and engagement has depth. Every other market is moving toward that number.</li>
-        <li>Michigan's 86% maternal visit completion significantly outperforms the national Medicaid postpartum average of ~62%. In a state where maternal health quality is a plan priority, this is a reportable outcome.</li>
-        <li>32 quit dates in Kentucky is a clinical commitment — not a goal set, not an intent captured. Each one represents a member on a path toward cessation who wasn't on that path before engagement.</li>
-        <li>Oklahoma's 128 completed appointments — across specialist, PCP, therapy, and maternal visits — represent 128 instances where a high-cost member chose a scheduled visit instead of an unplanned ED visit.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- STAGE 5 -->
-  <div class="stage-header">
-    <div class="stage-num">5</div>
-    <div class="stage-label-wrap">
-      <div class="stage-label-tag">Stage 5</div>
-      <div class="stage-title-text">Plan Value</div>
-      <div class="stage-desc-text">How member action translates to Aetna quality, utilization, and cost goals</div>
-    </div>
-    <div class="stage-divider"></div>
-  </div>
-
-  <div class="stage-card">
-    <div class="stage-narrative"><strong>The visits being completed today are the quality measures that close tomorrow.</strong> This program is 7 months old. What's visible now are leading indicators — the member actions that, at scale and over time, move quality scores, reduce utilization costs, and protect plan performance.</div>
-    <div class="three-col" style="margin-bottom:20px">
-      <div style="background:#f6f6f6;border-radius:8px;padding:18px;border-left:4px solid #d6661a">
-        <div style="font-size:10px;font-weight:700;color:#d6661a;text-transform:uppercase;margin-bottom:8px">Texas · Diabetic · HEDIS CDC</div>
-        <div style="font-size:13px;color:#2e4456;line-height:1.6"><strong>88% of enrolled diabetic members</strong> completed a care visit. HEDIS CDC measures — A1C testing, blood pressure control, retinal exams — are closed when members show up. Pyx is getting them to show up.</div>
-      </div>
-      <div style="background:#f6f6f6;border-radius:8px;padding:18px;border-left:4px solid #29a4a2">
-        <div style="font-size:10px;font-weight:700;color:#29a4a2;text-transform:uppercase;margin-bottom:8px">Michigan · Maternal · HEDIS Postpartum</div>
-        <div style="font-size:13px;color:#2e4456;line-height:1.6"><strong>86% of maternal members</strong> completed a maternal care visit — a direct HEDIS measure. Each completed visit is a reportable quality outcome for Aetna MI, in a population where that visit is too often missed.</div>
-      </div>
-      <div style="background:#f6f6f6;border-radius:8px;padding:18px;border-left:4px solid #0076bf">
-        <div style="font-size:10px;font-weight:700;color:#0076bf;text-transform:uppercase;margin-bottom:8px">FL · OK · IL · BH · HEDIS FUH/FUM</div>
-        <div style="font-size:13px;color:#2e4456;line-height:1.6"><strong>56–64% of BH members</strong> completed a care visit. Follow-up after hospitalization and sustained BH engagement are HEDIS measures. Pyx builds the engagement layer that makes those visits possible.</div>
-      </div>
-    </div>
-    <div class="roi-grid">
-      <div class="roi-tile teal"><div class="big">10%</div><div class="desc">Estimated reduction in physician visits and ED use from sustained engagement programs (evidence-based)</div></div>
-      <div class="roi-tile blue"><div class="big">$2,400</div><div class="desc">Per person per year savings from avoided physician visits and ED use — for the high-utilizer cohort Pyx is engaging</div></div>
-      <div class="roi-tile slate"><div class="big">42%</div><div class="desc">Of maternal health costs are non-medical — largely mental health related and directly addressable through care navigation</div></div>
-      <div class="roi-tile green"><div class="big">13.72x</div><div class="desc">Estimated return on programs that improve social connection and loneliness — the foundation of sustained engagement</div></div>
-    </div>
-    <div class="tp-block" id="tp-stage5">
-      <h4>Talking Points — Plan Value</h4>
-      <ul>
-        <li>Quality measure movement takes 12–24 months to show in state ratings. What we're showing today are the leading indicators — the member actions that precede measurable improvement. Texas's 88% diabetic activation is the early signal. The HEDIS movement follows.</li>
-        <li>The $2,400 per-person per-year savings figure is grounded in published research on sustained engagement programs for high-utilizer populations. Oklahoma is where this is most directly applicable: 91% direct care team engagement in a high-cost cohort, with 56% completing care. That's cost avoidance beginning to materialize.</li>
-        <li>42% of maternal health costs are non-medical — mental health related. Louisiana and Michigan are designed to address exactly this. The depth of engagement in those markets reflects the level of navigation support these members need and are receiving.</li>
-        <li>This is not a promise — it's a trajectory. The program is on a clear path to delivering measurable quality and utilization value in the back half of the contract term. Today's data is the evidence base for that path.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- WHAT'S NEXT -->
-  <div class="stage-header">
-    <div class="stage-num" style="background:#2e4456">→</div>
-    <div class="stage-label-wrap">
-      <div class="stage-label-tag" style="color:#2e4456">Opportunity Ahead</div>
-      <div class="stage-title-text">Significant value remains to be unlocked</div>
-    </div>
-    <div class="stage-divider"></div>
-  </div>
-
-  <div style="background:#2e4456;border-radius:12px;padding:28px;margin-bottom:24px" class="three-col">
-    <div>
-      <div style="color:#87d001;font-size:11px;font-weight:700;margin-bottom:8px;text-transform:uppercase">Activation Pipeline</div>
-      <div style="color:#fff;font-size:13px;line-height:1.6">44% of enrolled BH members have not yet activated. These are members in active care relationships — the engagement is happening, the barrier identification is underway. Activation follows. The pipeline is full.</div>
-    </div>
-    <div>
-      <div style="color:#87d001;font-size:11px;font-weight:700;margin-bottom:8px;text-transform:uppercase">Quality Measure Alignment</div>
-      <div style="color:#fff;font-size:13px;line-height:1.6">As early-cohort members cross 6 months of engagement, we will begin connecting activation data to quality measure trends — bringing the leading indicators in this review into direct alignment with HEDIS performance data.</div>
-    </div>
-    <div>
-      <div style="color:#87d001;font-size:11px;font-weight:700;margin-bottom:8px;text-transform:uppercase">Reach Expansion</div>
-      <div style="color:#fff;font-size:13px;line-height:1.6">Illinois has the largest eligibility pool (176K) with the most headroom. Oklahoma's food box pilot — 51 self-onboardings from 1,000 letters, zero outbound calls — is a replicable reach model for never-engaged populations across all markets.</div>
-    </div>
-  </div>
-
-  <div class="story-placeholder">
-    <div class="icon">◎</div>
-    <h4>Member Stories — Placeholders</h4>
-    <p>Add 2–3 de-identified member stories illustrating the full arc: barrier identified → engagement sustained → care action completed → outcome for the plan. One story per program type (BH, maternal, diabetic/cessation).</p>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== FLORIDA ======================== -->
+<!-- ============================================================
+     FLORIDA
+     ============================================================ -->
 <div class="page" id="page-fl">
   <div class="market-hero">
     <div>
-      <h1>Florida — Behavioral Health</h1>
-      <div class="subtitle">Aetna BH FL &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Access to care for members with BH diagnosis &amp; high utilizers</div>
+      <h1>Florida</h1>
+      <div class="subtitle">BH Medicaid Youth | Ages 13–17</div>
+      <div class="goal-tag">Family &amp; Behavioral Health Navigation</div>
     </div>
     <div class="hero-kpis">
-      <div class="hero-kpi">
-        <div class="hero-kpi-val">673</div>
-        <div class="hero-kpi-lbl">Enrolled Members</div>
-      </div>
-      <div class="hero-kpi">
-        <div class="hero-kpi-val">56%</div>
-        <div class="hero-kpi-lbl">Activation Rate</div>
-      </div>
+      <div class="hero-kpi"><div class="hero-kpi-val">1,175</div><div class="hero-kpi-lbl">Youth Enrolled</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">63%</div><div class="hero-kpi-lbl">Outreach Rate</div></div>
     </div>
   </div>
 
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">Members completing care</span><div class="section-divider"></div></div>
-
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Clinical Screening</div>
+    <div class="section-title">Loneliness &amp; Mental Distress Baselines</div>
+    <div class="section-divider"></div>
+  </div>
   <div class="activation-display">
-    <div class="two-col">
-      <div>
-        <div class="activation-number">56%</div>
-        <div class="activation-label">of enrolled members have activated into care</div>
-        <div class="activation-context">Activated members have completed a preventive, follow-up, or behavioral health visit — the core access-to-care outcome FL purchased this program to drive.</div>
-        <div class="tp-block" id="tp-fl-activation">
-          <h4>Talking Points — FL Activation</h4>
-          <ul>
-            <li>56% activation means more than 1 in 2 enrolled members took a care action. For a BH population with documented access barriers, this is a meaningful signal.</li>
-            <li>BH diagnoses correlate with higher ED utilization and missed preventive care — each of these completed visits is a claim Aetna doesn't have to pay for on the ED side.</li>
-            <li>This is a 5-month measure. The members still in active engagement are the activation pipeline — FL's number will move higher.</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <div class="story-placeholder">
-          <div class="icon">◎</div>
-          <h4>Member Story — Placeholder</h4>
-          <p>Add a de-identified Florida member story here. Suggested focus: BH member who completed a first-ever therapy appointment after barrier resolution.</p>
-        </div>
-      </div>
+    <div class="activation-number">22%</div>
+    <div class="activation-label">of enrolled Florida youth screen as lonely at baseline (UCLA-3 ≥6)</div>
+    <div class="activation-context">67% of those lonely youth also show elevated PHQ-2 distress — a direct signal of behavioral health risk that didn't exist in the clinical record before Pyx screening. For Aetna FL, this means early identification of members on a mental health trajectory before they generate BH claims.</div>
+    <div class="tp-block" id="tp-fl-screen">
+      <h4>Talking Points — FL Clinical Screening</h4>
+      <ul>
+        <li>22% loneliness at baseline means more than 250 FL youth are experiencing clinically significant isolation — a level of emotional risk invisible to Aetna before this program</li>
+        <li>67% of lonely youth also show PHQ-2 distress: these are the members most likely to initiate BH treatment in the next 6–12 months — Pyx gives Aetna a head start</li>
+        <li>Average UCLA-3 of 4.2 is the population baseline; movement toward ≥6 is the leading indicator the team tracks in ongoing engagement</li>
+        <li>PHQ-2 of 1.1 average means we are capturing distress before it crosses the clinical threshold — exactly when intervention is most effective</li>
+      </ul>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi purple"><div class="kpi-lbl">UCLA-3 Score (Avg)</div><div class="kpi-val">4.2</div><div class="kpi-ctx">Scale 3–9; ≥6 = lonely</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Screened Lonely</div><div class="kpi-val">22%</div><div class="kpi-ctx">UCLA-3 ≥6 at intake</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">PHQ-2 Score (Avg)</div><div class="kpi-val">1.1</div><div class="kpi-ctx">Scale 0–12; ≥2 = flag</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Lonely→Distress</div><div class="kpi-val">67%</div><div class="kpi-ctx">Of lonely youth, PHQ-2 elevated</div></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Youth Barriers</div>
+    <div class="section-title">Top SDoH Barriers — Florida Youth</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="billing-table">
+    <div class="barrier-row"><div class="barrier-name">Family Dynamics</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">23%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Discrimination</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:78%"></div></div></div><div class="barrier-vals">18%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Income / Financial</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:61%"></div></div></div><div class="barrier-vals">14%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:57%"></div></div></div><div class="barrier-vals">13%</div></div>
+    <div class="barrier-row" style="border-bottom:none"><div class="barrier-name">Food Insecurity</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:57%"></div></div></div><div class="barrier-vals">13%</div></div>
+    <div class="tp-block" id="tp-fl-barriers">
+      <h4>Talking Points — FL Youth Barriers</h4>
+      <ul>
+        <li>Family dynamics as the #1 barrier (23%) tells us these youth are navigating instability at home — not just access to care, but the safety and stability that makes seeking care possible</li>
+        <li>Discrimination at 18% is the highest discrimination rate in the portfolio — this is a health equity signal that belongs in Aetna FL's equity reporting and SDOH documentation</li>
+        <li>Food and income appearing together (13–14%) confirms co-occurring economic stress — youth cannot prioritize behavioral health when basic needs are unmet</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
+  <div class="section-header">
+    <div class="section-label">Program Data</div>
+    <div class="section-title">Enrollment &amp; Reach</div>
+    <div class="section-divider"></div>
+  </div>
   <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">673</div><div class="kpi-ctx">Largest enrolled market in program</div><div class="kpi-why">Every enrolled member is a BH relationship Aetna now owns — connected, screened, and navigated toward care.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Eligibility Pool</div><div class="kpi-val">54,442</div><div class="kpi-ctx">10.3% eligibility conversion rate</div><div class="kpi-why">Headroom remains — 10% conversion with a 54K pool means continued enrollment opportunity within the existing contract.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">22.5%</div><div class="kpi-ctx">Of members contacted, 22.5% enrolled</div><div class="kpi-why">For a BH population, 22.5% is strong — this is a population that historically doesn't respond to traditional outreach.</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Activation Rate</div><div class="kpi-val">56%</div><div class="kpi-ctx">More than 1 in 2 enrolled members took a care action</div><div class="kpi-why">BH diagnoses correlate with higher ED utilization and missed preventive care — each completed visit reduces the clinical and cost risk the plan is trying to address.</div></div>
+    <div class="kpi green"><div class="kpi-lbl">Youth Enrolled</div><div class="kpi-val">1,175</div><div class="kpi-ctx">BH Medicaid Youth program</div></div>
+    <div class="kpi slate"><div class="kpi-lbl">Eligible Pool</div><div class="kpi-val">72,983</div><div class="kpi-ctx">1.6% penetration — room to scale</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Support Contacts</div><div class="kpi-val">1,208</div><div class="kpi-ctx">Human engagement events</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Urgent SDoH Needs</div><div class="kpi-val">13%</div><div class="kpi-ctx">Flagged for priority navigation</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">SDoH Need Rate</div><div class="kpi-val">29%</div><div class="kpi-ctx">Avg 1.3 needs per member</div></div>
   </div>
 
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Florida</span><div class="section-divider"></div></div>
+  <div class="section-header">
+    <div class="section-label">Recommendations</div>
+    <div class="section-title">What's Next — Florida</div>
+    <div class="section-divider"></div>
+  </div>
   <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Expand outreach into the eligibility pool</div><div class="rec-body">54K eligible members at 10% conversion leaves significant headroom. Increasing outreach volume is the highest-leverage action for driving FL's enrolled count — and activation numbers — higher.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Align care completions to FUH/FUM</div><div class="rec-body">Activated BH members completing follow-up visits generate reportable HEDIS outcomes. Work with Aetna FL to establish the attribution pathway so completed visits appear in quality scores.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Surface barrier resolution rates</div><div class="rec-body">Transportation and medication access are the top identified barriers for FL BH members. Documenting resolution rates in the next review creates the full impact chain — barrier identified → navigated → resolved → care accessed.</div></div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Flag discrimination barrier for equity reporting</div>
+      <div class="rec-body">At 18%, FL has the highest discrimination barrier in the portfolio. Route this data to Aetna FL's health equity team for SDOH coding and annual equity assessment documentation — this is member-level intelligence that claims data cannot generate.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Activate FUH/FUM HEDIS pathway</div>
+      <div class="rec-body">67% of lonely FL youth also show PHQ-2 distress. These members are on a pathway to BH treatment initiation. Coordinate with Aetna FL on FUH/FUM HEDIS attribution — Pyx navigation can close the loop from first contact to follow-up appointment.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Scale into 72,983 eligible pool</div>
+      <div class="rec-body">Only 1.6% of FL's eligible youth are enrolled. Accelerate the referral pipeline through pediatric providers and school-based partners to scale early identification — the data proves the model works in FL, now it's a reach problem.</div>
+    </div>
   </div>
 
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
+  <div class="footer">Pyx Health | Aetna Youth &amp; Family Programs | Florida | 12-Month Rolling | Confidential</div>
 </div>
 
-<!-- ======================== KENTUCKY ======================== -->
-<div class="page" id="page-ky">
-  <div class="market-hero" style="background:linear-gradient(135deg,#3a2a7a,#2a1a6a)">
-    <div>
-      <h1>Kentucky — Smoking Cessation</h1>
-      <div class="subtitle">Aetna BH KY &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Support members with tobacco dependency toward cessation</div>
-    </div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">598</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">43%</div><div class="hero-kpi-lbl">Activation Rate</div></div>
-    </div>
-  </div>
-
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">Members taking steps toward cessation</span><div class="section-divider"></div></div>
-
-  <div class="activation-display">
-    <div class="two-col">
-      <div>
-        <div class="activation-number">43%</div>
-        <div class="activation-label">of enrolled members have activated — including <strong>32 quit dates set</strong></div>
-        <div class="activation-context">43% activation in a cessation program with documented quit dates is a measurable clinical outcome. Each quit date represents a member who has committed to a behavior change — the kind of action that reduces tobacco-related HEDIS gaps and long-term cost exposure.</div>
-        <div class="tp-block" id="tp-ky-activation">
-          <h4>Talking Points — KY Activation</h4>
-          <ul>
-            <li>32 quit dates isn't just an engagement metric — it's a clinical signal. A member who sets and keeps a quit date has meaningfully lower probability of tobacco-related hospitalization in the next 12 months.</li>
-            <li>Cessation success connects to FUH/FUM quality measures, cardiovascular HEDIS gaps, and respiratory cost drivers — all priorities for Medicaid plans.</li>
-            <li>43% activation with 57% still in the pipeline means this number will keep climbing through the contract term.</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <div class="story-placeholder">
-          <div class="icon">◎</div>
-          <h4>Member Story — Placeholder</h4>
-          <p>Add a de-identified Kentucky member story. Suggested focus: member who set and kept a quit date after Pyx identified medication adherence or transportation barriers to cessation support.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
-  <div class="kpi-grid">
-    <div class="kpi purple"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">598</div><div class="kpi-ctx">Strong reach into tobacco-using Medicaid population</div><div class="kpi-why">Tobacco use is the leading preventable driver of COPD and cardiovascular risk — these enrollments are Aetna's first line of cost prevention for this cohort.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Eligibility Pool</div><div class="kpi-val">107,116</div><div class="kpi-ctx">16.0% conversion from eligibility list</div><div class="kpi-why">Kentucky has the largest eligibility pool in the program. As enrollment ramp continues, significant headroom remains.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">29.8%</div><div class="kpi-ctx">Of members contacted, nearly 1 in 3 enrolled</div><div class="kpi-why">Nearly 30% conversion on a smoking cessation program is strong — members are motivated when reached through the right channel at the right time.</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Activation Rate</div><div class="kpi-val">43%</div><div class="kpi-ctx">Including 32 documented quit dates</div><div class="kpi-why">43% activation with 32 documented quit dates is a clinical behavior-change outcome — not an engagement metric. Each quit date represents a member committed to cessation, with measurable HEDIS and cost implications.</div></div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Kentucky</span><div class="section-divider"></div></div>
-  <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Follow the 32 quit dates</div><div class="rec-body">Members who set a quit date need a 30- and 90-day follow-up to convert behavioral commitment into sustained cessation. Building a tracking protocol now prevents the measurement gap that undermines cessation outcomes data.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Connect to HEDIS MSC measure</div><div class="rec-body">Cessation coaching touchpoints are reportable under the Medical Assistance with Smoking and Tobacco Use Cessation (MSC) measure. Align documentation practices to capture these interactions as reportable HEDIS events for Aetna KY.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Scale outreach into 107K pool</div><div class="rec-body">KY has the largest eligibility pool in the program — 598 enrolled against 107K eligible. With a 29.8% outreach response rate, increasing outreach volume is the clearest path to enrollment growth and more cessation outcomes.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== OKLAHOMA ======================== -->
+<!-- ============================================================
+     OKLAHOMA
+     ============================================================ -->
 <div class="page" id="page-ok">
-  <div class="market-hero" style="background:linear-gradient(135deg,#005f8e,#003f6e)">
+  <div class="market-hero">
     <div>
-      <h1>Oklahoma — BH &amp; High Utilizers</h1>
-      <div class="subtitle">Aetna BH OK &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Improve access to care for members with BH diagnosis &amp; high utilizers</div>
+      <h1>Oklahoma</h1>
+      <div class="subtitle">Medicaid Youth | Ages 13–17</div>
+      <div class="goal-tag">Highest Outreach Conversion — 82%</div>
     </div>
     <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">637</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">50%</div><div class="hero-kpi-lbl">Eligibility Conversion</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">1,249</div><div class="hero-kpi-lbl">Youth Enrolled</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">82%</div><div class="hero-kpi-lbl">Outreach Rate</div></div>
     </div>
   </div>
 
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">Members completing care — closing the access gap</span><div class="section-divider"></div></div>
-
-  <div class="two-col">
-    <div class="activation-display">
-      <div class="activation-number">56%</div>
-      <div class="activation-label">of high cost/high utilizer members completed a preventive, BH, or follow-up visit</div>
-      <div class="activation-context">Among the most expensive, most complex members in the OK Medicaid population — more than 1 in 2 have now completed a priority care visit through Pyx navigation.</div>
-      <div class="tp-block" id="tp-ok-activation">
-        <h4>Talking Points — OK Activation</h4>
-        <ul>
-          <li>High utilizers completing preventive and follow-up visits are the members most likely to shift from reactive (ED) to proactive (PCP) care patterns. That shift is where Aetna's cost structure improves.</li>
-          <li>56% in 5 months, with 44% still in the engagement pipeline. OK's activation rate will continue to climb.</li>
-          <li>The visit types (specialist, PCP, therapy) reflect a care navigation story — Pyx isn't just enrolling members, it's routing them to the right setting.</li>
-        </ul>
-      </div>
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Clinical Screening</div>
+    <div class="section-title">Loneliness &amp; Mental Distress Baselines</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="activation-display">
+    <div class="activation-number">76%</div>
+    <div class="activation-label">of lonely Oklahoma youth also show PHQ-2 mental distress — highest crossover rate in the portfolio</div>
+    <div class="activation-context">29% of enrolled OK youth screen as lonely (UCLA-3 ≥6), and of those, 76% also show elevated PHQ-2. Oklahoma youth showing loneliness are almost certainly experiencing concurrent mental health stress — this is the population to intercept before BH claims emerge.</div>
+    <div class="tp-block" id="tp-ok-screen">
+      <h4>Talking Points — OK Clinical Screening</h4>
+      <ul>
+        <li>Oklahoma's 76% lonely-to-distress crossover is a population-level signal — these aren't isolated cases, this is a systemic pattern among OK Medicaid youth</li>
+        <li>29% loneliness prevalence is second-highest in the portfolio — nearly 1 in 3 OK youth are experiencing clinically significant isolation</li>
+        <li>UCLA-3 average of 4.5 is the second-highest after TX STAR Kids — OK youth start with higher baseline loneliness than most markets</li>
+        <li>PHQ-2 of 1.1 on average means much of the distress is just below the clinical threshold — the intervention window is now, not after symptoms worsen</li>
+      </ul>
     </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi purple"><div class="kpi-lbl">UCLA-3 Score (Avg)</div><div class="kpi-val">4.5</div><div class="kpi-ctx">Scale 3–9; ≥6 = lonely</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Screened Lonely</div><div class="kpi-val">29%</div><div class="kpi-ctx">UCLA-3 ≥6 at intake</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">PHQ-2 Score (Avg)</div><div class="kpi-val">1.1</div><div class="kpi-ctx">Scale 0–12; ≥2 = flag</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Lonely→Distress</div><div class="kpi-val">76%</div><div class="kpi-ctx">Highest crossover in portfolio</div></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Youth Barriers</div>
+    <div class="section-title">Top SDoH Barriers — Oklahoma Youth</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="billing-table">
+    <div class="barrier-row"><div class="barrier-name">Mental Health</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">22%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Family Dynamics</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:95%"></div></div></div><div class="barrier-vals">21%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Income / Financial</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:59%"></div></div></div><div class="barrier-vals">13%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:59%"></div></div></div><div class="barrier-vals">13%</div></div>
+    <div class="barrier-row" style="border-bottom:none"><div class="barrier-name">Food Insecurity</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:50%"></div></div></div><div class="barrier-vals">11%</div></div>
+    <div class="tp-block" id="tp-ok-barriers">
+      <h4>Talking Points — OK Youth Barriers</h4>
+      <ul>
+        <li>Mental health as the #1 barrier (22%) — combined with the highest lonely-distress crossover (76%) — tells the same story twice: OK youth are experiencing behavioral health burden the care system is not reaching</li>
+        <li>Family dynamics at 21% (nearly tied with mental health) suggests the behavioral health burden is being amplified by instability at home</li>
+        <li>These top two barriers together represent a profile requiring both clinical navigation and family-level support — not a simple care gap closure</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Program Data</div>
+    <div class="section-title">Enrollment &amp; Reach</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi green"><div class="kpi-lbl">Youth Enrolled</div><div class="kpi-val">1,249</div><div class="kpi-ctx">Largest single-program enrollment</div></div>
+    <div class="kpi slate"><div class="kpi-lbl">Eligible Pool</div><div class="kpi-val">101,569</div><div class="kpi-ctx">1.2% penetration</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Support Contacts</div><div class="kpi-val">1,177</div><div class="kpi-ctx">Human engagement events</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Urgent SDoH Needs</div><div class="kpi-val">6%</div><div class="kpi-ctx">Flagged for priority navigation</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">SDoH Need Rate</div><div class="kpi-val">26%</div><div class="kpi-ctx">Avg 1.1 needs per member</div></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Recommendations</div>
+    <div class="section-title">What's Next — Oklahoma</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Track BH initiation for lonely-distress youth</div>
+      <div class="rec-body">76% of lonely OK youth show concurrent PHQ-2 distress — the highest crossover in the portfolio. Pull 6-month BH treatment initiation rates for this subpopulation to establish the HEDIS BH Access pipeline and document Pyx's role in the referral pathway.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Document mental health navigation for HEDIS alignment</div>
+      <div class="rec-body">Mental health is the #1 barrier in OK (22%). Pyx is surfacing what provider referrals miss — document how barrier identification leads to BH initiation for alignment with HEDIS mental health access and follow-up measures.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Replicate OK outreach model and expand into 101,569 pool</div>
+      <div class="rec-body">82% outreach conversion is the strongest in the portfolio. Document what drives OK's conversion rate and apply learnings to underperforming markets. Then use the refined model to expand enrollment into the 101,569 eligible member pool.</div>
+    </div>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Youth &amp; Family Programs | Oklahoma | 12-Month Rolling | Confidential</div>
+</div>
+
+<!-- ============================================================
+     KENTUCKY
+     ============================================================ -->
+<div class="page" id="page-ky">
+  <div class="market-hero">
     <div>
-      <div class="chart-wrap">
-        <div class="chart-title">Completed Appointments by Type</div>
-        <div class="appt-grid" style="margin-top:12px">
-          <div class="appt-item"><div class="appt-num">59</div><div class="appt-lbl">Specialist / Other</div></div>
-          <div class="appt-item"><div class="appt-num">33</div><div class="appt-lbl">PCP / Annual Exam</div></div>
-          <div class="appt-item"><div class="appt-num">23</div><div class="appt-lbl">Therapy / Counseling</div></div>
-          <div class="appt-item"><div class="appt-num">7</div><div class="appt-lbl">Maternal Health</div></div>
-          <div class="appt-item"><div class="appt-num">6</div><div class="appt-lbl">Dentist</div></div>
-        </div>
-      </div>
+      <h1>Kentucky</h1>
+      <div class="subtitle">Youth 13–17 · SKY Youth | BH Medicaid Youth Programs</div>
+      <div class="goal-tag">Largest Eligible Pool — 141,952 Members</div>
+    </div>
+    <div class="hero-kpis">
+      <div class="hero-kpi"><div class="hero-kpi-val">1,057</div><div class="hero-kpi-lbl">Youth Enrolled</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">68%</div><div class="hero-kpi-lbl">Outreach Rate</div></div>
     </div>
   </div>
 
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Clinical Screening</div>
+    <div class="section-title">Loneliness &amp; Mental Distress Baselines</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="activation-display">
+    <div class="activation-number">20%</div>
+    <div class="activation-label">of enrolled Kentucky youth screen as lonely at baseline — lowest loneliness rate in the portfolio</div>
+    <div class="activation-context">Kentucky shows the lowest loneliness prevalence across markets, but 47% of lonely KY youth still show PHQ-2 distress — nearly half the lonely population carrying concurrent mental health burden. With the largest eligible pool of any market (141,952), KY holds the greatest long-term enrollment opportunity in the portfolio.</div>
+    <div class="tp-block" id="tp-ky-screen">
+      <h4>Talking Points — KY Clinical Screening</h4>
+      <ul>
+        <li>KY's lower loneliness rate (20%) may reflect the program type mix or community dynamics specific to Kentucky Medicaid — worth tracking over time to understand if the model is reaching lower-acuity youth or the population genuinely presents differently</li>
+        <li>47% lonely-to-distress crossover still means nearly half of lonely KY youth are experiencing clinical mental health stress — 47% is not a low number</li>
+        <li>SKY Youth (39 enrolled) shows slightly higher SDoH need (33%) and avg needs (1.4) than core Youth program — a more complex population within the same market</li>
+        <li>PHQ-2 of 0.8 is the lowest in the portfolio alongside PA — KY youth present with lower baseline distress, but the loneliness is still present as an early risk signal</li>
+      </ul>
+    </div>
+  </div>
   <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">637</div><div class="kpi-ctx">559 enrolled through April; 78 added in May</div><div class="kpi-why">OK's enrollment reflects precision targeting — 66% of enrolled members carry a target diagnosis, the highest diagnostic concentration in the program.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Eligibility Conversion</div><div class="kpi-val">50%</div><div class="kpi-ctx">Of 76,336 eligible members — 50% converted</div><div class="kpi-why">Program-best conversion rate. This means Pyx is reaching and enrolling half of all eligible members the plan identified — that's population penetration, not sample outreach.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">75%</div><div class="kpi-ctx">Of members contacted, 3 in 4 enrolled</div><div class="kpi-why">75% is the strongest member response rate in the program — a reflection of both the precision of the member selection and the effectiveness of the outreach model.</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Activation Rate</div><div class="kpi-val">56%</div><div class="kpi-ctx">High-utilizer members completing priority care visits</div><div class="kpi-why">More than 1 in 2 of the highest-cost, most complex members in the OK Medicaid population have completed a preventive, BH, or follow-up visit through Pyx navigation.</div></div>
+    <div class="kpi purple"><div class="kpi-lbl">UCLA-3 Score (Avg)</div><div class="kpi-val">4.1</div><div class="kpi-ctx">Scale 3–9; ≥6 = lonely</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Screened Lonely</div><div class="kpi-val">20%</div><div class="kpi-ctx">UCLA-3 ≥6 at intake</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">PHQ-2 Score (Avg)</div><div class="kpi-val">0.8</div><div class="kpi-ctx">Scale 0–12; ≥2 = flag</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Lonely→Distress</div><div class="kpi-val">47%</div><div class="kpi-ctx">Of lonely youth, PHQ-2 elevated</div></div>
   </div>
 
-  <div class="section-header"><span class="section-label">Engagement Depth</span><span class="section-title">How Oklahoma members are connecting with care teams</span><div class="section-divider"></div></div>
+  <div class="data-note"><strong>SKY Youth Program:</strong> 39 enrolled · 69% outreach · UCLA-3 4.2 · 20% lonely · PHQ-2 0.4 · 33% SDoH need · avg 1.4 needs per member — slightly higher acuity than core Youth program.</div>
 
-  <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Direct Care Team Engagement</div><div class="kpi-val">91%</div><div class="kpi-ctx">vs. 62% under prior model (+29 pts)</div><div class="kpi-why">91% of enrolled members are talking directly to a care team member — not just getting texts or reminders. That's the relationship that enables barrier identification and care navigation.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Calls per Member</div><div class="kpi-val">3.0</div><div class="kpi-ctx">+130% vs. prior model</div><div class="kpi-why">Three touchpoints per member means care plans are being built, updated, and followed. Frequency is the mechanism behind sustained engagement.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Avg Minutes per Call</div><div class="kpi-val">31</div><div class="kpi-ctx">+63% vs. prior model</div><div class="kpi-why">31 minutes is a real conversation — not a check-in. This is enough time to identify barriers, discuss care options, and navigate to action.</div></div>
-    <div class="kpi purple"><div class="kpi-lbl">App Support Activities</div><div class="kpi-val">17</div><div class="kpi-ctx">Avg per member (+21%)</div><div class="kpi-why">App engagement between calls reinforces the care relationship and gives care teams visibility into member activity between interactions.</div></div>
+  <div class="section-header">
+    <div class="section-label">Youth Barriers</div>
+    <div class="section-title">Top SDoH Barriers — Kentucky Youth</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="billing-table">
+    <div class="barrier-row"><div class="barrier-name">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">20%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Income / Financial</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:95%"></div></div></div><div class="barrier-vals">19%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Food Insecurity</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:75%"></div></div></div><div class="barrier-vals">15%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Housing Instability</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:50%"></div></div></div><div class="barrier-vals">10%</div></div>
+    <div class="barrier-row" style="border-bottom:none"><div class="barrier-name">Transportation</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:50%"></div></div></div><div class="barrier-vals">10%</div></div>
+    <div class="tp-block" id="tp-ky-barriers">
+      <h4>Talking Points — KY Youth Barriers</h4>
+      <ul>
+        <li>Safety as the #1 barrier combined with income, food, and housing instability paints a picture of youth navigating compounding economic and environmental instability simultaneously</li>
+        <li>Housing instability at 10% is significant for youth — this isn't adult housing insecurity, it's youth living in unstable situations that affect school attendance, mental health, and care access together</li>
+        <li>Safety + housing + transportation as a cluster suggests rural access challenges layered on top of social instability — route to Aetna KY's SDOH and network adequacy teams</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="tp-block" id="tp-ok-engagement">
-    <h4>Talking Points — OK Engagement Depth</h4>
+  <div class="section-header">
+    <div class="section-label">Program Data</div>
+    <div class="section-title">Enrollment &amp; Reach</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi green"><div class="kpi-lbl">Youth Enrolled</div><div class="kpi-val">1,057</div><div class="kpi-ctx">1,018 Youth · 39 SKY</div></div>
+    <div class="kpi slate"><div class="kpi-lbl">Eligible Pool</div><div class="kpi-val">141,952</div><div class="kpi-ctx">Largest in portfolio — &lt;1% penetration</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Support Contacts</div><div class="kpi-val">1,020</div><div class="kpi-ctx">Human engagement events</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Urgent SDoH Needs</div><div class="kpi-val">6%</div><div class="kpi-ctx">Flagged for priority navigation</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">SDoH Need Rate</div><div class="kpi-val">30%</div><div class="kpi-ctx">Avg 1.0 needs per member</div></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Recommendations</div>
+    <div class="section-title">What's Next — Kentucky</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Route safety + housing findings to Aetna SDOH team</div>
+      <div class="rec-body">Safety, income, and housing instability as the top three barriers signal youth in genuinely unstable living situations. Route member-level findings to Aetna KY's SDOH coordination team — these members need resource navigation beyond what provider referrals can address.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Accelerate enrollment into 141,952 eligible pool</div>
+      <div class="rec-body">KY has the largest eligible youth pool in the portfolio and the lowest penetration rate (&lt;1%). The data proves the model works in KY — now it's a scale problem. Activate provider referral and school-based channels to close the gap.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Expand SKY program capacity and flag as high-acuity cohort</div>
+      <div class="rec-body">SKY Youth (33% SDoH need, avg 1.4 needs) shows higher acuity than the core Youth program. Ensure SKY members receive full Pyx navigation services and flag SKY as the high-complexity cohort in KY market reporting to Aetna.</div>
+    </div>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Youth &amp; Family Programs | Kentucky | 12-Month Rolling | Confidential</div>
+</div>
+
+<!-- ============================================================
+     TEXAS
+     ============================================================ -->
+<div class="page" id="page-tx">
+  <div class="market-hero">
+    <div>
+      <h1>Texas</h1>
+      <div class="subtitle">STAR CHIP Youth · STAR Kids Youth | Ages 13–17</div>
+      <div class="goal-tag">Highest Clinical Acuity — STAR Kids UCLA-3 5.4</div>
+    </div>
+    <div class="hero-kpis">
+      <div class="hero-kpi"><div class="hero-kpi-val">1,081</div><div class="hero-kpi-lbl">Youth Enrolled</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">85–87%</div><div class="hero-kpi-lbl">Outreach Rate</div></div>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Clinical Screening</div>
+    <div class="section-title">Two Programs, Distinct Acuity Profiles</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="two-col" style="margin-bottom:20px">
+    <div class="activation-display" style="margin-bottom:0">
+      <div class="activation-number" style="font-size:40px;color:#d6661a">28%</div>
+      <div class="activation-label" style="font-size:12px">STAR CHIP Youth — Lonely at Baseline</div>
+      <div class="activation-context">UCLA-3 avg 4.6 · PHQ-2 avg 1.5 · 78% lonely→distress · 31% SDoH need · 13% urgent</div>
+    </div>
+    <div class="activation-display" style="margin-bottom:0;border-top:3px solid #5542a7">
+      <div class="activation-number" style="font-size:40px;color:#5542a7">44%</div>
+      <div class="activation-label" style="font-size:12px">STAR Kids Youth — Lonely at Baseline</div>
+      <div class="activation-context">UCLA-3 avg 5.4 · PHQ-2 avg 2.1 · 78% lonely→distress · 30% SDoH need · 4% urgent</div>
+    </div>
+  </div>
+  <div class="spotlight">
+    <div class="tag">HIGHEST ACUITY IN PORTFOLIO</div>
+    <h3>STAR Kids: 44% lonely · UCLA-3 5.4 · PHQ-2 2.1 — above clinical thresholds at first contact</h3>
+    <p>Texas STAR Kids youth are the highest-acuity population in the Aetna youth portfolio. Nearly half screen as lonely, the average UCLA-3 (5.4) approaches the clinical lonely threshold (≥6), and the average PHQ-2 (2.1) crosses the distress flag threshold. 78% of lonely STAR Kids youth also show PHQ-2 distress. <strong>These members need coordinated behavioral health navigation — not standard engagement protocols.</strong></p>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi purple"><div class="kpi-lbl">STAR Kids UCLA-3</div><div class="kpi-val">5.4</div><div class="kpi-ctx">Highest in portfolio; ≥6 = lonely</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">STAR Kids % Lonely</div><div class="kpi-val">44%</div><div class="kpi-ctx">Highest loneliness rate</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">STAR Kids PHQ-2</div><div class="kpi-val">2.1</div><div class="kpi-ctx">Above distress flag (≥2)</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Lonely→Distress</div><div class="kpi-val">78%</div><div class="kpi-ctx">Both programs — highest in portfolio</div></div>
+  </div>
+  <div class="tp-block" id="tp-tx-screen">
+    <h4>Talking Points — TX Clinical Screening</h4>
     <ul>
-      <li>The +47% increase in overall engagement since moving to the new model is the headline. But the detail is in the calls: 3 calls per member averaging 31 minutes each. That's more than 90 minutes of direct care conversation per enrolled member.</li>
-      <li>The shift from 62% to 91% direct engagement is a model-level change, not a campaign result. The proactive, needs-based approach is structurally different from the prior reactive model.</li>
-      <li>For a high-cost/high-utilizer population, this depth of engagement is what turns avoidable ED visits into completed preventive care appointments.</li>
+      <li>TX STAR Kids is the highest-acuity youth population in the Aetna portfolio — a UCLA-3 of 5.4 means these youth are approaching the clinical lonely threshold at their very first Pyx contact</li>
+      <li>PHQ-2 of 2.1 for STAR Kids crosses the clinical distress flag threshold — these are not at-risk members, these are members in active distress who need coordinated BH navigation now</li>
+      <li>78% lonely-to-distress crossover shared across both TX programs is the highest in the portfolio — TX youth experiencing loneliness are almost certainly also experiencing mental health distress</li>
+      <li>87% outreach conversion for STAR Kids proves the model works even with the most complex members — high acuity doesn't mean unreachable</li>
     </ul>
   </div>
 
-  <div class="section-header"><span class="section-label">Barrier Identification</span><span class="section-title">What sustained engagement reveals that traditional outreach misses</span><div class="section-divider"></div></div>
+  <div class="section-header">
+    <div class="section-label">Youth Barriers</div>
+    <div class="section-title">Top SDoH Barriers — Texas Youth</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="two-col" style="margin-bottom:24px">
+    <div class="billing-table" style="margin-bottom:0">
+      <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:13px;color:#2e4456;margin-bottom:12px">STAR CHIP Youth</div>
+      <div class="barrier-row"><div class="barrier-name" style="font-size:12px;min-width:120px">Social Media</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#d6661a;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">27%</div></div>
+      <div class="barrier-row"><div class="barrier-name" style="font-size:12px;min-width:120px">Mental Health</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#d6661a;height:8px;border-radius:4px;width:74%"></div></div></div><div class="barrier-vals">20%</div></div>
+      <div class="barrier-row"><div class="barrier-name" style="font-size:12px;min-width:120px">Food Insecurity</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#d6661a;height:8px;border-radius:4px;width:56%"></div></div></div><div class="barrier-vals">15%</div></div>
+      <div class="barrier-row" style="border-bottom:none"><div class="barrier-name" style="font-size:12px;min-width:120px">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#d6661a;height:8px;border-radius:4px;width:48%"></div></div></div><div class="barrier-vals">13%</div></div>
+    </div>
+    <div class="billing-table" style="margin-bottom:0">
+      <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:13px;color:#2e4456;margin-bottom:12px">STAR Kids Youth</div>
+      <div class="barrier-row"><div class="barrier-name" style="font-size:12px;min-width:120px">Social Media</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#5542a7;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">22%</div></div>
+      <div class="barrier-row"><div class="barrier-name" style="font-size:12px;min-width:120px">Family Dynamics</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#5542a7;height:8px;border-radius:4px;width:77%"></div></div></div><div class="barrier-vals">17%</div></div>
+      <div class="barrier-row"><div class="barrier-name" style="font-size:12px;min-width:120px">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#5542a7;height:8px;border-radius:4px;width:59%"></div></div></div><div class="barrier-vals">13%</div></div>
+      <div class="barrier-row" style="border-bottom:none"><div class="barrier-name" style="font-size:12px;min-width:120px">Discrimination</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#5542a7;height:8px;border-radius:4px;width:59%"></div></div></div><div class="barrier-vals">13%</div></div>
+    </div>
+  </div>
+  <div class="tp-block" id="tp-tx-barriers">
+    <h4>Talking Points — TX Youth Barriers</h4>
+    <ul>
+      <li>Social media is the #1 barrier in both TX programs — 27% in STAR CHIP, 22% in STAR Kids. This is the only market where social media dominates across multiple programs simultaneously, suggesting a Texas-specific digital isolation pattern</li>
+      <li>Social media as a behavioral SDOH is distinct: it's not that youth lack internet access — they have it, but it's contributing to isolation rather than connection. This requires different navigation than traditional SDOH resources</li>
+      <li>For STAR Kids, family dynamics (17%) combined with discrimination (13%) and the highest loneliness scores in the portfolio creates the most complex barrier profile in the Aetna youth portfolio</li>
+    </ul>
+  </div>
 
-  <div class="chart-wrap">
-    <div class="chart-title">Social &amp; Behavioral Barriers Identified — Old Model vs. New Model</div>
-    <div style="margin-top:4px;font-size:11px;color:#aab5c0;margin-bottom:16px">+5.75 average point increase in barrier identification vs. prior contract model</div>
-    <div id="ok-barriers"></div>
-    <div class="tp-block" id="tp-ok-barriers">
-      <h4>Talking Points — Barrier Identification</h4>
+  <div class="section-header">
+    <div class="section-label">Program Data</div>
+    <div class="section-title">Enrollment &amp; Reach</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="two-col" style="margin-bottom:24px">
+    <div>
+      <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:13px;color:#2e4456;margin-bottom:12px">STAR CHIP Youth</div>
+      <div class="kpi-grid" style="grid-template-columns:1fr 1fr;margin-bottom:0">
+        <div class="kpi orange"><div class="kpi-lbl">Enrolled</div><div class="kpi-val">873</div></div>
+        <div class="kpi slate"><div class="kpi-lbl">Eligible</div><div class="kpi-val">50,964</div></div>
+        <div class="kpi teal"><div class="kpi-lbl">Support Contacts</div><div class="kpi-val">604</div></div>
+        <div class="kpi blue"><div class="kpi-lbl">Outreach</div><div class="kpi-val">85%</div></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:13px;color:#2e4456;margin-bottom:12px">STAR Kids Youth</div>
+      <div class="kpi-grid" style="grid-template-columns:1fr 1fr;margin-bottom:0">
+        <div class="kpi purple"><div class="kpi-lbl">Enrolled</div><div class="kpi-val">208</div></div>
+        <div class="kpi slate"><div class="kpi-lbl">SDoH Need</div><div class="kpi-val">30%</div></div>
+        <div class="kpi teal"><div class="kpi-lbl">Support Contacts</div><div class="kpi-val">149</div></div>
+        <div class="kpi blue"><div class="kpi-lbl">Outreach</div><div class="kpi-val">87%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Recommendations</div>
+    <div class="section-title">What's Next — Texas</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Designate STAR Kids as priority BH cohort</div>
+      <div class="rec-body">STAR Kids has the highest acuity in the portfolio (UCLA-3 5.4, 44% lonely, PHQ-2 2.1 — above clinical threshold). Ensure these 208 members are receiving full care coordination and BH navigation, not standard engagement protocols. Flag this cohort explicitly in Aetna TX reporting.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Document social media as behavioral SDOH in plan reporting</div>
+      <div class="rec-body">Social media is #1 in both TX programs. Document how Pyx identifies and navigates this barrier in plan-facing reports — this is a category of behavioral SDOH that claims data cannot surface and positions Pyx as a clinical partner, not a vendor.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Use TX STAR Kids as proof of concept for complex youth populations</div>
+      <div class="rec-body">87% outreach conversion with the portfolio's highest-acuity population proves the model works in complexity. Use TX STAR Kids as the proof case for Aetna national conversations about extending youth BH programs to complex Medicaid populations.</div>
+    </div>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Youth &amp; Family Programs | Texas | 12-Month Rolling | Confidential</div>
+</div>
+
+<!-- ============================================================
+     PENNSYLVANIA
+     ============================================================ -->
+<div class="page" id="page-pa">
+  <div class="market-hero">
+    <div>
+      <h1>Pennsylvania</h1>
+      <div class="subtitle">CHIP Youth 13–17 | Companion Call Model</div>
+      <div class="goal-tag">91% Companion Call Engagement — Highest Penetration in Portfolio</div>
+    </div>
+    <div class="hero-kpis">
+      <div class="hero-kpi"><div class="hero-kpi-val">1,060</div><div class="hero-kpi-lbl">Youth Enrolled</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">76%</div><div class="hero-kpi-lbl">Outreach Rate</div></div>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Clinical Screening</div>
+    <div class="section-title">Loneliness &amp; Mental Distress Baselines</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="activation-display">
+    <div class="activation-number">14.8%</div>
+    <div class="activation-label">enrollment penetration — highest in the portfolio, reaching nearly 1 in 7 eligible PA CHIP youth</div>
+    <div class="activation-context">Pennsylvania's CHIP pool is 7,184 members — significantly smaller than other markets — and Pyx has enrolled 1,060 of them (14.8%). This is the strongest proof of model saturation in the portfolio. 24% of enrolled PA youth show loneliness, 65% of those also show PHQ-2 distress, and 91% engage through companion calls rather than the app.</div>
+    <div class="tp-block" id="tp-pa-screen">
+      <h4>Talking Points — PA Clinical Screening</h4>
       <ul>
-        <li>Transportation jumped 12 points — from 13% to 25%. That's barriers to keeping appointments, which directly connects to ED re-admission risk and missed HEDIS measures.</li>
-        <li>Medication adherence moved from 32% to 38% — the plan already knew adherence was a problem. Pyx is making it visible and actionable at the individual member level.</li>
-        <li>Barriers identified are barriers that can be resolved. The value here isn't just the data — it's what happens next when a care team knows a member can't get to their PCP because they have no transportation.</li>
+        <li>14.8% penetration of the eligible PA pool is the highest in the portfolio — 1 in 7 CHIP youth are enrolled in Pyx. This level of saturation is happening entirely through companion calls, not digital outreach</li>
+        <li>24% loneliness (UCLA-3 ≥6) with 65% crossover to PHQ-2 distress — PA youth showing loneliness are almost certainly also experiencing mental health stress</li>
+        <li>PHQ-2 of 0.8 and UCLA-3 of 4.2 represent the lowest acuity in the portfolio alongside KY — PA's CHIP population carries lower baseline clinical risk, but still meaningful behavioral health exposure</li>
+        <li>91% companion call model means PA data represents the broadest possible youth population — including members who would never engage through digital health tools</li>
+      </ul>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi purple"><div class="kpi-lbl">UCLA-3 Score (Avg)</div><div class="kpi-val">4.2</div><div class="kpi-ctx">Scale 3–9; ≥6 = lonely</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Screened Lonely</div><div class="kpi-val">24%</div><div class="kpi-ctx">UCLA-3 ≥6 at intake</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">PHQ-2 Score (Avg)</div><div class="kpi-val">0.8</div><div class="kpi-ctx">Scale 0–12; ≥2 = flag</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Lonely→Distress</div><div class="kpi-val">65%</div><div class="kpi-ctx">Of lonely youth, PHQ-2 elevated</div></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Youth Barriers</div>
+    <div class="section-title">Top SDoH Barriers — Pennsylvania Youth</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="billing-table">
+    <div class="barrier-row"><div class="barrier-name">Social Media</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">18%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Food Insecurity</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:83%"></div></div></div><div class="barrier-vals">15%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Transportation</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:72%"></div></div></div><div class="barrier-vals">13%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Mental Health</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:61%"></div></div></div><div class="barrier-vals">11%</div></div>
+    <div class="barrier-row" style="border-bottom:none"><div class="barrier-name">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:56%"></div></div></div><div class="barrier-vals">10%</div></div>
+    <div class="tp-block" id="tp-pa-barriers">
+      <h4>Talking Points — PA Youth Barriers</h4>
+      <ul>
+        <li>Social media as the #1 PA barrier (18%) — a pattern shared with TX — signals that digital isolation is a cross-market youth phenomenon, not a regional anomaly. Worth surfacing to Aetna as a portfolio-level theme</li>
+        <li>Transportation at 13% in PA may reflect CHIP population demographics — members facing physical access barriers alongside digital access barriers; this combination isolates youth from care on multiple dimensions</li>
+        <li>PA's lower overall barrier intensity aligns with lower clinical acuity — but social media + transportation together still present an access equity challenge requiring active navigation</li>
       </ul>
     </div>
   </div>
 
-  <div class="section-header"><span class="section-label">Population Spotlight</span><span class="section-title">Food box pilot — extending reach without adding outreach burden</span><div class="section-divider"></div></div>
-
-  <div class="spotlight">
-    <div class="tag">SPOTLIGHT — INNOVATION PILOT</div>
-    <h3>Member Onboarding Pilot: Food Box Incentive</h3>
-    <p>Testing a low-touch path to self-onboarding for never-engaged members.</p>
-    <div class="big-stat">51</div>
-    <div class="big-label">members self-onboarded from 1,000-member mailing — with one letter, one email, and zero outbound calls</div>
-    <p style="margin-top:16px">Members who signed up in-window received one food box delivered to their door. Pilot is being re-run next month with a new batch of never-engaged members. Downstream engagement data will follow.</p>
-    <div class="tp-block visible" id="tp-ok-pilot" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3)">
-      <h4 style="color:#fff">Talking Points — OK Pilot</h4>
-      <ul style="color:rgba(255,255,255,.9)">
-        <li>5.1% self-onboard rate from a single mail/email touch with no outbound calling. Industry benchmark for mail response rates in Medicaid is typically 1–3%.</li>
-        <li>This is an expansion pathway — a way to grow enrolled population in markets without increasing call center cost. If the model holds, it extends reach affordably.</li>
-        <li>Downstream data from these self-onboarded members (engagement depth, barrier ID, activation) will be the real test — and we'll bring it back.</li>
-      </ul>
-    </div>
+  <div class="spotlight" style="margin-bottom:24px">
+    <div class="tag">PA ENGAGEMENT MODEL</div>
+    <h3>91% companion call · 9% app — a replicable alternative engagement standard</h3>
+    <p>Pennsylvania's CHIP Youth program operates at 91% companion call engagement — nearly every youth connects through human conversation, not a digital platform. Combined with 14.8% eligible pool penetration, this is both a proof point and a differentiator: Pyx reaches members that app-based programs leave behind entirely. The PA model is replicable in any market where youth digital engagement is low.</p>
   </div>
 
-  <div class="section-header"><span class="section-label">Plan Value</span><span class="section-title">How Oklahoma member action translates to Aetna outcomes</span><div class="section-divider"></div></div>
-
-  <div class="roi-grid">
-    <div class="roi-tile teal"><div class="big">10%</div><div class="desc">Estimated reduction in physician visits and ED use from sustained engagement programs</div></div>
-    <div class="roi-tile blue"><div class="big">$2,400</div><div class="desc">Per person per year savings from avoided physician visits and ED use</div></div>
-    <div class="roi-tile slate"><div class="big">42%</div><div class="desc">Of maternal health costs are non-medical — largely mental health related and addressable through navigation</div></div>
-    <div class="roi-tile green"><div class="big">13.72x</div><div class="desc">Estimated return on programs that improve loneliness and social connection</div></div>
+  <div class="section-header">
+    <div class="section-label">Program Data</div>
+    <div class="section-title">Enrollment &amp; Reach</div>
+    <div class="section-divider"></div>
   </div>
-
-  <div class="story-placeholder">
-    <div class="icon">◎</div>
-    <h4>Member Story — Placeholder</h4>
-    <p>Add a de-identified Oklahoma member story. Suggested focus: high-cost member who completed a follow-up visit after Pyx identified transportation barrier — shifting from reactive ED use to proactive PCP care.</p>
-  </div>
-
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Oklahoma</span><div class="section-divider"></div></div>
-  <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Expand the food box pilot</div><div class="rec-body">The 5.1% self-onboard rate from one letter and email — with no outbound calls — is above the 1–3% Medicaid mail-response benchmark. Test with a second cohort and track downstream engagement rates to validate as a scalable enrollment channel.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Track 6-month ED utilization</div><div class="rec-body">High utilizers completing preventive and follow-up visits are the members most likely to shift from reactive ED to proactive PCP care. Pull ED claims data at 6 months for the enrolled cohort vs. eligible non-enrolled to quantify the cost shift.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Document barrier resolution rates</div><div class="rec-body">Transportation (25%) and medication adherence (38%) are visible — but what happened next? Adding resolution tracking to the next review creates the full impact chain: barrier identified → navigated → resolved → care accessed.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== TEXAS ======================== -->
-<div class="page" id="page-tx">
-  <div class="market-hero" style="background:linear-gradient(135deg,#a84010,#7a2800)">
-    <div>
-      <h1>Texas — Diabetic Support</h1>
-      <div class="subtitle">Aetna BH TX &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Chronic condition management — reducing diabetes-related care gaps</div>
-    </div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">545</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">88%</div><div class="hero-kpi-lbl">Activation Rate</div></div>
-    </div>
-  </div>
-
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">Texas — program-wide leader in care activation</span><div class="section-divider"></div></div>
-
-  <div class="two-col">
-    <div class="activation-display">
-      <div class="activation-number">88%</div>
-      <div class="activation-label">of enrolled diabetic members have activated into care</div>
-      <div class="activation-context">For a population managing Type 2 diabetes in Medicaid — a group with high rates of uncontrolled A1C, missed retinal exams, and preventable complications — 88% activation represents a structural improvement in care access.</div>
-      <div class="tp-block" id="tp-tx-activation">
-        <h4>Talking Points — TX Activation</h4>
-        <ul>
-          <li>88% is the program benchmark — the standard the rest of the portfolio is moving toward. Texas shows what is possible when Pyx has a focused population and a clear plan priority.</li>
-          <li>Diabetes-related HEDIS measures (CDC measures — A1C testing, blood pressure control, retinal exams, kidney function) are where Aetna TX has quality exposure. Activated members are the ones closing those gaps.</li>
-          <li>Each completed diabetic care visit is a potential HEDIS measure hit. Pyx's navigation of these members into care is a direct quality-score intervention.</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <div class="story-placeholder">
-        <div class="icon">◎</div>
-        <h4>Member Story — Placeholder</h4>
-        <p>Add a de-identified Texas member story. Suggested focus: diabetic member who completed A1C testing or PCP visit after Pyx identified medication adherence or food insecurity barriers.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
   <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Activation Rate</div><div class="kpi-val">88%</div><div class="kpi-ctx">Highest in the program — program-wide benchmark</div><div class="kpi-why">88% activation means nearly 9 in 10 enrolled diabetic members have taken a care action. This is the clearest signal in the portfolio that sustained engagement drives behavior change.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">41.9%</div><div class="kpi-ctx">Of members contacted</div><div class="kpi-why">40%+ outreach conversion for a diabetic management program is strong — these are members with complex needs who are choosing to engage.</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">545</div><div class="kpi-ctx">Diabetic population — focused, high-need cohort</div><div class="kpi-why">TX's focused population and clear clinical target (diabetes management) gives the program a clear line of sight between member enrollment and HEDIS chronic condition measure closure.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Eligibility Pool</div><div class="kpi-val">26,726</div><div class="kpi-ctx">17.6% eligibility conversion</div><div class="kpi-why">TX has the most concentrated eligibility pool in the program — 17.6% conversion with 88% activation means the program is finding, enrolling, and activating the right members.</div></div>
+    <div class="kpi green"><div class="kpi-lbl">Youth Enrolled</div><div class="kpi-val">1,060</div><div class="kpi-ctx">CHIP 13–17</div></div>
+    <div class="kpi slate"><div class="kpi-lbl">Eligible Pool</div><div class="kpi-val">7,184</div><div class="kpi-ctx">14.8% penetration — highest in portfolio</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Support Contacts</div><div class="kpi-val">766</div><div class="kpi-ctx">Human engagement events</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Urgent SDoH Needs</div><div class="kpi-val">4%</div><div class="kpi-ctx">Lowest in portfolio</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">SDoH Need Rate</div><div class="kpi-val">29%</div><div class="kpi-ctx">Avg 0.9 needs per member</div></div>
   </div>
 
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Texas</span><div class="section-divider"></div></div>
+  <div class="section-header">
+    <div class="section-label">Recommendations</div>
+    <div class="section-title">What's Next — Pennsylvania</div>
+    <div class="section-divider"></div>
+  </div>
   <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Map activations to HEDIS CDC measures</div><div class="rec-body">88% activation means nearly 9 in 10 enrolled diabetic members have care access. Now connect to specific CDC measures — A1C testing, blood pressure control, retinal exams — to convert activation into reportable quality outcomes for Aetna TX.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Document and replicate the TX model</div><div class="rec-body">TX's 88% rate is the program benchmark. Identify the specific engagement model elements (population targeting, call frequency, navigator approach) that drive this performance so they can be applied to lower-performing markets.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Expand enrollment in the 26K pool</div><div class="rec-body">At 17.6% eligibility conversion with 88% activation, every additional enrolled TX member has a high probability of completing care. Enrollment growth is the lever that translates the TX model into more HEDIS closures.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== ILLINOIS ======================== -->
-<div class="page" id="page-il">
-  <div class="market-hero" style="background:linear-gradient(135deg,#0055a0,#003580)">
-    <div>
-      <h1>Illinois — Behavioral Health</h1>
-      <div class="subtitle">Aetna IL &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Reduce care barriers, improve member engagement for BH population</div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Formalize companion call model as alternative engagement standard</div>
+      <div class="rec-body">PA's 91% companion call engagement at 14.8% pool penetration is a replicable model. Formalize the PA approach as Pyx's documented alternative engagement standard for markets or populations where digital engagement is low — this is differentiating IP for Aetna national conversations.</div>
     </div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">543</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">64%</div><div class="hero-kpi-lbl">Activation Rate</div></div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Shift program focus from reach to depth</div>
+      <div class="rec-body">PA is approaching saturation with nearly 1 in 7 eligible youth enrolled. Transition the program's success metric from enrollment growth to engagement depth and navigation outcomes — barriers resolved, care appointments kept, and CHIP quality measure contribution.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-arrow">→</div>
+      <div class="rec-title">Align social media + transportation barriers with CHIP equity planning</div>
+      <div class="rec-body">Social media isolation and transportation barriers in combination signal digital access equity gaps in the PA CHIP population. Route findings to Aetna PA's CHIP team to inform network adequacy planning and equity reporting — members unreachable by digital tools need infrastructure solutions alongside navigation.</div>
     </div>
   </div>
 
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">BH members completing care</span><div class="section-divider"></div></div>
-
-  <div class="two-col">
-    <div class="activation-display">
-      <div class="activation-number">64%</div>
-      <div class="activation-label">of enrolled members have activated into care</div>
-      <div class="activation-context">For Illinois's BH population — members with documented care barriers and limited access — 64% completing a care action represents meaningful access improvement. The remaining 36% are the active engagement pipeline.</div>
-      <div class="tp-block" id="tp-il-activation">
-        <h4>Talking Points — IL Activation</h4>
-        <ul>
-          <li>64% positions IL in the top half of the program on activation, above FL (56%) and OK (56%), behind TX (88%) and ahead of KY (43%).</li>
-          <li>Illinois's BH population is the most underserved in the state for access to mental health providers — Pyx's navigation model is designed to work in exactly this kind of constrained environment.</li>
-          <li>With 176K eligible members and 543 enrolled, IL is a growth story as much as a performance story. The activation opportunity here is the largest in the portfolio — and enrollment is the lever that unlocks it.</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <div class="story-placeholder">
-        <div class="icon">◎</div>
-        <h4>Member Story — Placeholder</h4>
-        <p>Add a de-identified Illinois member story. Suggested focus: BH member who accessed therapy or counseling services for the first time after Pyx care navigation removed access barriers.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
-  <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Activation Rate</div><div class="kpi-val">64%</div><div class="kpi-ctx">Above-program-average activation</div><div class="kpi-why">64% of enrolled BH members have completed a care action — well above the portfolio midpoint and closing toward TX's benchmark performance.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Eligibility Pool</div><div class="kpi-val">176,595</div><div class="kpi-ctx">Largest eligibility pool in the program</div><div class="kpi-why">IL has the most headroom of any market. 543 enrolled against 176K eligible = significant upside opportunity within the existing contract structure.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">38.7%</div><div class="kpi-ctx">Of members contacted</div><div class="kpi-why">38% conversion is a strong response rate — IL members are responding to Pyx outreach at nearly twice the rate suggested by the raw eligibility-to-enrolled ratio.</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">543</div><div class="kpi-ctx">BH population — largest eligibility pool in program</div><div class="kpi-why">With 543 enrolled and the largest pool to draw from, IL is the market with the most room to grow. Enrollment is an active lever — the activation story here gets stronger as the cohort matures.</div></div>
-    <div class="kpi slate"><div class="kpi-lbl">OB Rate (Post-SF)</div><div class="kpi-val">23.5%</div><div class="kpi-ctx">Second-highest outbound response rate</div></div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Illinois</span><div class="section-divider"></div></div>
-  <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Enrollment growth is the priority</div><div class="rec-body">176K eligible at 543 enrolled is the largest untapped opportunity in the portfolio. Outreach is working — 38.7% conversion when members are contacted. Increasing outreach volume is the single highest-leverage action for IL.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Align to FUH/FUM documentation</div><div class="rec-body">Activated BH members completing follow-up visits generate reportable HEDIS FUH/FUM events. Tighten documentation and attribution practices with Aetna IL so these care completions appear in the plan's quality scores.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Use IL as the BH activation benchmark</div><div class="rec-body">At 64%, IL outperforms FL (56%) and OK (56%) on BH activation. Position IL as the model for BH market performance in the next review cycle — it demonstrates what's achievable as the enrolled cohort matures.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== LOUISIANA ======================== -->
-<div class="page" id="page-la">
-  <div class="market-hero" style="background:linear-gradient(135deg,#1a7a78,#0a5a58)">
-    <div>
-      <h1>Louisiana — Maternal Health</h1>
-      <div class="subtitle">Aetna LA &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Maternal health support — prenatal &amp; postpartum engagement</div>
-    </div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">502</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">43.4%</div><div class="hero-kpi-lbl">Outreach Conversion</div></div>
-    </div>
-  </div>
-
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">Maternal members completing care</span><div class="section-divider"></div></div>
-
-  <div class="two-col">
-    <div>
-      <div class="story-placeholder">
-        <div class="icon">◎</div>
-        <h4>Activation Data — In Progress</h4>
-        <p>Louisiana 5-month activation data is available through March 2026. Full activation metrics will be updated at the next review cycle. Highlights from the March deck will be presented verbally.</p>
-      </div>
-      <div class="tp-block" id="tp-la-activation">
-        <h4>Talking Points — LA Context</h4>
-        <ul>
-          <li>Louisiana carries the highest per-member charge in the program ($179) — a signal of depth, not cost. These members require more navigation support, and they're getting it.</li>
-          <li>The maternal health context in Louisiana is critical: LA consistently ranks among the highest states for maternal mortality. Pyx engagement in the prenatal/postpartum window is a direct intervention in the state's highest-risk health moment.</li>
-          <li>42% of maternal health costs are non-medical — largely mental health related. Pyx's barrier identification and care navigation is addressing the exact category of cost that traditional clinical intervention misses.</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <div class="story-placeholder">
-        <div class="icon">◎</div>
-        <h4>Member Story — Placeholder</h4>
-        <p>Add a de-identified Louisiana member story. Suggested focus: maternal member who completed a postpartum visit or accessed mental health support through Pyx navigation in a region with limited provider access.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
-  <div class="kpi-grid">
-    <div class="kpi teal"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">502</div><div class="kpi-ctx">Maternal population with high SDOH burden</div><div class="kpi-why">Each enrolled maternal member is a plan relationship that spans the highest-risk period of healthcare — prenatal through postpartum. Access gaps in this window carry both quality and cost consequences.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Eligibility Pool</div><div class="kpi-val">93,694</div><div class="kpi-ctx">22.8% conversion from eligibility list</div><div class="kpi-why">Nearly 1 in 4 eligible maternal members enrolled. LA's outreach is reaching a population that is often difficult to engage through standard plan communication.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">43.4%</div><div class="kpi-ctx">Of members contacted</div><div class="kpi-why">Maternal members respond to support-oriented outreach at higher rates than general Medicaid populations — reflecting the unmet need this program is designed to address.</div></div>
-    <div class="kpi green"><div class="kpi-lbl">Engagement Depth</div><div class="kpi-val">Deepest</div><div class="kpi-ctx">Highest sustained engagement in the portfolio</div><div class="kpi-why">LA maternal members with high SDOH needs are generating the deepest care relationships in the program — reflecting how much navigation support this population requires and receives.</div></div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Louisiana</span><div class="section-divider"></div></div>
-  <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Pull and publish the 5-month activation data</div><div class="rec-body">March activation metrics are available from the 5-month deck. Digitizing these numbers into the dashboard completes the LA value story and removes the "in progress" gap before Aetna sees this review.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Establish postpartum attribution pathway</div><div class="rec-body">Maternal members completing a postpartum visit generate a HEDIS-reportable outcome. Coordinate with Aetna LA to build the attribution pathway so Pyx-navigated completions appear in the plan's quality scores.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Build the mental health to referral pipeline</div><div class="rec-body">42% of maternal costs are non-medical — largely mental health related. LA's deep engagement creates the trust needed to surface PPD risk and navigate to support. Tracking this connection in the next review demonstrates the full cost-impact chain.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== MICHIGAN ======================== -->
-<div class="page" id="page-mi">
-  <div class="market-hero" style="background:linear-gradient(135deg,#006090,#003f70)">
-    <div>
-      <h1>Michigan — Maternal Support</h1>
-      <div class="subtitle">Aetna MI &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Plan goal: Prenatal &amp; postpartum care completion for maternal Medicaid members</div>
-    </div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">469</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">86%</div><div class="hero-kpi-lbl">Maternal Visit Completion</div></div>
-    </div>
-  </div>
-
-  <div class="section-header" style="margin-top:0"><span class="section-label">Activation</span><span class="section-title">Maternal members completing the care journey</span><div class="section-divider"></div></div>
-
-  <div class="two-col">
-    <div class="activation-display">
-      <div class="activation-number">86%</div>
-      <div class="activation-label">of maternal members completed a maternal care visit</div>
-      <div class="activation-context">Michigan's maternal visit completion rate is the standout metric in this program — 86% of enrolled maternal members accessing a visit is a near-benchmark result. This connects directly to postpartum HEDIS measures and Michigan's maternal health quality priorities.</div>
-      <div class="tp-block" id="tp-mi-activation">
-        <h4>Talking Points — MI Activation</h4>
-        <ul>
-          <li>86% maternal visit completion is exceptional. The national Medicaid average for postpartum visit completion hovers around 60–65%. Michigan's Pyx-enrolled members are outperforming that benchmark.</li>
-          <li>Postpartum visit completion is a HEDIS measure — it directly feeds Aetna MI's quality scores. Every one of these completed visits is a reportable quality outcome.</li>
-          <li>The program is designed to work in the window that matters most — prenatal through postpartum — which is when SDOH barriers (housing instability, transportation, childcare) are highest and access is most constrained.</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <div class="story-placeholder">
-        <div class="icon">◎</div>
-        <h4>Member Story — Placeholder</h4>
-        <p>Add a de-identified Michigan member story. Suggested focus: maternal member who completed a postpartum visit and was connected to mental health support after Pyx identified depression screening need.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
-  <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Activation Rate</div><div class="kpi-val">56%</div><div class="kpi-ctx">Of enrolled members completed care</div><div class="kpi-why">56% overall activation in a maternal population — the cohort with the highest risk of care avoidance due to SDOH barriers — is meaningful progress toward the plan's prenatal/postpartum goals.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Maternal Visit Completion</div><div class="kpi-val">86%</div><div class="kpi-ctx">Of maternal members completed a visit</div><div class="kpi-why">86% of Pyx-enrolled maternal members in MI completed a maternal care visit — a direct HEDIS-connected outcome and a signal that the program is closing the access gap the plan identified.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Outreach Conversion</div><div class="kpi-val">47.4%</div><div class="kpi-ctx">Of members contacted — strong response</div><div class="kpi-why">Nearly 1 in 2 maternal members contacted enrolled. For a population managing the demands of pregnancy alongside Medicaid-related access constraints, this response rate reflects real unmet need being answered.</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">469</div><div class="kpi-ctx">Maternal Medicaid population — 27,892 eligible</div><div class="kpi-why">MI's focused eligibility pool (27K) with 14.5% conversion and 86% maternal visit completion creates a clear, measurable line between enrollment and HEDIS postpartum measure performance.</div></div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Michigan</span><div class="section-divider"></div></div>
-  <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Formalize HEDIS postpartum attribution</div><div class="rec-body">86% maternal visit completion is the standout metric in the portfolio. The next step is establishing a formal reporting pathway with Aetna MI so Pyx-navigated completions appear as credited HEDIS postpartum measure events — not just program data points.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Build the PPD screening bridge</div><div class="rec-body">Members who completed a postpartum visit are in a trust relationship with a Pyx navigator. Tracking how many of these members also received a depression screen — and were connected to mental health support — shows the full depth of the care navigation value chain.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Grow enrollment in the 27K pool</div><div class="rec-body">MI's 86% maternal visit completion rate means every additional enrolled member has a high probability of completing care. With 27K eligible, increasing enrollment volume directly translates to more HEDIS measure closures.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
-</div>
-
-<!-- ======================== ARIZONA ======================== -->
-<div class="page" id="page-az">
-  <div class="market-hero" style="background:linear-gradient(135deg,#2a6a00,#1a5000)">
-    <div>
-      <h1>Arizona — Mercy Care</h1>
-      <div class="subtitle">Aetna Mercy Care &nbsp;|&nbsp; Navigate Program &nbsp;|&nbsp; Go Live: November 2025</div>
-      <div class="goal-tag">Medicaid managed care — member engagement &amp; activation</div>
-    </div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">458</div><div class="hero-kpi-lbl">Enrolled Members</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">205K</div><div class="hero-kpi-lbl">Eligibility Pool</div></div>
-    </div>
-  </div>
-
-  <div class="section-header" style="margin-top:0"><span class="section-label">Performance Review</span><span class="section-title">AZ 5-month performance review</span><div class="section-divider"></div></div>
-
-  <div class="story-placeholder">
-    <div class="icon">◎</div>
-    <h4>5-Month Review — In Progress</h4>
-    <p>The Arizona 5-month performance review deck is in preparation. This section will be updated with market-specific activation data, engagement depth metrics, and barrier identification findings when available. Tableau enrollment and billing data are current through May 7, 2026.</p>
-  </div>
-
-  <div class="story-placeholder">
-    <div class="icon">◎</div>
-    <h4>Member Story — Placeholder</h4>
-    <p>Add a de-identified Arizona Mercy Care member story when available from the 5-month review.</p>
-  </div>
-
-  <div class="section-header"><span class="section-label">Program Data</span><span class="section-title">Enrollment & reach</span><div class="section-divider"></div></div>
-
-  <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">Enrolled Members</div><div class="kpi-val">458</div><div class="kpi-ctx">Strong enrollment into large eligibility pool</div><div class="kpi-why">458 members enrolled into an actively growing program — AZ has the largest eligibility base (205K) and represents the single largest long-term growth opportunity in the portfolio.</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Eligibility Pool</div><div class="kpi-val">205,644</div><div class="kpi-ctx">Largest eligibility pool in the program</div><div class="kpi-why">AZ's Mercy Care population represents 205K eligible members. At current enrollment levels, this is the market with the most upside if conversion rate approaches program averages.</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">5-Month Review</div><div class="kpi-val">In Progress</div><div class="kpi-ctx">Activation and engagement data coming</div><div class="kpi-why">AZ's 5-month review is in preparation. Enrollment and engagement data are current — activation and barrier identification metrics will be added when the review is complete.</div></div>
-  </div>
-
-  <div class="section-header"><span class="section-label">Recommendations</span><span class="section-title">What's next for Arizona</span><div class="section-divider"></div></div>
-  <div class="rec-grid">
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Complete and publish the 5-month review</div><div class="rec-body">Activation, barrier identification, and engagement depth data are the immediate priority. Once the review is complete, AZ moves from "in progress" to a fully comparable market — and the 205K eligibility story becomes a concrete growth narrative.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Set an enrollment conversion target</div><div class="rec-body">205K eligible at 458 enrolled is the largest gap in the portfolio. Even reaching a 5% eligibility conversion rate — half the program average — represents 10,000 members. Establishing a conversion target for the next 6 months creates the roadmap for AZ's growth.</div></div>
-    <div class="rec-card"><div class="rec-arrow">→</div><div class="rec-title">Benchmark engagement quality</div><div class="rec-body">Without activation data, confirm that AZ's engagement model mirrors high-performing markets — OK's 3 calls per member at 31 minutes average. Engagement quality is the leading indicator of activation performance; auditing it now surfaces any gaps before the next review cycle.</div></div>
-  </div>
-
-  <div class="footer">Pyx Health &times; Aetna Medicaid Mid-Year Review &nbsp;|&nbsp; May 2026 &nbsp;|&nbsp; Confidential</div>
+  <div class="footer">Pyx Health | Aetna Youth &amp; Family Programs | Pennsylvania | 12-Month Rolling | Confidential</div>
 </div>
 
 <script>
-// ── DATA ──────────────────────────────────────────────────────────────
-const D = {
-  program: {
-    totalEnrolled: 4424,
-    billableCalls: 8909,
-    avgMonths: 2.5
-  },
-  enrollByMonth: [
-    {mo:'Nov',n:888}, {mo:'Dec',n:834}, {mo:'Jan',n:735},
-    {mo:'Feb',n:657}, {mo:'Mar',n:617}, {mo:'Apr',n:439},
-    {mo:'May*',n:227}
-  ],
-  markets: [
-    {code:'FL', name:'Florida',      type:'Behavioral Health',  cls:'bh',
-     enrolled:673, elig:54442, convPct:10.3, outPct:22.5, activation:56,
-     signal:'Leads program in enrolled member count — largest active cohort in the portfolio. 56% BH activation in a historically hard-to-reach population.'},
-    {code:'KY', name:'Kentucky',     type:'Smoking Cessation',  cls:'smoking',
-     enrolled:598, elig:107116, convPct:16.0, outPct:29.8, activation:43,
-     signal:'43% activation with 32 documented quit dates — measurable cessation outcomes in 5 months.'},
-    {code:'OK', name:'Oklahoma',     type:'BH / High Utilizers',cls:'bh',
-     enrolled:637, elig:76336, convPct:50.0, outPct:75.0, activation:56,
-     signal:'Program-best 50% eligibility conversion and 75% outreach response. 91% care team engagement rate vs 62% prior.'},
-    {code:'TX', name:'Texas',        type:'Diabetic Support',   cls:'diabetic',
-     enrolled:545, elig:26726, convPct:17.6, outPct:41.9, activation:88,
-     signal:'88% activation — the program benchmark. Diabetic members completing care at near-universal rates.'},
-    {code:'IL', name:'Illinois',     type:'Behavioral Health',  cls:'bh',
-     enrolled:543, elig:176595, convPct:17.5, outPct:38.7, activation:64,
-     signal:'64% BH activation with the largest eligibility pool in the program — greatest growth opportunity.'},
-    {code:'LA', name:'Louisiana',    type:'Maternal Health',    cls:'maternal',
-     enrolled:502, elig:93694, convPct:22.8, outPct:43.4, activation:null,
-     signal:'Deepest sustained engagement of any market — maternal members with high SDOH burden receiving the most intensive navigation support.'},
-    {code:'MI', name:'Michigan',     type:'Maternal Support',   cls:'maternal',
-     enrolled:469, elig:27892, convPct:14.5, outPct:47.4, activation:56,
-     signal:'86% of maternal members completed a visit — connecting directly to HEDIS postpartum measures.'},
-    {code:'AZ', name:'Arizona',      type:'Mercy Care',         cls:'mercy',
-     enrolled:458, elig:205644, convPct:null, outPct:null, activation:null,
-     signal:'205K eligibility pool — the largest market opportunity in the program. 5-month review in preparation.'}
-  ],
-  monthsService: [
-    {mo:'1 month', n:2986, pct:49},
-    {mo:'2 months',n:1451, pct:24},
-    {mo:'3 months',n:915,  pct:15},
-    {mo:'4 months',n:515,  pct:9},
-    {mo:'5 months',n:165,  pct:3},
-    {mo:'6+ months',n:26,  pct:0}
-  ]
-};
-
-// ── UTILITIES ────────────────────────────────────────────────────────
-const $ = id => document.getElementById(id);
-function fmt(n, type) {
-  if (n === null || n === undefined) return '—';
-  if (type === 'pct') return n.toFixed(1) + '%';
-  if (type === 'usd') return '$' + n.toLocaleString();
-  if (type === 'dec') return n.toFixed(1);
-  return n.toLocaleString();
-}
-
-// ── NAV ─────────────────────────────────────────────────────────────
-function showPage(id, el) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  $('page-' + id).classList.add('active');
+function showPage(id,el){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active')});
+  document.getElementById('page-'+id).classList.add('active');
   el.classList.add('active');
 }
-
-// ── TALKING POINTS ───────────────────────────────────────────────────
-function toggleTalkingPoints(btn) {
-  const blocks = document.querySelectorAll('.tp-block');
-  const isOn = btn.classList.toggle('active');
-  blocks.forEach(b => {
-    if (!b.closest('.spotlight')) b.classList.toggle('visible', isOn);
-  });
-  document.querySelectorAll('.kpi-why').forEach(w => w.classList.toggle('visible', isOn));
-  btn.textContent = isOn ? 'Hide Talking Points' : 'Talking Points';
+function toggleTP(){
+  var btn=document.getElementById('tp-toggle');
+  var on=btn.classList.toggle('active');
+  document.querySelectorAll('.tp-block').forEach(function(b){b.classList.toggle('visible',on)});
 }
-
-// ── MARKET GRID ──────────────────────────────────────────────────────
-function renderMarketGrid() {
-  const el = $('national-market-grid');
-  if (!el) return;
-  el.innerHTML = D.markets.map(m => `
-    <div class="mkt-card ${m.cls}">
-      <div class="mkt-card-header">
-        <div class="mkt-name">${m.name} (${m.code})</div>
-        <div class="mkt-type-badge">${m.type}</div>
-      </div>
-      <div class="mkt-stats">
-        <div class="mkt-stat">
-          <div class="mkt-stat-lbl">Enrolled</div>
-          <div class="mkt-stat-val green">${fmt(m.enrolled)}</div>
-        </div>
-        <div class="mkt-stat">
-          <div class="mkt-stat-lbl">Activation</div>
-          <div class="mkt-stat-val ${m.activation ? 'green' : ''}">${m.activation ? m.activation + '%' : '—'}</div>
-        </div>
-        <div class="mkt-stat">
-          <div class="mkt-stat-lbl">Eligibility Pool</div>
-          <div class="mkt-stat-val">${fmt(m.elig)}</div>
-        </div>
-        <div class="mkt-stat">
-          <div class="mkt-stat-lbl">Outreach Conv.</div>
-          <div class="mkt-stat-val blue">${m.outPct ? fmt(m.outPct,'pct') : '—'}</div>
-        </div>
-      </div>
-      <div class="mkt-signal">${m.signal}</div>
-    </div>`).join('');
-}
-
-// ── ENROLLMENT CHART ─────────────────────────────────────────────────
-function renderEnrollmentChart() {
-  const el = $('enrollment-chart');
-  if (!el) return;
-  const max = Math.max(...D.enrollByMonth.map(m => m.n));
-  el.innerHTML = D.enrollByMonth.map(m => {
-    const h = Math.round((m.n / max) * 100);
-    return `
-    <div class="bar-col">
-      <div class="bar-val">${m.n}</div>
-      <div class="bar-fill" style="height:${h}px;background:${m.mo.includes('*') ? '#87d001' : '#49a601'}"></div>
-      <div class="bar-lbl">${m.mo}</div>
-    </div>`;
-  }).join('');
-}
-
-// ── MONTHS CHART ─────────────────────────────────────────────────────
-function renderMonthsChart() {
-  const el = $('months-chart');
-  if (!el) return;
-  el.innerHTML = D.monthsService.map(m => `
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;min-width:80px;color:#6b7f8f">${m.mo}</div>
-      <div style="flex:1;background:#eff1f3;border-radius:4px;height:18px;position:relative">
-        <div style="background:#49a601;border-radius:4px;height:18px;width:${m.pct}%"></div>
-      </div>
-      <div style="font-size:12px;font-weight:700;min-width:50px;text-align:right">${fmt(m.n)}</div>
-      <div style="font-size:11px;color:#8a9aab;min-width:28px">${m.pct}%</div>
-    </div>`).join('');
-}
-
-// ── OKLAHOMA BARRIERS ─────────────────────────────────────────────────
-function renderOKBarriers() {
-  const barriers = [
-    {name:'Transportation',     old:13, nw:25, delta:'+12 pts'},
-    {name:'Medication Adherence',old:32, nw:38, delta:'+6 pts'},
-    {name:'Childcare',          old:9,  nw:13, delta:'+4 pts'},
-    {name:'Safety',             old:15, nw:16, delta:'+1 pt'},
-  ];
-  $('ok-barriers').innerHTML = barriers.map(b => `
-    <div class="barrier-row">
-      <div class="barrier-name">${b.name}</div>
-      <div class="barrier-bars">
-        <div style="flex:1;position:relative;height:20px">
-          <div class="barrier-old" style="width:${b.old * 2}%;position:absolute;top:6px;height:8px;border-radius:4px"></div>
-        </div>
-        <div style="flex:1;position:relative;height:20px">
-          <div class="barrier-new" style="width:${b.nw * 2}%;position:absolute;top:6px;height:8px;border-radius:4px"></div>
-        </div>
-      </div>
-      <div class="barrier-vals">${b.old}% → ${b.nw}%</div>
-      <div class="barrier-change">${b.delta}</div>
-    </div>`).join('');
-  $('ok-barriers').insertAdjacentHTML('afterbegin',`
-    <div style="display:flex;gap:16px;font-size:11px;margin-bottom:12px">
-      <span style="display:flex;align-items:center;gap:6px"><span style="width:20px;height:8px;background:#d2dce8;border-radius:4px;display:inline-block"></span>Prior model</span>
-      <span style="display:flex;align-items:center;gap:6px"><span style="width:20px;height:8px;background:#49a601;border-radius:4px;display:inline-block"></span>New model</span>
-    </div>`);
-}
-
-// ── VALUE VIEW: BARRIER CHART ────────────────────────────────────────
-function renderVVBarriers() {
-  const el = $('vv-barriers');
-  if (!el) return;
-  const barriers = [
-    {name:'Transportation',      old:13, nw:25, delta:'+12 pts', why:'Transportation gaps block every care appointment. Identifying this at scale means Pyx can navigate to solutions — rides, telehealth options, community transport — before a missed appointment becomes a missed quality measure.'},
-    {name:'Medication Adherence',old:32, nw:38, delta:'+6 pts',  why:'Non-adherence in a BH and high-utilizer population is the leading driver of avoidable hospitalization. Now it\'s visible. Now it can be addressed.'},
-    {name:'Childcare',           old:9,  nw:13, delta:'+4 pts',  why:'Childcare barriers are invisible to claims data. They show up as no-shows. Surfacing them allows care navigation to offer solutions that make appointments possible.'},
-    {name:'Safety',              old:15, nw:16, delta:'+1 pt',   why:'Safety barriers — domestic situations, housing instability — affect care-seeking across every clinical category. Identification is the prerequisite to intervention.'},
-  ];
-  el.innerHTML = `
-    <div style="display:flex;gap:16px;font-size:11px;margin-bottom:12px">
-      <span style="display:flex;align-items:center;gap:6px"><span style="width:20px;height:8px;background:#d2dce8;border-radius:4px;display:inline-block"></span>Prior model</span>
-      <span style="display:flex;align-items:center;gap:6px"><span style="width:20px;height:8px;background:#49a601;border-radius:4px;display:inline-block"></span>New model</span>
-    </div>` +
-  barriers.map(b => `
-    <div class="barrier-row" style="flex-direction:column;gap:6px;padding-bottom:12px">
-      <div style="display:flex;align-items:center;gap:12px;width:100%">
-        <div class="barrier-name">${b.name}</div>
-        <div class="barrier-bars" style="flex:1">
-          <div style="flex:1;position:relative;height:20px">
-            <div class="barrier-old" style="width:${b.old*2}%;position:absolute;top:6px;height:8px;border-radius:4px"></div>
-          </div>
-          <div style="flex:1;position:relative;height:20px">
-            <div class="barrier-new" style="width:${b.nw*2}%;position:absolute;top:6px;height:8px;border-radius:4px"></div>
-          </div>
-        </div>
-        <div class="barrier-vals">${b.old}% → ${b.nw}%</div>
-        <div class="barrier-change">${b.delta}</div>
-      </div>
-      <div style="font-size:11px;color:#49a601;padding-left:168px;line-height:1.4">${b.why}</div>
-    </div>`).join('');
-}
-
-// ── VALUE VIEW: ACTIVATION GRID ─────────────────────────────────────
-function renderVVActivationGrid() {
-  const el = $('vv-activation-grid');
-  if (!el) return;
-  const items = [
-    {market:'Texas', pct:'88%', color:'#d6661a', type:'Diabetic', context:'88% of enrolled diabetic members completed a care visit — the program benchmark. Each visit is a HEDIS chronic condition measure being closed.'},
-    {market:'Michigan', pct:'86%', color:'#29a4a2', type:'Maternal visit completion', context:'86% of enrolled maternal members completed a maternal care visit — well above the national Medicaid postpartum average of ~62%.'},
-    {market:'Illinois', pct:'64%', color:'#0076bf', type:'BH Access', context:'64% of enrolled BH members completed a care visit — in the market with the largest eligibility pool in the program and the most headroom to grow.'},
-    {market:'Florida', pct:'56%', color:'#0076bf', type:'BH Access', context:'56% of enrolled BH members activated — in the market with the largest enrolled member count in the program.'},
-    {market:'Oklahoma', pct:'56%', color:'#0076bf', type:'High Utilizer visits', context:'56% of high-cost/high-utilizer members completed a preventive, BH, or follow-up visit. These are the members whose avoidable utilization costs the plan most.'},
-    {market:'Kentucky', pct:'43%', color:'#5542a7', type:'Cessation milestones', context:'43% activation including 32 documented quit dates — a clinical behavior-change outcome, not just an engagement metric.'},
-  ];
-  el.innerHTML = items.map(i => `
-    <div style="background:#fff;border-radius:10px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-top:3px solid ${i.color}">
-      <div style="font-size:11px;font-weight:700;color:${i.color};margin-bottom:4px">${i.market} — ${i.type}</div>
-      <div style="font-size:36px;font-weight:700;color:#2e4456;line-height:1">${i.pct}</div>
-      <div style="font-size:11px;color:#6b7f8f;margin-top:8px;line-height:1.5">${i.context}</div>
-    </div>`).join('');
-}
-
-// ── INIT ─────────────────────────────────────────────────────────────
-renderMarketGrid();
-renderEnrollmentChart();
-renderMonthsChart();
-renderOKBarriers();
-renderVVBarriers();
-renderVVActivationGrid();
 </script>
 </body>
 </html>
