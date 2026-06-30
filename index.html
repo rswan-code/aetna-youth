@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pyx Health × Aetna Medicaid | BH Family Program</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#49a601;--lgreen:#87d001;--slate:#2e4456;--blue:#0076bf;--teal:#29a4a2;--orange:#d6661a;--purple:#5542a7;--lpurple:#8a74c1;--g1:#d2dce8;--g2:#eff1f3;--g3:#f6f6f6;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:var(--g3);color:var(--slate);font-size:14px}
+h1,h2,h3{font-family:'Roboto Slab',serif}
+.tab-nav{background:var(--slate);display:flex;align-items:center;padding:0 24px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.25);flex-wrap:wrap}
+.nav-logo{font-family:'Roboto Slab',serif;font-weight:300;font-size:14px;color:#fff;letter-spacing:1px;margin-right:12px;padding:14px 12px 14px 0;border-right:1px solid rgba(255,255,255,.15);white-space:nowrap}
+.nav-logo span{color:var(--green);font-weight:600}
+.tab-btn{background:none;border:none;border-bottom:3px solid transparent;color:var(--g1);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:17px 12px 14px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.tab-btn:hover{color:#fff}
+.tab-btn.active{color:var(--lgreen);border-bottom-color:var(--lgreen)}
+.page{display:none}
+.page.active{display:block}
+.tp-toggle-btn{margin-left:auto;background:rgba(135,208,1,.15);border:1px solid rgba(135,208,1,.4);border-radius:20px;color:var(--lgreen);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.tp-toggle-btn:hover,.tp-toggle-btn.active{background:var(--lgreen);color:var(--slate);border-color:var(--lgreen)}
+.tp-block{display:none;background:linear-gradient(135deg,rgba(41,164,162,.07),rgba(73,166,1,.05));border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0 8px;font-size:13px;line-height:1.7;color:var(--slate)}
+.tp-block.visible{display:block}
+.tp-label{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.tp-line{margin-bottom:10px}
+.tp-line:last-child{margin-bottom:0}
+.tp-stat{font-weight:700;color:var(--slate)}
+.tp-say{color:#4a6070;font-style:italic}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.section{padding:48px 0}
+.white-bg{background:var(--white)}
+.alt-bg{background:var(--g3)}
+.client-header{background:linear-gradient(135deg,var(--slate) 0%,#1e3347 100%);padding:56px 40px 48px;color:#fff;position:relative;overflow:hidden}
+.client-header::after{content:'';position:absolute;top:0;right:0;width:400px;height:100%;background:linear-gradient(135deg,transparent,rgba(73,166,1,.08));clip-path:polygon(30% 0,100% 0,100% 100%,0% 100%)}
+.header-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--lgreen);margin-bottom:14px}
+.client-header h1{font-size:38px;font-weight:300;line-height:1.15;margin-bottom:10px}
+.client-header h1 strong{font-weight:700;color:var(--green)}
+.header-period{font-size:14px;color:var(--g1);margin-bottom:28px}
+.market-pills{display:flex;flex-wrap:wrap;gap:8px}
+.mpill{border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:rgba(255,255,255,.85);background:rgba(255,255,255,.07)}
+.value-anchor-banner{background:linear-gradient(120deg,var(--slate) 0%,#1e3a4a 100%);padding:28px 40px;border-bottom:3px solid var(--green)}
+.vab-inner{max-width:820px;margin:0 auto;text-align:center}
+.vab-eyebrow{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lgreen);margin-bottom:10px}
+.vab-text{font-family:'Roboto Slab',serif;font-size:16px;font-weight:300;color:#fff;line-height:1.7}
+.vab-text strong{font-weight:600;color:var(--lgreen)}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:16px}
+.kpi{background:#fff;border-radius:12px;padding:22px 20px;border-top:4px solid var(--green);box-shadow:0 2px 10px rgba(46,68,86,.07)}
+.kpi.blue{border-top-color:var(--blue)}.kpi.teal{border-top-color:var(--teal)}.kpi.orange{border-top-color:var(--orange)}.kpi.purple{border-top-color:var(--purple)}.kpi.slate{border-top-color:var(--slate)}
+.kpi-lbl{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#4a6070;margin-bottom:8px}
+.kpi-val{font-family:'Roboto Slab',serif;font-size:26px;font-weight:700;color:var(--slate);line-height:1;margin-bottom:6px}
+.kpi-ctx{font-size:11px;color:#4a6070}
+.kpi-ctx.good{color:var(--green);font-weight:700}
+.kpi-why{font-size:11px;color:var(--teal);line-height:1.5;margin-top:10px;padding-top:10px;border-top:1px solid var(--g2);font-style:italic}
+.timeline-bar{background:#fff;border-bottom:1px solid var(--g1);padding:28px 40px}
+.tl-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4a6070;margin-bottom:20px}
+.tl-swimlane{position:relative}
+.tl-sw-axis{display:grid;grid-template-columns:150px 1fr;margin-bottom:6px}
+.tl-sw-axis-labels{position:relative;height:14px}
+.tl-sw-axis-labels span{position:absolute;font-size:9px;font-weight:700;letter-spacing:.05em;color:#c8d4de;transform:translateX(-50%)}
+.tl-now-wrap{position:absolute;top:20px;bottom:0;left:150px;right:0;pointer-events:none}
+.tl-now-line{position:absolute;top:0;bottom:-8px;width:2px;background:var(--slate);opacity:.35}
+.tl-now-pill{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:var(--slate);color:#fff;font-size:9px;font-weight:700;letter-spacing:.06em;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.tl-sw-row{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:12px;margin-bottom:8px}
+.tl-sw-lbl{font-size:11px;font-weight:600;color:#4a6070;text-align:right;padding-right:4px}
+.tl-sw-track{position:relative;height:30px;background:var(--g2);border-radius:6px}
+.tl-sw-bar{position:absolute;top:0;height:100%;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-size:10px;font-weight:700;letter-spacing:.05em;white-space:nowrap;overflow:hidden;min-width:60px}
+.tl-sw-bar.done{background:var(--green);color:#fff}
+.tl-sw-bar.active{background:linear-gradient(to right,var(--slate) 80%,rgba(46,68,86,.2));color:#fff}
+.tl-sw-bar.building{background:var(--teal);color:#fff;opacity:.75}
+.tl-sw-bar.upcoming{background:var(--g1);color:#4a6070}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(46,68,86,.06)}
+.card-lbl{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#4a6070;margin-bottom:10px}
+.card-val{font-family:'Roboto Slab',serif;font-size:36px;font-weight:700;color:var(--slate);margin-bottom:6px;line-height:1}
+.card-sub{font-size:12px;color:#4a6070;line-height:1.6}
+.goals-section{padding:48px 0}
+.goals-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:28px}
+.goal-card{background:#fff;border:1px solid var(--g1);border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(46,68,86,.06);border-top:4px solid var(--green)}
+.goal-lbl{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.goal-statement{font-size:14px;font-weight:600;color:var(--slate);line-height:1.5;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--g1)}
+.goal-pyx{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.goal-action{font-size:13px;color:#4a6070;line-height:1.6}
+.goal-metric{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(73,166,1,.1);color:var(--green)}
+.barrier-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--g2)}
+.barrier-row:last-of-type{border-bottom:none}
+.barrier-name{font-size:13px;font-weight:500;min-width:190px}
+.barrier-track{flex:1;background:var(--g2);border-radius:4px;height:8px}
+.barrier-fill{height:8px;border-radius:4px;background:var(--teal)}
+.barrier-val{font-size:12px;font-weight:700;color:var(--slate);min-width:36px;text-align:right}
+.priority-section{padding:56px 0}
+.priority-section.alt{background:var(--g3)}
+.priority-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(73,166,1,.12);border:1px solid rgba(73,166,1,.3);border-radius:20px;padding:4px 14px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.footer{background:linear-gradient(135deg,var(--slate),#1a2a38);padding:36px 40px;color:rgba(255,255,255,.55);font-size:12px;line-height:1.8;text-align:center}
+.footer-logo{font-family:'Roboto Slab',serif;font-weight:300;font-size:16px;color:#fff;margin-bottom:8px}
+.footer-logo span{color:var(--green);font-weight:600}
+/* STAGE STYLES */
+.stage-section{padding:48px 0}
+.stage-section.white-bg{background:var(--white)}
+.stage-section.alt-bg{background:var(--g3)}
+.stage-header{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.stage-num{width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;font-family:'Roboto Slab',serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.stage-badge{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:rgba(73,166,1,.1);border:1px solid rgba(73,166,1,.25);border-radius:20px;padding:3px 10px;display:inline-block;margin-bottom:4px}
+.stage-title{font-family:'Roboto Slab',serif;font-size:20px;font-weight:600;color:var(--slate);line-height:1.2}
+.stage-sub{font-size:11px;color:#4a6070;margin-top:2px}
+.stage-narrative{font-size:13px;color:#4a6070;line-height:1.75;max-width:820px;margin-bottom:28px}
+.enroll-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:24px}
+.enroll-card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(46,68,86,.06);border-left:4px solid var(--green)}
+.enroll-card.blue{border-left-color:var(--blue)}
+.enroll-card.teal{border-left-color:var(--teal)}
+.enroll-card.orange{border-left-color:var(--orange)}
+.enroll-card.purple{border-left-color:var(--purple)}
+.enroll-market{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#4a6070;margin-bottom:4px}
+.enroll-val{font-family:'Roboto Slab',serif;font-size:28px;font-weight:700;color:var(--slate);line-height:1;margin-bottom:4px}
+.enroll-type{font-size:11px;color:#4a6070}
+.appt-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:16px}
+.appt-table th{padding:10px 16px;text-align:left;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#4a6070;border-bottom:2px solid var(--g1);background:var(--g3)}
+.appt-table td{padding:12px 16px;border-bottom:1px solid var(--g2)}
+.appt-table tr:last-child td{border-bottom:none;font-weight:700;color:var(--slate)}
+.appt-table tr:last-child{background:rgba(73,166,1,.05)}
+.portfolio-highlight{background:rgba(41,164,162,.06);border:1px solid rgba(41,164,162,.2);border-radius:8px;padding:14px 18px;font-size:12px;color:var(--slate);margin:16px 0}
+.portfolio-highlight strong{color:var(--teal)}
+.section-head{margin-bottom:32px}
+.section-title{font-size:26px;font-weight:600;color:var(--slate);margin-bottom:6px;font-family:'Roboto Slab',serif}
+.section-sub{font-size:13px;color:#4a6070;line-height:1.6;max-width:720px}
+.section-eyebrow{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.eyebrow-1{background:rgba(73,166,1,.12);color:var(--green)}
+.eyebrow-2{background:rgba(0,118,191,.12);color:var(--blue)}
+.eyebrow-3{background:rgba(41,164,162,.12);color:var(--teal)}
+.dark-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.dark-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:26px}
+.dark-card-lbl{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lgreen);margin-bottom:8px}
+.dark-card-val{font-family:'Roboto Slab',serif;font-size:34px;font-weight:700;color:#fff;margin-bottom:10px}
+.dark-card-sub{font-size:12px;color:rgba(255,255,255,.7);line-height:1.6}
+@media(max-width:768px){.wrap{padding:0 20px}.tl-sw-row,.tl-sw-axis{grid-template-columns:100px 1fr}.enroll-grid{grid-template-columns:1fr 1fr}}
+</style>
+</style>
+</head>
+<body>
+<nav class="tab-nav">
+  <div class="nav-logo">pyx <span>health</span> &times; aetna medicaid</div>
+  <button class="tab-btn active" onclick="showPage('youth-natl',this)">Youth &mdash; National</button>
+  <button class="tab-btn" onclick="showPage('guardian-natl',this)">Guardian &mdash; National</button>
+  <button class="tab-btn" onclick="showPage('fl-fam',this)">FL Family</button>
+  <button class="tab-btn" onclick="showPage('ky-fam',this)">KY Family</button>
+  <button class="tab-btn" onclick="showPage('ok-fam',this)">OK Family</button>
+  <button class="tab-btn" onclick="showPage('tx-fam',this)">TX Family</button>
+  <button class="tab-btn" onclick="showPage('pa-fam',this)">PA Family</button>
+  <button class="tp-toggle-btn" id="tp-toggle" onclick="toggleTP(this)">Talking Points</button>
+</nav>
+
+<div id="page-youth-natl" class="page active">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Youth Program &middot; 5 Markets &middot; Data through June 30, 2026</div>
+    <h1>Youth BH &mdash; <strong>National Portfolio</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; Ages 13&ndash;17 &middot; Medicaid &amp; CHIP Youth Populations</p>
+    <div class="market-pills">
+      <span class="mpill">5 Markets</span>
+      <span class="mpill">~9,615 Youth Enrolled</span>
+      <span class="mpill">Medicaid &amp; CHIP</span>
+      <span class="mpill">BH / Loneliness Archetype</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">BH Youth &middot; Value Anchor</div>
+      <div class="vab-text">You asked us to test a hypothesis: that youth Medicaid members carry <strong>significant and unmeasured behavioral health burden</strong>. Across 5 markets and ~9,615 youth relationships, the data confirms it &mdash; and quantifies it for the first time.</div>
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Portfolio at a Glance</div>
+        <div class="section-title">The burden is real. The data is new.</div>
+        <div class="section-sub">These are not claims-based estimates. These are self-reported behavioral health and social need signals from youth members who were never screened before.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Youth Enrolled</div>
+          <div class="kpi-val">~9,615</div>
+          <div class="kpi-ctx">FL &middot; KY &middot; OK &middot; TX &middot; PA</div>
+          <div class="kpi-why">Scale of reach across 5 markets &mdash; the baseline for every other number on this page.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">Portfolio UCLA-3 Avg</div>
+          <div class="kpi-val">4.6</div>
+          <div class="kpi-ctx">Loneliness scale, 0&ndash;9</div>
+          <div class="kpi-why">Clinically meaningful loneliness signal across all youth markets &mdash; not an outlier, a pattern.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely (Portfolio)</div>
+          <div class="kpi-val">32%</div>
+          <div class="kpi-ctx">1 in 3 youth members</div>
+          <div class="kpi-why">Loneliness at this prevalence predicts higher ED utilization, lower adherence, and unmet behavioral health need.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; PHQ Distress</div>
+          <div class="kpi-val">72%</div>
+          <div class="kpi-ctx">Of lonely youth also screen PHQ+</div>
+          <div class="kpi-why">Loneliness is not a soft signal. For 7 in 10 lonely youth, it co-occurs with measurable psychological distress.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">30%</div>
+          <div class="kpi-ctx">Portfolio avg &middot; Social determinants</div>
+          <div class="kpi-why">3 in 10 youth carry an unmet social need that claims data cannot see &mdash; food, income, family instability.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Portfolio PHQ-2 Avg</div>
+          <div class="kpi-val">1.3</div>
+          <div class="kpi-ctx">Psychological distress, 0&ndash;6</div>
+          <div class="kpi-why">Scores cluster above 1.0 &mdash; the threshold where clinical follow-up is warranted in adolescent populations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market Comparison Table -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-2">Market Comparison</div>
+        <div class="section-title">Every market is lonely. The acuity varies.</div>
+        <div class="section-sub">BH burden is consistent across all 5 markets &mdash; but the mix of loneliness, distress, and social need shifts by geography. TX and PA carry the highest compound acuity.</div>
+      </div>
+      <table class="appt-table">
+        <thead>
+          <tr>
+            <th>Market</th>
+            <th>Enrolled</th>
+            <th>UCLA-3 Avg</th>
+            <th>PHQ-2 Avg</th>
+            <th>% Lonely</th>
+            <th>Lonely &rarr; PHQ+</th>
+            <th>% SDoH Need</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FL</strong></td>
+            <td>1,837</td>
+            <td>4.5</td>
+            <td>1.2</td>
+            <td>27%</td>
+            <td>68%</td>
+            <td>28%</td>
+          </tr>
+          <tr>
+            <td><strong>KY</strong></td>
+            <td>1,571</td>
+            <td>4.3</td>
+            <td>1.1</td>
+            <td>24%</td>
+            <td>59%</td>
+            <td>33%</td>
+          </tr>
+          <tr>
+            <td><strong>OK</strong></td>
+            <td>1,695</td>
+            <td>4.4</td>
+            <td>1.1</td>
+            <td>26%</td>
+            <td><strong style="color:var(--orange)">80%</strong></td>
+            <td>26%</td>
+          </tr>
+          <tr>
+            <td><strong>TX</strong></td>
+            <td>~2,694</td>
+            <td><strong style="color:var(--orange)">5.2</strong></td>
+            <td><strong style="color:var(--orange)">1.9</strong></td>
+            <td><strong style="color:var(--orange)">44%</strong></td>
+            <td>78%</td>
+            <td><strong style="color:var(--orange)">36%</strong></td>
+          </tr>
+          <tr>
+            <td><strong>PA</strong></td>
+            <td>1,818</td>
+            <td>4.8</td>
+            <td>1.4</td>
+            <td>39%</td>
+            <td>76%</td>
+            <td>27%</td>
+          </tr>
+          <tr>
+            <td><strong>Portfolio</strong></td>
+            <td><strong>~9,615</strong></td>
+            <td><strong>4.6</strong></td>
+            <td><strong>1.3</strong></td>
+            <td><strong>32%</strong></td>
+            <td><strong>72%</strong></td>
+            <td><strong>30%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>OK outlier:</strong> Oklahoma youth have the lowest loneliness score in the portfolio (4.4) &mdash; but once lonely, 80% are also PHQ-distressed. The lonely subgroup in OK carries the highest behavioral health acuity in the portfolio. Prevalence is low; severity is high.
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Barriers -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Top Barriers &middot; Youth Portfolio</div>
+        <div class="section-title">What youth told us is standing in their way.</div>
+        <div class="section-sub">Social media, discrimination, and mental health top the youth barrier list &mdash; categories that do not appear in standard PRAPARE screens designed for adults.</div>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-lbl">Mental Health</div>
+          <div class="card-val" style="font-size:28px">8&ndash;22%</div>
+          <div class="card-sub">Range across markets. Self-identified as a barrier to health &mdash; before any clinical encounter.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Discrimination / Ethnicity</div>
+          <div class="card-val" style="font-size:28px">6&ndash;24%</div>
+          <div class="card-sub">PA highest at 24%. A health equity signal not captured in claims or quality scores.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Social Media</div>
+          <div class="card-val" style="font-size:28px">6&ndash;23%</div>
+          <div class="card-sub">Youth-specific barrier (not in adult PRAPARE). TX and FL both at 23&ndash;24%. A distinct driver of adolescent BH burden.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Family</div>
+          <div class="card-val" style="font-size:28px">6&ndash;12%</div>
+          <div class="card-sub">Family instability as a named barrier across all markets &mdash; directly tied to care-seeking behavior and adherence.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Food</div>
+          <div class="card-val" style="font-size:28px">10&ndash;18%</div>
+          <div class="card-sub">Food insecurity remains a top SDoH driver for youth across FL, TX, and PA.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Avg Needs per Youth</div>
+          <div class="card-val" style="font-size:28px">1.1&ndash;1.4</div>
+          <div class="card-sub">Youth members carry overlapping needs &mdash; not one barrier, but a compound picture that requires a whole-person response.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pressure Test -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Pressure Test</div>
+        <div class="section-title">The hypothesis held. The data delivers.</div>
+        <div class="section-sub">Aetna markets purchased the BH archetype for youth Medicaid populations based on a clinical hypothesis: that youth in Medicaid carry significant, unmeasured loneliness and behavioral health burden that standard engagement programs miss.</div>
+      </div>
+      <div class="portfolio-highlight">
+        <strong>Confirmed:</strong> Across all 5 markets, youth UCLA-3 scores range from 4.3 to 5.2 &mdash; every market above the clinical threshold for meaningful loneliness. 32% of youth meet a loneliness threshold. 72% of those youth also screen positive for psychological distress. 30% carry an identified social need. This is not a margin-of-error finding. This is a population-level behavioral health burden that was invisible before this program.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; BH Youth National</div>
+        <div class="tp-line"><span class="tp-stat">1 in 3 youth Medicaid members is lonely &mdash; and 72% of those are also psychologically distressed.</span> <span class="tp-say">Say: &ldquo;This is not a soft metric. Loneliness at this level predicts higher ED utilization, lower adherence, and unmet BH need. We&rsquo;re quantifying something claims data has never captured.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">Social media is a named health barrier for up to 23% of youth &mdash; a category that doesn&rsquo;t exist in adult PRAPARE.</span> <span class="tp-say">Say: &ldquo;Our youth tool was built for youth. It surfaces drivers that standard screenings miss entirely.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">TX carries the highest acuity: 44% lonely, 78% lonely+distressed, 36% SDoH need, PHQ-2 avg 1.9.</span> <span class="tp-say">Say: &ldquo;Texas isn&rsquo;t an outlier &mdash; it&rsquo;s the high-water mark of a trend we see in every market. When BH burden goes untreated in youth, it becomes adult Medicaid spend.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Youth Program &middot; National Portfolio</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-youth-natl -->
+
+<!-- BH GUARDIAN NATIONAL -->
+<div id="page-guardian-natl" class="page">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Guardian Program &middot; 5 Markets &middot; Data through June 30, 2026</div>
+    <h1>Guardian BH &mdash; <strong>National Portfolio</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; Foster Parents &middot; Grandparents &middot; Kinship Caregivers</p>
+    <div class="market-pills">
+      <span class="mpill">5 Markets</span>
+      <span class="mpill">1,388 Guardians Enrolled</span>
+      <span class="mpill">100% Non-App</span>
+      <span class="mpill">Compassionate Support Center</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">BH Guardian &middot; Value Anchor</div>
+      <div class="vab-text">When the caregiver is in crisis, the child is in crisis. <strong>40% of guardians are lonely. 66% of lonely guardians are psychologically distressed. 67% carry an unmet social need.</strong> No claims file captures any of this.</div>
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Portfolio at a Glance</div>
+        <div class="section-title">The caregiver burden no claims data sees.</div>
+        <div class="section-sub">Guardians are the adults raising children in the Medicaid system. They are lonely, distressed, and resource-strained &mdash; at rates that exceed the youth they support. Reaching them is a child health intervention.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Guardians Enrolled</div>
+          <div class="kpi-val">1,388</div>
+          <div class="kpi-ctx">FL &middot; KY &middot; OK &middot; TX &middot; PA</div>
+          <div class="kpi-why">A population Medicaid plans rarely engage proactively &mdash; and rarely screen for BH or social need.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">Portfolio UCLA-3 Avg</div>
+          <div class="kpi-val">4.9</div>
+          <div class="kpi-ctx">Higher than youth portfolio avg (4.6)</div>
+          <div class="kpi-why">Guardians are lonelier than the youth they care for. The caregiver system is under stress.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely (Portfolio)</div>
+          <div class="kpi-val">40%</div>
+          <div class="kpi-ctx">2 in 5 guardians</div>
+          <div class="kpi-why">A loneliness rate 8 points higher than the youth portfolio &mdash; in the adults who determine whether children show up for care.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; PHQ-4 Distress</div>
+          <div class="kpi-val">66%</div>
+          <div class="kpi-ctx">Of lonely guardians also PHQ-4+</div>
+          <div class="kpi-why">Loneliness in guardians is a reliable predictor of psychological distress &mdash; and downstream disruption to child care access.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">67%</div>
+          <div class="kpi-ctx">Portfolio avg &middot; Social determinants</div>
+          <div class="kpi-why">Two-thirds of screened guardians have an active social need. Food, housing, income, medication &mdash; barriers that block the whole household.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Portfolio PHQ-4 Avg</div>
+          <div class="kpi-val">4.4</div>
+          <div class="kpi-ctx">Anxiety + depression composite</div>
+          <div class="kpi-why">A PHQ-4 score above 3 is clinically significant. Portfolio average exceeds that threshold across all 5 markets.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market Comparison -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-2">Market Comparison</div>
+        <div class="section-title">Caregiver burden is universal. TX is the most acute.</div>
+        <div class="section-sub">Every guardian market shows meaningful loneliness, PHQ distress, and social need. TX stands apart: 90% of lonely guardians are also PHQ-4 distressed, and 100% have an identified SDoH need.</div>
+      </div>
+      <table class="appt-table">
+        <thead>
+          <tr>
+            <th>Market</th>
+            <th>Enrolled</th>
+            <th>UCLA-3 Avg</th>
+            <th>PHQ-4 Avg</th>
+            <th>% Lonely</th>
+            <th>Lonely &rarr; PHQ+</th>
+            <th>% SDoH Need</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FL</strong></td>
+            <td>278</td>
+            <td><strong style="color:var(--orange)">5.2</strong></td>
+            <td><strong style="color:var(--orange)">5.0</strong></td>
+            <td>42%</td>
+            <td>65%</td>
+            <td>70%</td>
+          </tr>
+          <tr>
+            <td><strong>KY</strong></td>
+            <td>350</td>
+            <td>4.9</td>
+            <td>4.8</td>
+            <td>41%</td>
+            <td>63%</td>
+            <td>43%</td>
+          </tr>
+          <tr>
+            <td><strong>OK</strong></td>
+            <td>224</td>
+            <td>4.8</td>
+            <td>3.7</td>
+            <td>39%</td>
+            <td>53%</td>
+            <td>37%</td>
+          </tr>
+          <tr>
+            <td><strong>TX</strong></td>
+            <td>307</td>
+            <td>5.1</td>
+            <td>4.2</td>
+            <td><strong style="color:var(--orange)">46%</strong></td>
+            <td><strong style="color:var(--orange)">90%</strong></td>
+            <td><strong style="color:var(--orange)">100%</strong></td>
+          </tr>
+          <tr>
+            <td><strong>PA</strong></td>
+            <td>229</td>
+            <td>4.4</td>
+            <td>4.3</td>
+            <td>31%</td>
+            <td>60%</td>
+            <td>83%</td>
+          </tr>
+          <tr>
+            <td><strong>Portfolio</strong></td>
+            <td><strong>1,388</strong></td>
+            <td><strong>4.9</strong></td>
+            <td><strong>4.4</strong></td>
+            <td><strong>40%</strong></td>
+            <td><strong>66%</strong></td>
+            <td><strong>67%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>TX Guardian outlier:</strong> 90% of lonely TX guardians also screen PHQ-4 positive. 100% of screened TX guardians have an SDoH need. This is a guardian population in compound crisis &mdash; and they are the adults making healthcare decisions for children in the plan.
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Needs -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Top SDoH Needs &middot; Guardian Portfolio</div>
+        <div class="section-title">Resource strain runs deep in caregiver households.</div>
+        <div class="section-sub">Guardians are not just lonely &mdash; they face compound resource barriers that affect the entire household, including the children they care for.</div>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-lbl">Food</div>
+          <div class="card-val" style="font-size:28px">#1</div>
+          <div class="card-sub">Top SDoH need across guardian markets. Food insecurity in caregiver households directly affects child nutrition and school attendance.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Housing</div>
+          <div class="card-val" style="font-size:28px">#2</div>
+          <div class="card-sub">Housing instability surfaces in FL, KY, and TX guardian populations. A top barrier to care continuity for the entire household.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Income &amp; Economic Stability</div>
+          <div class="card-val" style="font-size:28px">#3</div>
+          <div class="card-sub">Financial stress compounds loneliness and mental health burden &mdash; and limits guardians&rsquo; ability to transport children to appointments.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Medication Access</div>
+          <div class="card-val" style="font-size:28px">&uarr;</div>
+          <div class="card-sub">Medication barriers appear in TX and KY guardian data &mdash; a gap that puts both caregiver and child health at risk.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Childcare</div>
+          <div class="card-val" style="font-size:28px">&uarr;</div>
+          <div class="card-sub">Childcare access surfaces in TX guardian data at 50% &mdash; a barrier unique to caregiver populations.</div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Engagement Model</div>
+          <div class="card-val" style="font-size:28px">100%</div>
+          <div class="card-sub">All guardian engagement is through compassionate support center calls. No app. Human-first by design &mdash; because this population needs a voice, not a notification.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pressure Test -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Pressure Test</div>
+        <div class="section-title">Guardians were the missing link.</div>
+        <div class="section-sub">The BH Guardian program identified a population that exists in every Medicaid plan but appears in almost no engagement model: the adults raising children placed by the state.</div>
+      </div>
+      <div class="portfolio-highlight">
+        <strong>The compound picture:</strong> Guardian avg age is 40&ndash;42. They are raising children who are not biologically theirs, often under state supervision, with no clinical support of their own. 40% are lonely. 66% of those are psychologically distressed. 67% have an unmet social need. When a guardian can&rsquo;t function, the child misses appointments, misses medication, and misses school. No claims data captures caregiver burden &mdash; but it shows up in child quality scores. That&rsquo;s the connection this program makes visible.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; BH Guardian National</div>
+        <div class="tp-line"><span class="tp-stat">40% of guardians are lonely &mdash; 8 points higher than the youth portfolio. 66% of lonely guardians are also PHQ-4 distressed.</span> <span class="tp-say">Say: &ldquo;The caregiver system is under more stress than the youth system. When we don&rsquo;t support the guardian, the child&rsquo;s care falls apart.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">67% of guardians have an identified SDoH need. In TX, it&rsquo;s 100%.</span> <span class="tp-say">Say: &ldquo;This is not a niche population with edge-case needs. Two-thirds of the caregivers in this program are resource-strained in ways that directly affect the children they&rsquo;re responsible for.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">All guardian engagement is 100% through compassionate support center calls &mdash; no app, by design.</span> <span class="tp-say">Say: &ldquo;We built a phone-first model because this population needs a human voice, not a push notification. That design choice is why we&rsquo;re reaching them.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Guardian Program &middot; National Portfolio</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-guardian-natl -->
+
+<!-- FL FAMILY -->
+<div id="page-fl-fam" class="page">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Family Program &middot; Florida &middot; Data through June 30, 2026</div>
+    <h1>Florida Family Program &mdash; <strong>Youth &amp; Guardian</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; Youth 13&ndash;17 &middot; Foster Parents &middot; Grandparents &middot; Kinship Caregivers</p>
+    <div class="market-pills">
+      <span class="mpill">FL Youth: 1,837</span>
+      <span class="mpill">FL Guardians: 278</span>
+      <span class="mpill">Medicaid</span>
+      <span class="mpill">Multilingual Reach</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">Florida &middot; Value Anchor</div>
+      <div class="vab-text">In Florida, the <strong>guardians are lonelier and more distressed than the youth they support.</strong> The family system is under stress at both ends. FL Guardian PHQ-4 avg 5.0 &mdash; the highest in the portfolio.</div>
+    </div>
+  </div>
+
+  <!-- YOUTH SECTION -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Youth Program &middot; Florida</div>
+        <div class="section-title">1,837 youth. A loneliness and discrimination signal hiding in plain sight.</div>
+        <div class="section-sub">FL youth show a strong discrimination barrier (24%) &mdash; a health equity signal that standard quality measures do not surface. 27% are lonely; 68% of those youth are also distressed.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Youth Enrolled</div>
+          <div class="kpi-val">1,837</div>
+          <div class="kpi-ctx">Youth 13&ndash;17 &middot; Medicaid</div>
+          <div class="kpi-why">Scale of FL youth reach &mdash; the foundation for every downstream quality and care metric.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.5</div>
+          <div class="kpi-ctx">Loneliness score, 0&ndash;9</div>
+          <div class="kpi-why">Clinically meaningful loneliness signal consistent with portfolio average.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">27%</div>
+          <div class="kpi-ctx">1 in 4 FL youth</div>
+          <div class="kpi-why">27% lonely at baseline &mdash; a population segment with elevated BH risk that would otherwise go unseen.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">68%</div>
+          <div class="kpi-ctx">PHQ-2 co-occurring with loneliness</div>
+          <div class="kpi-why">Two-thirds of lonely FL youth are also psychologically distressed &mdash; a compounding BH risk signal.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">28%</div>
+          <div class="kpi-ctx">Identified social barriers</div>
+          <div class="kpi-why">Nearly 1 in 3 FL youth have a social need that drives health behavior but doesn&rsquo;t appear in claims.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Urgent Flags</div>
+          <div class="kpi-val">9%</div>
+          <div class="kpi-ctx">Flagged for urgent follow-up</div>
+          <div class="kpi-why">These youth required immediate escalation &mdash; a safety net function that engagement-only programs don&rsquo;t provide.</div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:32px">
+        <div class="section-eyebrow eyebrow-2">Top Youth Barriers &middot; Florida</div>
+      </div>
+      <div class="card-grid">
+        <div class="card"><div class="card-lbl">Discrimination / Ethnicity</div><div class="card-val" style="font-size:28px">24%</div><div class="card-sub">Highest health equity barrier in FL youth. A signal quality measures miss &mdash; but one that predicts lower engagement with care.</div></div>
+        <div class="card"><div class="card-lbl">Food</div><div class="card-val" style="font-size:28px">15%</div><div class="card-sub">Food insecurity driving BH and physical health burden for FL youth.</div></div>
+        <div class="card"><div class="card-lbl">Income</div><div class="card-val" style="font-size:28px">15%</div><div class="card-sub">Economic instability named as a direct barrier to health by FL youth.</div></div>
+        <div class="card"><div class="card-lbl">Mental Health</div><div class="card-val" style="font-size:28px">15%</div><div class="card-sub">Self-identified mental health barrier &mdash; before any clinical encounter. A referral opportunity at scale.</div></div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Support Center &middot; FL Youth:</strong> 1,364 youth reached through compassionate support center. Spanish-speaking guardians represent 26% of the FL program &mdash; multilingual reach is a differentiator for FL&rsquo;s diverse population.
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARDIAN SECTION -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Guardian Program &middot; Florida</div>
+        <div class="section-title">278 guardians. The most distressed caregiver population in the portfolio.</div>
+        <div class="section-sub">FL guardians hold the highest UCLA-3 (5.2) and PHQ-4 (5.0) averages in the entire guardian portfolio. 42% are lonely. 65% of those are distressed. 70% have an SDoH need. They are carrying more burden than the youth they care for.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Guardians Enrolled</div>
+          <div class="kpi-val">278</div>
+          <div class="kpi-ctx">Foster parents &middot; Grandparents &middot; Kinship</div>
+          <div class="kpi-why">278 caregiver relationships &mdash; each one a household multiplier for youth health outcomes.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">5.2</div>
+          <div class="kpi-ctx">Highest in guardian portfolio</div>
+          <div class="kpi-why">FL guardians are the loneliest in the portfolio. A 5.2 UCLA-3 score signals deep social isolation in the caregivers responsible for these children.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">PHQ-4 Avg</div>
+          <div class="kpi-val">5.0</div>
+          <div class="kpi-ctx">Highest in guardian portfolio</div>
+          <div class="kpi-why">PHQ-4 avg 5.0 exceeds the clinical threshold for moderate anxiety-depression &mdash; in the adults making daily decisions for Medicaid youth.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">42%</div>
+          <div class="kpi-ctx">Higher than FL youth (27%)</div>
+          <div class="kpi-why">The caregiver loneliness rate is 15 points higher than the youth they support. The family system is upside down.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">70%</div>
+          <div class="kpi-ctx">7 in 10 guardians</div>
+          <div class="kpi-why">Food, housing, income &mdash; 70% of FL guardians are resource-strained in ways that shape the health of every child in their household.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Urgent Flags</div>
+          <div class="kpi-val">25%</div>
+          <div class="kpi-ctx">Flagged for urgent follow-up</div>
+          <div class="kpi-why">1 in 4 FL guardians required urgent escalation &mdash; a clinical safety signal invisible to claims-based monitoring.</div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:32px">
+        <div class="section-eyebrow eyebrow-2">Top Guardian Barriers &middot; Florida</div>
+      </div>
+      <div class="card-grid">
+        <div class="card"><div class="card-lbl">Food</div><div class="card-val" style="font-size:28px">27%</div><div class="card-sub">Top SDoH barrier for FL guardians &mdash; food insecurity in the caregiver home affects every child in it.</div></div>
+        <div class="card"><div class="card-lbl">Housing</div><div class="card-val" style="font-size:28px">25%</div><div class="card-sub">Housing instability is a compounding risk for FL guardians &mdash; driving both caregiver stress and child care disruption.</div></div>
+        <div class="card"><div class="card-lbl">Income</div><div class="card-val" style="font-size:28px">11%</div><div class="card-sub">Economic strain named alongside food and housing &mdash; a compound resource gap.</div></div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Top resource connections &middot; FL Guardians:</strong> Florida Healthy Kids Resources (62%) &middot; Medicaid MMA Resources (47%) &middot; Support center FL Guardian reach: 34
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Insight -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Florida Family Insight</div>
+        <div class="section-title">The family system is in stress at both ends.</div>
+      </div>
+      <div class="portfolio-highlight">
+        FL Guardian UCLA-3 (5.2) &gt; FL Youth UCLA-3 (4.5). FL Guardian PHQ-4 (5.0) is the highest in the portfolio. 26% of the FL program is Spanish-speaking &mdash; multilingual reach is expanding access for a population that traditional engagement leaves out. In Florida, supporting the guardian is the highest-leverage youth health intervention available.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; Florida Family</div>
+        <div class="tp-line"><span class="tp-stat">FL guardians are lonelier and more distressed than the youth they support &mdash; UCLA-3 5.2, PHQ-4 5.0, both the highest in the portfolio.</span> <span class="tp-say">Say: &ldquo;In Florida, the caregiver is in more clinical distress than the child. That&rsquo;s not what you expect to find &mdash; and it wouldn&rsquo;t appear anywhere without this program.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">24% of FL youth identify discrimination or ethnicity as a health barrier &mdash; the joint highest equity signal in the portfolio.</span> <span class="tp-say">Say: &ldquo;This is a health equity data point that HEDIS scores don&rsquo;t surface. We&rsquo;re seeing it because we asked.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">26% of the FL program is Spanish-speaking &mdash; multilingual reach is built into FL delivery.</span> <span class="tp-say">Say: &ldquo;FL&rsquo;s population diversity requires a multilingual model. We built that in from day one.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Family Program &middot; Florida</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-fl-fam -->
+
+<!-- KY FAMILY -->
+<div id="page-ky-fam" class="page">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Family Program &middot; Kentucky &middot; Data through June 30, 2026</div>
+    <h1>Kentucky Family Program &mdash; <strong>Youth &amp; Guardian</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; Youth 13&ndash;17 &middot; SKY Program &middot; Foster &amp; Adoptive Youth &middot; Guardians</p>
+    <div class="market-pills">
+      <span class="mpill">KY Youth: 1,571</span>
+      <span class="mpill">KY Guardians: 350</span>
+      <span class="mpill">SKY Program</span>
+      <span class="mpill">Largest Guardian Program</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">Kentucky &middot; Value Anchor</div>
+      <div class="vab-text">Kentucky&rsquo;s guardian program is the <strong>largest and most established in the portfolio</strong>, launched June 2024. 350 guardians enrolled. 41% lonely. 29% flagged urgent. The caregiver burden in KY is high &mdash; and it&rsquo;s being measured for the first time.</div>
+    </div>
+  </div>
+
+  <!-- YOUTH SECTION -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Youth Program &middot; Kentucky</div>
+        <div class="section-title">1,571 youth. The best loneliness scores in the portfolio &mdash; and still meaningful.</div>
+        <div class="section-sub">KY youth show the lowest UCLA-3 (4.3) and lonely&rarr;distress crossover (59%) in the portfolio &mdash; but &ldquo;best in portfolio&rdquo; still means 24% of youth are lonely and 59% of those are psychologically distressed. KY also includes foster and adoptive youth through the SKY program, a population with distinct BH needs.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Youth Enrolled</div>
+          <div class="kpi-val">1,571</div>
+          <div class="kpi-ctx">Youth 13&ndash;17: 1,470 &middot; SKY Youth: 101</div>
+          <div class="kpi-why">KY youth includes foster and adoptive youth through the SKY program &mdash; a clinically distinct population with elevated BH risk.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.3</div>
+          <div class="kpi-ctx">Lowest (best) in youth portfolio</div>
+          <div class="kpi-why">KY is the best-performing market on loneliness. &ldquo;Best in portfolio&rdquo; still means 24% are lonely &mdash; this is a floor, not a ceiling.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">24%</div>
+          <div class="kpi-ctx">1 in 4 KY youth</div>
+          <div class="kpi-why">Portfolio-low loneliness prevalence &mdash; but still represents hundreds of youth carrying measurable BH burden.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">59%</div>
+          <div class="kpi-ctx">Lowest crossover in portfolio</div>
+          <div class="kpi-why">Lowest crossover rate in the portfolio &mdash; but still 3 in 5 lonely KY youth are also PHQ-2 positive.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">33%</div>
+          <div class="kpi-ctx">Social barriers identified</div>
+          <div class="kpi-why">KY youth have the second-highest SDoH need in the portfolio &mdash; social barriers are prominent even where loneliness is comparatively lower.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Urgent Flags</div>
+          <div class="kpi-val">6%</div>
+          <div class="kpi-ctx">Flagged for urgent follow-up</div>
+          <div class="kpi-why">Urgent escalation pathway active in KY &mdash; clinical safety net for youth who needed immediate support.</div>
+        </div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>SKY Program note:</strong> KY includes youth in foster and adoptive placements through the SKY program (SKY Youth 13&ndash;17: 101; SKY Members 18+: 87). This is a higher-acuity sub-population with distinct BH history. Postpartum Support connections appear in KY data, indicating some youth members in maternal health pathways.
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARDIAN SECTION -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Guardian Program &middot; Kentucky</div>
+        <div class="section-title">350 guardians. The largest and most mature program in the portfolio.</div>
+        <div class="section-sub">KY launched its guardian program in June 2024 &mdash; the most established of any market. 350 guardians enrolled, 41% lonely, 29% flagged urgent. The SKY plan infrastructure and specialized resources (Duffel Bag, Birthday Box) reflect the depth of KY&rsquo;s foster care support model.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Guardians Enrolled</div>
+          <div class="kpi-val">350</div>
+          <div class="kpi-ctx">Largest guardian program</div>
+          <div class="kpi-why">KY&rsquo;s guardian program is the largest in the portfolio &mdash; reflecting both program maturity and the depth of KY&rsquo;s foster care population.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.9</div>
+          <div class="kpi-ctx">Loneliness score, 0&ndash;9</div>
+          <div class="kpi-why">Consistent with portfolio avg (4.9) &mdash; KY guardians carry meaningful loneliness burden.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">PHQ-4 Avg</div>
+          <div class="kpi-val">4.8</div>
+          <div class="kpi-ctx">Second highest in portfolio</div>
+          <div class="kpi-why">KY guardian PHQ-4 avg 4.8 &mdash; second highest in the portfolio. Significant anxiety-depression burden in this caregiver population.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">41%</div>
+          <div class="kpi-ctx">2 in 5 KY guardians</div>
+          <div class="kpi-why">Consistent with portfolio average &mdash; loneliness in KY guardians is the norm, not the exception.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">43%</div>
+          <div class="kpi-ctx">Active social barriers</div>
+          <div class="kpi-why">43% of KY guardians have an identified social need &mdash; resource strain that affects both caregiver and child health.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Urgent Flags</div>
+          <div class="kpi-val">29%</div>
+          <div class="kpi-ctx">Flagged for urgent follow-up</div>
+          <div class="kpi-why">Nearly 1 in 3 KY guardians required urgent escalation &mdash; a high acuity signal in the most established program.</div>
+        </div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Top resource connections &middot; KY Guardians:</strong> ABHKY Medicaid &amp; CHIP Plan Resources (62%) &middot; SKY Plan Resources (55%) &middot; Duffel Bag &amp; Birthday Box Programs (21%) &mdash; specialized foster care support connections reflecting KY&rsquo;s program depth.
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Insight -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Kentucky Family Insight</div>
+        <div class="section-title">The most established program surfaces the deepest guardian acuity.</div>
+      </div>
+      <div class="portfolio-highlight">
+        KY youth show the lowest loneliness scores in the portfolio &mdash; and still 1 in 4 is lonely. KY guardians, by contrast, show 29% urgent flagging &mdash; the caregiver population in KY is carrying significant, unmet distress. The maturity of the KY program (launched June 2024) means more data depth and more established resource pathways than any other market. What KY reveals is what happens when you commit to a guardian program long enough to see the full picture.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; Kentucky Family</div>
+        <div class="tp-line"><span class="tp-stat">KY guardian program is the largest (350) and most established (launched June 2024) in the portfolio &mdash; 29% flagged urgent.</span> <span class="tp-say">Say: &ldquo;KY shows us what a mature guardian program looks like. It also shows us what&rsquo;s been hidden in this population: nearly 1 in 3 required urgent escalation.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">KY includes foster and adoptive youth through the SKY program &mdash; a population with distinct and elevated BH risk.</span> <span class="tp-say">Say: &ldquo;SKY youth are not a standard Medicaid population. They&rsquo;ve experienced placement disruption, family separation, and system involvement &mdash; BH screening is not optional for this group, it&rsquo;s essential.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">KY youth have the lowest portfolio loneliness rate (24%) &mdash; and still a 59% lonely&rarr;distressed crossover.</span> <span class="tp-say">Say: &ldquo;Best in portfolio on loneliness still means hundreds of youth with measurable BH burden. There&rsquo;s no market where this signal is absent.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Family Program &middot; Kentucky</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-ky-fam -->
+
+<!-- OK FAMILY -->
+<div id="page-ok-fam" class="page">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Family Program &middot; Oklahoma &middot; Data through June 30, 2026</div>
+    <h1>Oklahoma Family Program &mdash; <strong>Youth &amp; Guardian</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; Youth 13&ndash;17 &middot; SoonerCare &middot; Foster Parents &middot; Kinship Caregivers</p>
+    <div class="market-pills">
+      <span class="mpill">OK Youth: 1,695</span>
+      <span class="mpill">OK Guardians: 224</span>
+      <span class="mpill">SoonerCare</span>
+      <span class="mpill">Highest Lonely&rarr;Distress Rate</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">Oklahoma &middot; Value Anchor</div>
+      <div class="vab-text">Oklahoma youth have the <strong>highest lonely&rarr;distress crossover in the portfolio: 80%.</strong> Prevalence is not the story &mdash; severity is. Once a youth in OK is lonely, they are almost always also psychologically distressed.</div>
+    </div>
+  </div>
+
+  <!-- YOUTH SECTION -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Youth Program &middot; Oklahoma</div>
+        <div class="section-title">1,695 youth. Lower prevalence, higher severity.</div>
+        <div class="section-sub">OK youth show a loneliness rate of 26% &mdash; near the portfolio average. But among those youth, 80% also screen PHQ-2 positive. Social media (23%) and discrimination (19%) are the top named barriers. The acuity among OK&rsquo;s lonely subgroup is the highest in the portfolio.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Youth Enrolled</div>
+          <div class="kpi-val">1,695</div>
+          <div class="kpi-ctx">Youth 13&ndash;17 &middot; SoonerCare</div>
+          <div class="kpi-why">1,695 youth relationships &mdash; and a severity signal that distinguishes OK from every other market.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.4</div>
+          <div class="kpi-ctx">Near portfolio avg</div>
+          <div class="kpi-why">Average loneliness score &mdash; the aggregate doesn&rsquo;t tell the real story. The lonely subgroup does.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">26%</div>
+          <div class="kpi-ctx">Near portfolio avg (32%)</div>
+          <div class="kpi-why">Prevalence is moderate &mdash; but the 80% crossover rate means the lonely subgroup is carrying extreme BH burden.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">80%</div>
+          <div class="kpi-ctx">Highest in youth portfolio</div>
+          <div class="kpi-why">4 in 5 lonely OK youth are also PHQ-2 distressed &mdash; the highest crossover rate in the portfolio. Severity is the story.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">26%</div>
+          <div class="kpi-ctx">Social barriers identified</div>
+          <div class="kpi-why">Consistent with the FL level &mdash; real social need present even in a lower-loneliness market.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Urgent Flags</div>
+          <div class="kpi-val">7%</div>
+          <div class="kpi-ctx">Flagged for urgent follow-up</div>
+          <div class="kpi-why">Urgent escalation pathway active &mdash; a clinical safety function that no claims-based model provides.</div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:32px">
+        <div class="section-eyebrow eyebrow-2">Top Youth Barriers &middot; Oklahoma</div>
+      </div>
+      <div class="card-grid">
+        <div class="card"><div class="card-lbl">Social Media</div><div class="card-val" style="font-size:28px">23%</div><div class="card-sub">Top youth barrier in OK &mdash; tied with TX for highest social media barrier in the portfolio. A youth-specific driver that standard tools miss.</div></div>
+        <div class="card"><div class="card-lbl">Discrimination</div><div class="card-val" style="font-size:28px">19%</div><div class="card-sub">A health equity signal &mdash; discrimination named as a barrier by nearly 1 in 5 OK youth screened.</div></div>
+        <div class="card"><div class="card-lbl">Mental Health</div><div class="card-val" style="font-size:28px">10%</div><div class="card-sub">Self-identified mental health barrier in OK youth &mdash; lower than TX (21%) but present and actionable.</div></div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Support Center &middot; OK Youth:</strong> 1,300 youth reached through compassionate support center. Spanish-speaking reach: 1% of OK youth (predominantly English-speaking population). SoonerCare resources are the top connection pathway for OK youth.
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARDIAN SECTION -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Guardian Program &middot; Oklahoma</div>
+        <div class="section-title">224 guardians. The lowest distress in the portfolio &mdash; and still 39% lonely.</div>
+        <div class="section-sub">OK guardians show the lowest PHQ-4 (3.7) and lonely&rarr;distress crossover (53%) in the guardian portfolio. Relative to other markets, OK guardian acuity is lower &mdash; but the prevalence of loneliness and social need is still meaningful. Food is the dominant SDoH barrier (37%).</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Guardians Enrolled</div>
+          <div class="kpi-val">224</div>
+          <div class="kpi-ctx">Foster parents &middot; Kinship caregivers</div>
+          <div class="kpi-why">224 caregiver relationships &mdash; each representing a household where child health outcomes are at stake.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.8</div>
+          <div class="kpi-ctx">Loneliness score, 0&ndash;9</div>
+          <div class="kpi-why">Consistent with portfolio avg &mdash; meaningful loneliness signal in OK caregiver population.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">PHQ-4 Avg</div>
+          <div class="kpi-val">3.7</div>
+          <div class="kpi-ctx">Lowest in guardian portfolio</div>
+          <div class="kpi-why">Lowest PHQ-4 in the portfolio &mdash; still above the clinical threshold for mild psychological distress.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">39%</div>
+          <div class="kpi-ctx">2 in 5 OK guardians</div>
+          <div class="kpi-why">Even the &ldquo;best&rdquo; guardian market has 39% loneliness. There is no market where caregiver isolation is absent.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">37%</div>
+          <div class="kpi-ctx">Active social barriers</div>
+          <div class="kpi-why">37% with an identified SDoH need &mdash; led by food insecurity at 37%, the highest food barrier rate in the guardian portfolio.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">53%</div>
+          <div class="kpi-ctx">Lowest crossover in guardian portfolio</div>
+          <div class="kpi-why">Lowest crossover in the guardian portfolio &mdash; but still more than half of lonely OK guardians are also PHQ-4 positive.</div>
+        </div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Top guardian barriers &middot; OK:</strong> Food (37%) &middot; Housing (18%) &middot; Income (11%). Top resource connection: SoonerCare state resources. Support center OK Guardian reach: 35.
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Insight -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Oklahoma Family Insight</div>
+        <div class="section-title">OK is the inversion market: lower prevalence, higher severity.</div>
+      </div>
+      <div class="portfolio-highlight">
+        Oklahoma youth have the lowest UCLA-3 in the portfolio (4.4) &mdash; and the highest lonely&rarr;distressed crossover (80%). Once a youth in OK is lonely, they are almost always also in psychological distress. OK guardians, by contrast, show the lowest acuity of any market. The youth population in OK is where the intervention is most urgent &mdash; not because the prevalence is highest, but because the severity among those who are lonely is extreme.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; Oklahoma Family</div>
+        <div class="tp-line"><span class="tp-stat">80% of lonely OK youth are also PHQ-2 distressed &mdash; the highest crossover rate in the portfolio.</span> <span class="tp-say">Say: &ldquo;OK is not the most lonely market &mdash; it&rsquo;s the most severe. Once a youth here is lonely, they&rsquo;re almost always distressed too. The subgroup that needs clinical support is easier to miss precisely because the overall prevalence looks moderate.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">Social media is the top named barrier for OK youth at 23% &mdash; tied with TX for the highest in the portfolio.</span> <span class="tp-say">Say: &ldquo;Our youth tool captures what standard PRAPARE screens miss. Social media as a health barrier is not hypothetical &mdash; it&rsquo;s what youth in Oklahoma told us.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">OK guardians have the lowest portfolio PHQ-4 (3.7) and crossover rate (53%) &mdash; still above clinical significance.</span> <span class="tp-say">Say: &ldquo;Even the healthiest guardian market in this portfolio is still above the threshold for clinical concern. There is no market where this signal disappears.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Family Program &middot; Oklahoma</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-ok-fam -->
+
+<!-- TX FAMILY -->
+<div id="page-tx-fam" class="page">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Family Program &middot; Texas &middot; Data through June 30, 2026</div>
+    <h1>Texas Family Program &mdash; <strong>Youth &amp; Guardian</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; CHIP &middot; STAR CHIP Youth &middot; STAR Kids &middot; Guardian PRAPARE</p>
+    <div class="market-pills">
+      <span class="mpill">TX Youth: ~2,694</span>
+      <span class="mpill">TX Guardians: 307</span>
+      <span class="mpill">Largest Youth Program</span>
+      <span class="mpill">Most Acute Family Market</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">Texas &middot; Value Anchor</div>
+      <div class="vab-text">Texas is the most acute market in the portfolio. <strong>44% of youth are lonely. 46% of guardians are lonely. 90% of lonely guardians are PHQ-4 distressed. 100% of screened guardians have an SDoH need.</strong> This is a high-acuity family system.</div>
+    </div>
+  </div>
+
+  <!-- YOUTH SECTION -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Youth Program &middot; Texas</div>
+        <div class="section-title">~2,694 youth across 5 program types. The highest acuity in the portfolio.</div>
+        <div class="section-sub">TX is the largest and most complex youth market: CHIP, CHIP Pregnant, STAR CHIP Youth 13&ndash;17, STAR Kids 18+, STAR Kids Youth 13&ndash;17. UCLA-3 avg 5.2 (highest). PHQ-2 avg 1.9 (highest). 44% lonely. 83% use the app &mdash; highest app adoption in the portfolio.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Youth Enrolled</div>
+          <div class="kpi-val">~2,694</div>
+          <div class="kpi-ctx">CHIP &middot; STAR CHIP &middot; STAR Kids</div>
+          <div class="kpi-why">Largest youth program in the portfolio &mdash; 5 program types, one integrated engagement model.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">5.2</div>
+          <div class="kpi-ctx">Highest in youth portfolio</div>
+          <div class="kpi-why">TX youth carry the highest loneliness burden in the portfolio. The baseline score signals a population in chronic social isolation.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">44%</div>
+          <div class="kpi-ctx">Highest in youth portfolio</div>
+          <div class="kpi-why">Nearly half of TX youth meet the loneliness threshold &mdash; a prevalence rate that predicts measurable downstream health impact.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">78%</div>
+          <div class="kpi-ctx">PHQ-2 co-occurring with loneliness</div>
+          <div class="kpi-why">78% of lonely TX youth are also psychologically distressed. Loneliness is not an isolated signal &mdash; it&rsquo;s a leading indicator of compound BH need.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">36%</div>
+          <div class="kpi-ctx">Highest in youth portfolio</div>
+          <div class="kpi-why">More than 1 in 3 TX youth have an identified social need. Social media, family instability, and safety are top barriers.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">App Adoption</div>
+          <div class="kpi-val">83%</div>
+          <div class="kpi-ctx">Highest app adoption in portfolio</div>
+          <div class="kpi-why">83% of TX youth use the Pyx app &mdash; the highest rate in the portfolio. Strong digital engagement amplifies screening reach.</div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:32px">
+        <div class="section-eyebrow eyebrow-2">Top Youth Barriers &middot; Texas</div>
+      </div>
+      <div class="card-grid">
+        <div class="card"><div class="card-lbl">Social Media</div><div class="card-val" style="font-size:28px">23%</div><div class="card-sub">Tied for highest in portfolio. Social media named as a health barrier by nearly 1 in 4 TX youth screened.</div></div>
+        <div class="card"><div class="card-lbl">Mental Health</div><div class="card-val" style="font-size:28px">21%</div><div class="card-sub">Highest mental health self-identification rate in the portfolio &mdash; a referral and intervention signal at scale.</div></div>
+        <div class="card"><div class="card-lbl">Family</div><div class="card-val" style="font-size:28px">15%</div><div class="card-sub">Family instability named as a barrier by 15% of TX youth &mdash; driving both loneliness and care avoidance.</div></div>
+        <div class="card"><div class="card-lbl">Safety</div><div class="card-val" style="font-size:28px">15%</div><div class="card-sub">Safety as a named barrier at 15% &mdash; a community and domestic environment signal that clinical outreach must account for.</div></div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Support Center &middot; TX Youth:</strong> 4,320 youth reached &mdash; the highest support center volume in the portfolio. PHQ-2 avg 1.9 &mdash; highest in the portfolio, signaling a population where BH need is pervasive and active.
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARDIAN SECTION -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Guardian Program &middot; Texas</div>
+        <div class="section-title">307 guardians. 90% lonely&rarr;distressed. 100% SDoH need.</div>
+        <div class="section-sub">TX guardian data is the most acute in the portfolio on every compound measure. 46% lonely (highest). 90% lonely&rarr;PHQ-4 (highest). 100% SDoH need (highest). All guardian engagement is through compassionate support center calls &mdash; 100% non-app. These caregivers needed a human voice, not a digital interface.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Guardians Enrolled</div>
+          <div class="kpi-val">307</div>
+          <div class="kpi-ctx">100% non-app engagement</div>
+          <div class="kpi-why">307 guardian relationships &mdash; every one of them reached by phone, not app. A deliberate model match for a high-need population.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">5.1</div>
+          <div class="kpi-ctx">Second highest in guardian portfolio</div>
+          <div class="kpi-why">TX guardian loneliness score ranks second in the portfolio &mdash; consistent with a high-acuity caregiver population.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">46%</div>
+          <div class="kpi-ctx">Highest in guardian portfolio</div>
+          <div class="kpi-why">Nearly half of TX guardians are lonely &mdash; 6 points above the portfolio average. The caregiver system in TX is in acute social isolation.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">90%</div>
+          <div class="kpi-ctx">Highest crossover in portfolio</div>
+          <div class="kpi-why">9 in 10 lonely TX guardians are also PHQ-4 distressed. Loneliness in this population is virtually never isolated from psychological distress.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">100%</div>
+          <div class="kpi-ctx">Every screened guardian</div>
+          <div class="kpi-why">100% of screened TX guardians have an identified social need. Food, childcare, medication access, economic stability &mdash; compound resource strain in every household.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Urgent Flags</div>
+          <div class="kpi-val">50%</div>
+          <div class="kpi-ctx">1 in 2 TX guardians</div>
+          <div class="kpi-why">Half of TX guardians were flagged for urgent escalation. No claims model identifies this. Only a proactive, human-first outreach model does.</div>
+        </div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>TX Guardian PRAPARE barriers:</strong> Food (100%) &middot; Access to Care (64%) &middot; Childcare (50%) &middot; Medication (50%) &middot; Economic Stability (12%). Support center TX Guardian reach: 44 &middot; Pyxir conversations: 41 &middot; Avg activity 8 per person.
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Insight -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Texas Family Insight</div>
+        <div class="section-title">The most acute family system in the portfolio &mdash; at both ends.</div>
+      </div>
+      <div class="portfolio-highlight">
+        TX youth: highest loneliness (44%), highest PHQ-2 avg (1.9), highest SDoH need (36%), highest app adoption (83%), highest support center volume (4,320). TX guardians: highest loneliness (46%), highest lonely&rarr;distressed crossover (90%), highest SDoH need (100%), 50% urgent flagging. When both the youth and the caregiver are in compound crisis, the plan faces compounding cost and quality risk. TX is where this program earns its return most visibly.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; Texas Family</div>
+        <div class="tp-line"><span class="tp-stat">44% of TX youth are lonely. 46% of TX guardians are lonely. 90% of lonely TX guardians are PHQ-4 distressed. 100% of screened TX guardians have an SDoH need.</span> <span class="tp-say">Say: &ldquo;Texas is not one isolated finding &mdash; it&rsquo;s a family system in compound crisis. Both ends of the household are flagging. That doesn&rsquo;t show up in claims. It shows up here.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">TX youth app adoption is 83% &mdash; the highest in the portfolio. TX support center volume is 4,320 &mdash; also the highest.</span> <span class="tp-say">Say: &ldquo;TX youth are engaged. The channel works. The data is flowing. What we do with it next is the quality conversation.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">50% of TX guardians were flagged for urgent escalation &mdash; in a 100% phone-based program.</span> <span class="tp-say">Say: &ldquo;Every guardian in TX was reached by a human voice. Half of them needed immediate follow-up. That&rsquo;s not a program overhead &mdash; that&rsquo;s a safety net.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Family Program &middot; Texas</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-tx-fam -->
+
+<!-- PA FAMILY -->
+<div id="page-pa-fam" class="page">
+
+  <div class="client-header">
+    <div class="header-eyebrow">BH Family Program &middot; Pennsylvania &middot; Data through June 30, 2026</div>
+    <h1>Pennsylvania Family Program &mdash; <strong>Youth &amp; Guardian</strong></h1>
+    <p class="header-period">Aetna Medicaid &middot; CHIP 13&ndash;17 &middot; Aetna Better Health Kids &middot; Guardians</p>
+    <div class="market-pills">
+      <span class="mpill">PA Youth: 1,818</span>
+      <span class="mpill">PA Guardians: 229</span>
+      <span class="mpill">CHIP Only</span>
+      <span class="mpill">Most Established Guardian Program</span>
+    </div>
+  </div>
+
+  <div class="value-anchor-banner">
+    <div class="vab-inner">
+      <div class="vab-eyebrow">Pennsylvania &middot; Value Anchor</div>
+      <div class="vab-text">Pennsylvania youth carry the <strong>highest discrimination barrier in the portfolio at 24%</strong> &mdash; a health equity signal that HEDIS scores don&rsquo;t capture. PA guardians, launched Dec 2023, are the most established program in the portfolio and the most comprehensively screened.</div>
+    </div>
+  </div>
+
+  <!-- YOUTH SECTION -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Youth Program &middot; Pennsylvania</div>
+        <div class="section-title">1,818 CHIP youth. A health equity signal hiding in the data.</div>
+        <div class="section-sub">PA is a CHIP-only youth market (ages 13&ndash;17). 39% are lonely, 76% of those are distressed &mdash; near TX levels for crossover. But the defining signal in PA is discrimination: 24% of screened youth identify discrimination or ethnicity as a health barrier. Only 38% use the app &mdash; 62% are served through the support center alone.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Youth Enrolled</div>
+          <div class="kpi-val">1,818</div>
+          <div class="kpi-ctx">CHIP 13&ndash;17 &middot; Pennsylvania</div>
+          <div class="kpi-why">1,818 CHIP youth relationships &mdash; a population where discrimination-related barriers are shaping health behavior at scale.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.8</div>
+          <div class="kpi-ctx">Second highest in youth portfolio</div>
+          <div class="kpi-why">PA youth loneliness score ranks second in the portfolio &mdash; a meaningful BH signal in a CHIP-specific population.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">39%</div>
+          <div class="kpi-ctx">Second highest in youth portfolio</div>
+          <div class="kpi-why">39% lonely &mdash; near TX levels. PA is the second-most lonely youth market in the portfolio.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">Lonely &rarr; Distressed</div>
+          <div class="kpi-val">76%</div>
+          <div class="kpi-ctx">PHQ-2 co-occurring</div>
+          <div class="kpi-why">76% of lonely PA youth are also PHQ-2 distressed &mdash; a crossover rate that signals compound BH need requiring active intervention.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">Discrimination Barrier</div>
+          <div class="kpi-val">24%</div>
+          <div class="kpi-ctx">Highest in youth portfolio</div>
+          <div class="kpi-why">1 in 4 PA youth identify discrimination as a health barrier &mdash; the highest rate in the portfolio. A health equity signal that predicts lower engagement with mainstream care.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Support Center Only</div>
+          <div class="kpi-val">62%</div>
+          <div class="kpi-ctx">Lowest app adoption (38%)</div>
+          <div class="kpi-why">62% of PA youth are reached through the support center alone &mdash; a phone-first population that would be missed by an app-only model.</div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:32px">
+        <div class="section-eyebrow eyebrow-2">Top Youth Barriers &middot; Pennsylvania</div>
+      </div>
+      <div class="card-grid">
+        <div class="card"><div class="card-lbl">Discrimination / Ethnicity</div><div class="card-val" style="font-size:28px">24%</div><div class="card-sub">Highest in the portfolio. A health equity signal that claims data and standard quality measures cannot surface. Requires a trust-first engagement model.</div></div>
+        <div class="card"><div class="card-lbl">Mental Health</div><div class="card-val" style="font-size:28px">13%</div><div class="card-sub">Self-identified mental health barrier &mdash; actionable at the point of engagement, before any clinical encounter.</div></div>
+        <div class="card"><div class="card-lbl">Family</div><div class="card-val" style="font-size:28px">6%</div><div class="card-sub">Family instability named as a barrier in PA youth &mdash; a consistent theme across the portfolio.</div></div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Support Center &middot; PA Youth:</strong> 1,021 youth reached through compassionate support center. Spanish-speaking reach: 6% of PA youth program &mdash; multilingual access built in. PA has the lowest app adoption (38%) in the portfolio; the phone model is the primary service channel.
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARDIAN SECTION -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Guardian Program &middot; Pennsylvania</div>
+        <div class="section-title">229 guardians. The most established program. The most comprehensive screening.</div>
+        <div class="section-sub">PA guardian program launched Dec 2023 &mdash; the most established in the portfolio. 31% lonely (lowest), 60% lonely&rarr;distressed, 83% SDoH need. 52 PRAPARE screenings and 42 Well-Being assessments completed &mdash; more comprehensive than any other market. Top resource: Aetna Better Health Kids Plan Resources at 85%.</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-lbl">Guardians Enrolled</div>
+          <div class="kpi-val">229</div>
+          <div class="kpi-ctx">Launched Dec 2023 &middot; Most established</div>
+          <div class="kpi-why">PA&rsquo;s program longevity provides the deepest data baseline and most mature resource connection network in the portfolio.</div>
+        </div>
+        <div class="kpi teal">
+          <div class="kpi-lbl">UCLA-3 Avg</div>
+          <div class="kpi-val">4.4</div>
+          <div class="kpi-ctx">Lowest in guardian portfolio</div>
+          <div class="kpi-why">PA guardians show the lowest loneliness score in the portfolio &mdash; a relative bright spot, though 31% are still lonely.</div>
+        </div>
+        <div class="kpi orange">
+          <div class="kpi-lbl">% Lonely</div>
+          <div class="kpi-val">31%</div>
+          <div class="kpi-ctx">Lowest in guardian portfolio</div>
+          <div class="kpi-why">Lowest loneliness prevalence in the guardian portfolio &mdash; still nearly 1 in 3 guardians. The floor is not zero.</div>
+        </div>
+        <div class="kpi blue">
+          <div class="kpi-lbl">% SDoH Need</div>
+          <div class="kpi-val">83%</div>
+          <div class="kpi-ctx">Second highest in portfolio</div>
+          <div class="kpi-why">83% of PA guardians have an identified social need &mdash; high SDoH burden even in the market with the lowest loneliness rates.</div>
+        </div>
+        <div class="kpi purple">
+          <div class="kpi-lbl">PRAPARE Screenings</div>
+          <div class="kpi-val">52</div>
+          <div class="kpi-ctx">+ 42 Well-Being assessments</div>
+          <div class="kpi-why">PA conducts both PRAPARE and Well-Being assessments &mdash; the most comprehensive guardian screening in the portfolio. More data depth, more actionable connections.</div>
+        </div>
+        <div class="kpi slate">
+          <div class="kpi-lbl">Top Resource Connection</div>
+          <div class="kpi-val">85%</div>
+          <div class="kpi-ctx">Aetna Better Health Kids Plan Resources</div>
+          <div class="kpi-why">85% resource connection to plan-specific resources &mdash; driving guardians back into Aetna&rsquo;s ecosystem for ongoing support.</div>
+        </div>
+      </div>
+      <div class="portfolio-highlight" style="margin-top:20px">
+        <strong>Support Center &middot; PA Guardian:</strong> 27 guardians reached through compassionate support center. Lonely&rarr;PHQ-4 crossover: 60%. PA guardian program launched Dec 2023 &mdash; the most mature program in the portfolio, with the deepest screening data and established plan resource connections.
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Insight -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-1">Pennsylvania Family Insight</div>
+        <div class="section-title">PA is the equity and depth market.</div>
+      </div>
+      <div class="portfolio-highlight">
+        Two signals define the PA family program. First, health equity: 24% of PA youth identify discrimination as a health barrier &mdash; the highest in the portfolio. This is a quality and equity metric that HEDIS cannot see but drives real care avoidance. Second, program depth: PA guardian launched Dec 2023, conducts PRAPARE + Well-Being assessments, and connects 85% of guardians to Aetna Better Health Kids plan resources. PA shows what a mature, comprehensive family program looks like &mdash; and the equity signals it surfaces.
+      </div>
+    </div>
+  </div>
+
+  <!-- Talking Points -->
+  <div class="stage-section alt-bg">
+    <div class="wrap">
+      <div class="tp-block">
+        <div class="tp-label">Talking Points &middot; Pennsylvania Family</div>
+        <div class="tp-line"><span class="tp-stat">24% of PA youth identify discrimination or ethnicity as a health barrier &mdash; the highest rate in the portfolio.</span> <span class="tp-say">Say: &ldquo;This is not a demographic stat. It&rsquo;s a care-seeking barrier. When youth name discrimination as a barrier, they&rsquo;re telling us why they don&rsquo;t show up. HEDIS doesn&rsquo;t ask. We do.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">62% of PA youth are served through the support center only &mdash; the lowest app adoption (38%) in the portfolio.</span> <span class="tp-say">Say: &ldquo;PA is proof that an app-only model leaves populations behind. The phone channel isn&rsquo;t a fallback &mdash; it&rsquo;s the primary access point for more than half of PA youth.&rdquo;</span></div>
+        <div class="tp-line"><span class="tp-stat">PA guardian program is the most established (Dec 2023) and conducts the most comprehensive screening in the portfolio &mdash; PRAPARE + Well-Being assessments, 85% plan resource connection.</span> <span class="tp-say">Say: &ldquo;PA shows what this program looks like at maturity: deep data, established pathways, and guardians connected back to the plan&rsquo;s own resources. That&rsquo;s the model we&rsquo;re building toward in every market.&rdquo;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcomes Placeholder -->
+  <div class="stage-section white-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow eyebrow-3">Outcomes &middot; Coming Next</div>
+        <div class="section-title">Score change data in progress.</div>
+      </div>
+      <div class="portfolio-highlight" style="text-align:center;padding:28px 20px">
+        Score change data to be added &mdash; UCLA-3 and PHQ improvement rates at repeat screening
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">pyx <span>health</span></div>
+    <div>Pyx Health &times; Aetna Medicaid &middot; BH Family Program &middot; Pennsylvania</div>
+    <div>Data through June 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div><!-- end page-pa-fam -->
+
+<script>
+function showPage(id, el) {
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('page-' + id).classList.add('active');
+  if (el) el.classList.add('active');
+}
+function toggleTP(btn) {
+  var on = btn.classList.toggle('active');
+  document.querySelectorAll('.tp-block').forEach(function(b) { b.classList.toggle('visible', on); });
+}
+</script>
+</body>
+</html>
